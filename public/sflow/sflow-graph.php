@@ -229,10 +229,13 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options)
     // print_r($options);
     // echo '</pre>';
     
-	$font_cfg=' --font DEFAULT:0:"SimHei,黑体" ';
+//	$font_cfg=' --font DEFAULT:0:"SimHei,黑体" ';
+
+	$font_cfg=' ';
+
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
     
-     //echo $cmdline;die;
+     // echo $cmdline;die;
      
 	$fp = popen($cmdline, "r");
         	

@@ -49,6 +49,7 @@ defined( 'APPLICATION_PATH' ) || define( 'APPLICATION_PATH', realpath(dirname(__
 set_include_path( implode( PATH_SEPARATOR,
         array(
             realpath( APPLICATION_PATH . '/../library' ),
+            realpath( APPLICATION_PATH . '/../library' ),
             get_include_path()
         )
     )

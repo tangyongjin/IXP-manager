@@ -75,6 +75,14 @@ class StaticController extends IXP_Controller_Action
     public function exampleAction()
     {}
 
+    public function example2Action()
+    {}
+
+    public function regeneratemrtgAction()
+    {}
+
+
+
     public function feesAction()
     {
         $this->_requireAuth();
