@@ -19,61 +19,133 @@
         </div>
 {/if}
 
-<div class="alert alert-info">
-    <h3 align="center">
-        Techical Support: {mailto address="email@example.com" encode="javascript"}
-        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        Billing / Accounts: {mailto address="email@example.com" encode="javascript"}
-        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        Sales / Marketing: {mailto address="email@example.com" encode="javascript"}
-    </h3>
-</div>
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique diam pretium ipsum fermentum ut sollicitudin mauris blandit. Mauris luctus, ipsum id feugiat bibendum, felis nulla dignissim sem, vehicula sollicitudin tortor turpis ut eros. Sed sit amet orci arcu, et varius velit. Vestibulum et nulla tortor, quis tincidunt augue. Vestibulum fringilla tempus faucibus. Donec non mauris neque. Nam urna odio, facilisis id tincidunt eu, dictum sed sapien. Pellentesque porttitor viverra nunc a porttitor. Fusce tempor, elit tempus dignissim accumsan, nisi metus eleifend ipsum, vel pellentesque lectus dolor at orci. Suspendisse potenti.
-<br /><br />
-</p>
 
-<h3>Emergency 24x7x365 Support</h3>
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique diam pretium ipsum fermentum ut sollicitudin mauris blandit. Mauris luctus, ipsum id feugiat bibendum, felis nulla dignissim sem, vehicula sollicitudin tortor turpis ut eros. Sed sit amet orci arcu, et varius velit. Vestibulum et nulla tortor, quis tincidunt augue. Vestibulum fringilla tempus faucibus. Donec non mauris neque. Nam urna odio, facilisis id tincidunt eu, dictum sed sapien. Pellentesque porttitor viverra nunc a porttitor. Fusce tempor, elit tempus dignissim accumsan, nisi metus eleifend ipsum, vel pellentesque lectus dolor at orci. Suspendisse potenti.
-</p>
 
 <br /><br />
 
 <div class="well">
+<h3>Dockers </h3>
 
-    <table border="0" align="center">
+    <table border="1">
     <tr>
-        <td width="20"></td>
-        <td colspan="3"><h3>Technical Support Summary</h3></td>
+
+        <td align="right"><strong>Dockername</strong></td>
+        <td>配置</td>
+        <td align="left">备注</td>
     </tr>
     <tr>
-        <td></td>
-        <td align="right"><strong>Email:</strong></td>
-        <td></td>
-        <td align="left">{mailto address="email@example.com" encode="javascript"}</td>
+        <td align="right"><strong>ixp.mrtg</strong></td>
+        <td>CONFFILE=/ixpdata/mrtgcfg/mrtg.cfg</td>
+        <td align="left">
+           
+           mrtg.cfg根据数据库配置生成<br/>
+           ixp.webframework运行时会自动生成配置文件.<br/>
+           也可以由ixpmanager菜单Action手工生成.
+            
+            
+        </td>
     </tr>
     <tr>
-        <td></td>
-        <td align="right"><strong>Phone:</strong></td>
-        <td></td>
-        <td align="left">+353 1 123 4567</td>
+        <td align="right"><strong>ixp.sflow</strong></td>
+        <td>/usr/local/etc/ixpmanager.conf</td>
+        <td align="left">
+           每5分钟更新数据库mactable一次.<br/>
+           &nbsp;&nbsp; */5 * * * * root  /usr/local/bin/update-l2database.pl
+           <br/>
+           supervisord.conf.sflow文件使用supervisord机制,运行:<br />
+           <pre style="padding:1px;margin:0px;">
+
+[program:sflow-receiver]
+ command =/usr/local/bin/sflowtool -4 -p 6343 -l -f 127.0.0.1/5500 -f 127.0.0.1/5501
+
+[program:sflow-to-rrd]
+ priority=1004
+ command =/usr/local/bin/sflow-to-rrd-handler
+ startsecs=100
+ autorestart=false
+ startretries=10
+
+
+[program:sflow-detect-ixp-bgp-sessions]
+ priority=1005
+ command =/usr/local/bin/sflow-detect-ixp-bgp-sessions
+ startsecs=100
+ autorestart=false
+ startretries=10
+            </pre>
+
+        </td>
     </tr>
     <tr>
-        <td></td>
-        <td align="right"><strong>Hours:</strong></td>
-        <td></td>
-        <td align="left">09:00 to 18:00 GMT, Monday to Friday</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td align="right"><strong>24h Emergency:</strong></td>
-        <td></td>
-        <td align="left">+353 1 987 6541</td>
+        <td align="right"><strong>ixp.webframework</strong></td>
+        <td>
+        /usr/local/etc/ixpmanager.conf <br/>
+        /etc/ixpmanager.conf
+        </td>
+        <td align="left">中文字体文件:<br/>
+        /usr/local/share/fonts/truetype/simhei/chinese.simhei.ttf
+        </td>
     </tr>
     </table>
+</div>
+
+
+<div class="well">
+
+<h3> docker-compose.yml </h3>
+
+<pre>
+
+version: '2'
+services:
+
+  mysql:
+    image: ixp.mysql
+    container_name: ixpmysql
+    ports:
+     - "3306:3306"
+    volumes:
+      - "/ixpdata/mysql/:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: cnix@1234
+
+  web:
+    image: ixp.webframework
+    container_name: web
+    volumes:
+       - "/ixpdata/:/ixpdata"
+       - "/ixpdata/webapp/opt/:/opt"
+
+    depends_on:
+       -  mysql
+    ports:
+     - "80:80"
+    tty: true
+
+  sflow:
+    image: ixp.sflow
+    container_name: sflow
+    volumes:
+      - "/ixpdata/:/ixpdata"
+    depends_on:
+       -  mysql
+    ports:
+      - "6343:6343/udp"
+
+  mrtg:
+    image: ixp.mrtg
+    container_name: mrtg
+    volumes:
+      - "/ixpdata/:/ixpdata"
+    depends_on:
+       -  mysql
+       -  web
+    tty: true
+
+   
+</pre>
 </div>
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
