@@ -93,11 +93,8 @@
 
 
 <div class="well">
-
 <h3> docker-compose.yml </h3>
-
 <pre>
-
 version: '2'
 services:
 
@@ -143,10 +140,28 @@ services:
        -  mysql
        -  web
     tty: true
-
-   
 </pre>
 </div>
+
+
+<div class="well">
+<h3>Timeing </h3>
+<pre>
+
+mac地址表:
+   每30分钟从交换机读取一次.
+
+mrtg:
+   每5分钟一次.
+
+sflow-to-rrd: 
+   每一分钟update一次.
+</pre>
+</div>
+
+
+
+
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
     </div>

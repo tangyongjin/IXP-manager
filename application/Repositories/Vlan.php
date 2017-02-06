@@ -239,12 +239,27 @@ class Vlan extends EntityRepository
     */
     public function getPeeringMatrixVLANs()
     {
-        return $this->getEntityManager()->createQuery(
+
+        $x=$this->getEntityManager()->createQuery(
+                "SELECT v FROM \\Entities\\Vlan v
+                    WHERE v.peering_matrix = 1
+                ORDER BY v.number ASC"
+            );
+
+        // $sql=$x->getSQL();
+        // echo $sql;
+        // die;
+
+        $ret= $this->getEntityManager()->createQuery(
                 "SELECT v FROM \\Entities\\Vlan v
                     WHERE v.peering_matrix = 1
                 ORDER BY v.number ASC"
             )
             ->getResult();
+
+
+
+        return  $ret;
     }
 
 

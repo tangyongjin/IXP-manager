@@ -53,7 +53,7 @@ class BGPSessionData extends EntityRepository
      * @return array Array of peerings (as described above)
      * @throws \IXP_Exception Thrown if an invalid protocol or VLAN id is specified
      */
-    public function getPeers( $vlan = null, $protocol = 6, $asn = null, $forceDb = false )
+    public function getPeers( $vlan = null, $protocol = 6, $asn = null, $forceDb = true )
     {
         $key = "pm_sessions_{$vlan}_{$protocol}";
 
@@ -64,8 +64,8 @@ class BGPSessionData extends EntityRepository
             throw new \IXP_Exception( 'Invalid protocol' );
           
         $x= $this->getEntityManager()->getRepository( '\Entities\Vlan' )->find( $vlan );
-
-
+         
+        
         if( $vlan !== null && !( $evlan = $this->getEntityManager()->getRepository( '\Entities\Vlan' )->find( $vlan ) ) )
             throw new \IXP_Exception( "无效 protocol:$protocol vlan:$vlan VLAN/Invalid VLAN" );
             
