@@ -30,8 +30,10 @@
  */
 function smarty_modifier_asnumber( $value )
 {
+//https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AS63598
+
     return '<a href="#cb' . $value . '" '
-        . 'onClick=\'$.colorbox({href:"https://apps.db.ripe.net/search/query.html?searchtext=as'
+        . 'onClick=\'$.colorbox({href:"https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AS'
             . $value . '", iframe: true, width: "75%", height: "75%"});'
             . 'return false;\'>' . $value . '</a>';
 }

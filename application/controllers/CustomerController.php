@@ -167,6 +167,8 @@ class CustomerController extends IXP_Controller_FrontEnd
      */
     protected function listGetData( $id = null )
     {
+
+
         $qb = $this->getD2EM()->createQueryBuilder()
                 ->select( 'c.id AS id, c.name AS name, c.shortname AS shortname, c.type AS type,
                             c.autsys AS autsys, c.maxprefixes AS maxprefixes, c.peeringemail AS peeringemail,
@@ -245,6 +247,8 @@ class CustomerController extends IXP_Controller_FrontEnd
      */
     public function overviewAction()
     {
+
+        
         $this->view->netinfo   = $this->getD2EM()->getRepository( '\\Entities\\NetworkInfo' )->asVlanProtoArray();
         $this->view->cust      = $cust = $this->_loadCustomer();
         $this->view->tab       = $this->getParam( 'tab', false );
