@@ -34,7 +34,7 @@ function smarty_modifier_asnumber( $value )
 
     return '<a href="#cb' . $value . '" '
         . 'onClick=\'$.colorbox({href:"https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AS'
-            . $value . '", iframe: true, width: "75%", height: "75%"});'
+            . $value . '", title:'.'"<a class=btn-primary>ASN'. $value.'</a>"' .', iframe: true, width: "75%", height: "75%"});'
             . 'return false;\'>' . $value . '</a>';
 }
 
