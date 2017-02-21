@@ -1,3 +1,8 @@
+{assign var=keys value='/,\s*/'|preg_split:'Bits,Packets,Bytes'}
+{assign var=vals value='/,\s*/'|preg_split:'bits,pkts,bytes'}
+{assign var=categories value=$keys|@array_combine:$vals}
+
+
 {tmplinclude file="header.phtml"}
 
 {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
@@ -102,7 +107,7 @@
     </td>
     <td width="20"></td>
     <td valign="middle">
-        <input class="btn" type="submit" value="Submit &raquo;" />
+        <input class="btn" type="submit" value="BSubmit &raquo;" />
     </td>
     </tr>
 </table>

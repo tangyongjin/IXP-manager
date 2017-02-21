@@ -161,6 +161,33 @@ sflow-to-rrd:
 
 
 
+<div class="well">
+<h3>internal error while talking to rrdcached </h3>
+<pre>
+ 权限问题:
+ /etc/hosts.allow
+
+ sshd:ALL
+ rrdcached:localhost
+ 
+</pre>
+</div>
+
+
+<div class="well">
+<h3>测试sflow 6343端口</h3>
+<pre>
+      echo -n "foo" | nc -4u -w1   114.113.88.2  6343
+
+</pre>
+</div>
+
+
+ 
+
+
+
+
 
 
 {if not isset( $user ) or $user->getPrivs() neq 3}

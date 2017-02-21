@@ -287,6 +287,8 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
     public function switchesAction()
     {
+
+
         $eSwitches = $this->getD2EM()->getRepository( '\\Entities\\Switcher' )->getAndCache( true, \Entities\Switcher::TYPE_SWITCH );
 
         $switches = [];
@@ -333,19 +335,27 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
      */
     public function p2pAction()
     {
+
+
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
 
         $this->setIXP( $cust );
         $category = $this->setCategory( 'category', true );
+        
+
+
         $period   = $this->setPeriod();
         $proto    = $this->setProtocol();
 
         // Find the possible VLAN interfaces that this customer has for the given IXP
         if( !count( $srcVlis = $this->view->srcVlis = $this->getD2R( '\\Entities\\VlanInterface' )->getForCustomer( $cust, $this->ixp ) ) )
         {
+
             $this->addMessage( 'There were no interfaces available for the given criteria. Returning to default view.' );
             $this->redirect( 'statistics/p2p' );
         }
+
+
 
         if( ( $svlid = $this->getParam( 'svli', false ) ) && isset( $srcVlis[ $svlid ] ) )
             $this->view->srcVli = $srcVli = $srcVlis[ $svlid ];
@@ -361,7 +371,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         if( !count( $dstVlis ) )
         {
             $this->addMessage( 'There were no other interfaces available for traffic exchange for the given criteria. Returning to default view.' );
-            $this->redirect( 'statistics/p2p' );
+          //  $this->redirect( 'statistics/p2p' );
         }
 
         if( ( $dvlid = $this->getParam( 'dvli', false ) ) && isset( $dstVlis[ $dvlid ] ) )
@@ -371,8 +381,10 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
         if( $dstVli )
         {
-            Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
-            $this->view->display( 'statistics/p2p-single.phtml' );
+
+           Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
+           $this->view->display( 'statistics/p2p-single.phtml' );
+        
         }
     }
 }

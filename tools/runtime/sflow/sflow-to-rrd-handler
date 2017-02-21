@@ -39,7 +39,7 @@ my $ixp = new IXPManager::Config;	# (configfile => $configfile);
 my $dbh = $ixp->{db};
 
 my $debug = defined($ixp->{ixp}->{debug}) ? $ixp->{ixp}->{debug} : 0;
-my $insanedebug = 0;
+my $insanedebug = 1;
 my $rrdcached = defined($ixp->{ixp}->{sflow_rrdcached}) ? $ixp->{ixp}->{sflow_rrdcached} : 1;
 my $sflowtool = defined($ixp->{ixp}->{sflowtool}) ? $ixp->{ixp}->{sflowtool} : '/usr/bin/sflowtool';
 my $sflowtool_opts = defined($ixp->{ixp}->{sflowtool_opts}) ? $ixp->{ixp}->{sflowtool_opts} : '-l';
@@ -68,6 +68,11 @@ if ($insanedebug) {
 
 my $mactable = reload_mactable($dbh);
 my $matrix = matrix_init($dbh);
+
+
+print Dumper ($matrix);
+
+
 
 my $execute_periodic = 0;
 my $quit_after_periodic = 0;

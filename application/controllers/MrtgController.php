@@ -39,6 +39,7 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
     
     public function preDispatch()
     {
+
         // there's no HTML output from this controller - just images
         Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
         
@@ -53,7 +54,7 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
 
     function errorAction()
     {
-        @readfile(
+        readfile(
                 APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
                 . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
                 . 'image-missing.png'
@@ -63,13 +64,17 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
     
     function retrieveImageAction()
     {
+
+         
+
+        
         $this->setIXP();
         $monitorindex = $this->getParam( 'monitorindex', 'aggregate' );
         $period       = $this->getParam( 'period', IXP_Mrtg::$PERIODS['Day'] );
         $shortname    = $this->getParam( 'shortname' );
         $category     = $this->getParam( 'category', IXP_Mrtg::$CATEGORIES['Bits'] );
         $graph        = $this->getParam( 'graph', '' );
-        
+ 
         
         $this->getLogger()->debug( "Request for {$shortname}-{$monitorindex}-{$category}-{$period}-{$graph} by {$this->getUser()->getUsername()}" );
 
@@ -99,13 +104,14 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
                 $monitorindex, $category, $shortname, $period
             );
         }
+ 
 
         $this->getLogger()->debug( "Serving {$filename} to {$this->getUser()->getUsername()}" );
 
-        if( @readfile( $filename ) === false )
+        if( readfile( $filename ) === false )
         {
             $this->getLogger()->notice( "Could not load {$filename} for mrtg/retrieveImageAction" );
-            @readfile(
+            readfile(
                 APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
                     . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
                     . 'image-missing.png'
@@ -119,7 +125,10 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
         
         $this->setIXP( $cust );
-        $category = $this->setCategory( 'category', false );
+
+        $category=$this->getParam( 'category') ;
+
+
         $period   = $this->setPeriod();
         $proto    = $this->setProtocol();
 
@@ -146,6 +155,12 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         $filename = IXP_Mrtg::getMrtgP2pFilePath( $this->ixp->getMrtgP2pPath(),
             $svli, $dvli, $category, $period, $proto
         );
+
+        // header( 'Content-Type: text' );
+        // echo $filename;
+        // die;
+
+
         
         $this->getLogger()->debug( "Serving P2P $filename to {$this->getUser()->getUsername()}" );
 

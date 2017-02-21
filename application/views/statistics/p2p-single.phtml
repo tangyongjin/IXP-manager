@@ -1,3 +1,12 @@
+{assign var=keys value='/,\s*/'|preg_split:'Bits,Packets,Bytes'}
+{assign var=vals value='/,\s*/'|preg_split:'bits,pkts,bytes'}
+{assign var=categories value=$keys|@array_combine:$vals}
+
+
+        
+       <!-- {$countries|@var_dump}  -->
+
+       
 {tmplinclude file="header.phtml"}
 
 {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
@@ -53,8 +62,13 @@
     <td width="20"></td>
     <td valign="middle"><strong>Graph Type:</strong></td>
     <td>
-        &nbsp;
+
+
         <select name="category" style="width: 100px;">
+           
+           
+            
+            
             {foreach from=$categories key=cname item=cvalue}
                 {if $cname neq 'Errors' and $cname neq 'Discards'}
                     <option value="{$cvalue}" {if $category eq $cvalue}selected{/if}>{$cname}</option>
@@ -75,7 +89,7 @@
     <td width="20"></td>
     <td valign="middle">
         {if isset( $dstVli )}<input type="hidden" name="dvli" value="{$dstVli->getId()}" />{/if}
-        <input class="btn" type="submit" value="Submit &raquo;" />
+        <input class="btn" type="submit" value="ASubmit &raquo;" />
     </td>
     </tr>
 </table>

@@ -30,6 +30,8 @@
 
 //set_include_path(get_include_path() . PATH_SEPARATOR . dirname( __FILE__ ) . "/../../library");
 
+
+
 set_include_path(get_include_path() . PATH_SEPARATOR . dirname( __FILE__ ) . "/../../library".PATH_SEPARATOR.'/opt/ixpmanager/vendor/zendframework/zendframework1/library/');
 require '/opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Config/Ini.php';
 //require '../../library/Zend/Config/Ini.php';
@@ -40,17 +42,9 @@ $config = new Zend_Config_Ini('../../application/configs/application.ini', scrip
 $dbopts = $config->resources->doctrine2->connection->options;
 
 
+//# Zend likes to use "pdo_driver" instead of "driver".  This confuses.
 
-  // echo '<pre>';
-  //  print_r($dbopts);
-  //   echo '</pre>';
-
-
-# Zend likes to use "pdo_driver" instead of "driver".  This confuses.
 $driver = $dbopts->driver;
-
-
-
 
 $driver = preg_replace('/^pdo_/', '', $driver);
 
@@ -60,8 +54,6 @@ $db = new PDO($driver.":host=".$dbopts->host.";dbname=".$dbopts->dbname, $dbopts
 
 
 $db->query('SET NAMES utf8 ');
-
-
 
 $sth = $db->query('
 SELECT DISTINCT
@@ -93,20 +85,41 @@ if (!$srcvli || !$dstvli || !is_numeric($custinfo[$srcvli]['vlan']) || !is_numer
 	die();
 }
 
-
-    // echo '<pre>';
-    // print_r($custinfo);
-    // echo '</pre>';
+ 
 
 $srcvliowner=$custinfo[$srcvli]['name'];
 $dstvliowner=$custinfo[$dstvli]['name'];
 
 // default to ipv4 if not otherwise specified
 $protocol = ($_REQUEST['protocol'] == 6) ? 6 : 4;
-$rrdtype = ($_REQUEST['type'] == 'pkts') ? 'pkts' : 'bytes';
+
+$rrdtype = $_REQUEST['type']; 
+
+
+// print_r($_REQUEST);die;
+
+
+if($rrdtype=='bits'){
+   $file_type='bytes' ;
+}
+
+if($rrdtype=='bytes'){
+   $file_type='bytes' ;
+}
+
+if($rrdtype=='pkts'){
+   $file_type='pkts' ;
+}
+
+
+	//== 'pkts') ? 'pkts' : 'bytes';
 
 # /data/ixpmatrix/ipv6/pkts/p2p/src-00043/p2p.ipv6.pkts.src-00043.dst-00131.rrd 
-$filename=sprintf ($config->sflow->rootdir."/ipv$protocol/$rrdtype/p2p/src-%05d/p2p.ipv$protocol.$rrdtype.src-%05d.dst-%05d.rrd", $srcvli, $srcvli, $dstvli);
+
+
+$filename=sprintf ($config->sflow->rootdir."/ipv$protocol/$file_type/p2p/src-%05d/p2p.ipv$protocol.$file_type.src-%05d.dst-%05d.rrd", $srcvli, $srcvli, $dstvli);
+
+$rrdfilename=$filename;
 
 // don't send error messages back to the end user (barryo)
 if( !is_readable( $filename ) )
@@ -136,22 +149,35 @@ $separated_maxima = ($timeperiod > 60*60*24*2) ? 1: 0;
 
 
 
-$multiplier =    ($rrdtype == 'bytes') ? 8 : 1;
+// $multiplier =    ($rrdtype == 'bytes') ? 8 : 1;
+
+$multiplier=1;
+
+if ( ($file_type=='bytes')&&( $rrdtype=='bits') ){
+ 
+    $multiplier=8;
+
+}
+
+// $multiplier =    ($rrdtype == 'bytes') ? 64 : 8;
 
 
 
 
 $options = array (
 //	'--daemon', isset( $config->sflow->rrd->rrdcached->sock ) ? $config->sflow->rrd->rrdcached->sock : null,
-//	'--font title:10:Courier',
+	// '--font title:10:Courier',
 	'--width=600',
 	'--height=150',
 	'--slope-mode',
 	'--lower-limit=0',
 	'--start=' . (time() - $timeperiod),
-	'--title='.$dstvliowner.' - '.$srcvliowner.' traffic - '.$config->identity->orgname.' '.$vlanname[$custinfo[$srcvli]['vlan']].' - IPv'.$protocol.'/'.$rrdtype,
-	'--vertical-label='.(($rrdtype == 'bytes') ? 'bits' : 'pkts' ).' / second',
-	'--watermark=Copyright '. date('Y') .' '.$config->identity->orgname.' -绘图/Cnix@IXP Manager: '.date('Y-m-d G:i:s'),
+	'--title='.$dstvliowner.' - '.$srcvliowner.' traffic - '.$config->identity->orgname.' '.$vlanname[$custinfo[$srcvli]['vlan']].' - IPv'.$protocol.'/'.$rrdtype.$multiplier,
+	
+	// '--vertical-label='.(($rrdtype == 'bytes') ? 'bits' : 'pkts' ).' / second',
+    '--vertical-label='.$rrdtype.'/second',
+
+	'--watermark=Copyright '. date('Y') .' '.$config->identity->orgname.$rrdfilename.'-'.date('Y-m-d G:i:s'),
 	'DEF:a='.$filename.':traffic_in:AVERAGE',
 	'DEF:b='.$filename.':traffic_in:MAX',
 	'DEF:c='.$filename.':traffic_out:AVERAGE',
@@ -194,7 +220,7 @@ $options[] = 'COMMENT:\s';
 $options[] = 'COMMENT:\s';
 $options[] = 'COMMENT:\s';
 
-$output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options);
+$output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options,$rrdfilename);
 
 if ($output) {
 	ob_start();
@@ -210,7 +236,7 @@ exit;
 # "-" as a filename.  Because of this, it cannot be used for inline image
 # generation.  So we need to write our own wrapper function, sigh.
 
-function ixpmanager_rrdgraph ($rrdtool, $filename, $options)
+function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
 {
 	/* clean up headers, session stuff, configure appropriate MIME stuff */
 	$args = '';
@@ -234,10 +260,11 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options)
 	$font_cfg=' ';
 
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
-    
-     // echo $cmdline;die;
-     
-	$fp = popen($cmdline, "r");
+ 	$fp = popen($cmdline, "r");
+
+ 	// echo $cmdline;
+ 	// die;
+
         	
 	if (isset($fp) && is_resource($fp)) {
 		$line = "";
