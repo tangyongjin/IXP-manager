@@ -1,0 +1,2 @@
+OPTIONS="-l unix:/var/run/rrdcached.sock  -s root -m 664 -b /media/ramedisk_ixp/rrd"
+RRDC_USER=root
