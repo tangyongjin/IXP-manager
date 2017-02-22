@@ -183,6 +183,22 @@ sflow-to-rrd:
 </div>
 
 
+<div class="well">
+<h3>Tips</h3>
+<pre>
+
+  Centos rrdtool 1.5.6 ,编译时候加上perl库的安装
+  ./configure  --with-perl-options= "PREFIX=/usr/local/share/perl5 INSTALL_BASE= LIB=/usr/lib64/perl5"
+   ---------------
+
+  unknow optione "--daemon" rrdtool 版本(rrdtool , rrdcached,  perl-rrd,etc)
+  Centos 6.5 缺省是 rrdtool-1.3.8
+
+</pre>
+</div>
+
+
+
  
 
 
@@ -195,3 +211,4 @@ sflow-to-rrd:
 {/if}
 
 {tmplinclude file="footer.phtml"}
+
