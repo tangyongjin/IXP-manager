@@ -107,6 +107,9 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
  
 
         $this->getLogger()->debug( "Serving {$filename} to {$this->getUser()->getUsername()}" );
+        
+
+ 
 
         if( readfile( $filename ) === false )
         {
@@ -156,18 +159,17 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
             $svli, $dvli, $category, $period, $proto
         );
 
-        // header( 'Content-Type: text' );
-        // echo $filename;
-        // die;
-
 
         
         $this->getLogger()->debug( "Serving P2P $filename to {$this->getUser()->getUsername()}" );
 
-        if( @readfile( $filename ) === false )
+        if( readfile( $filename ) === false )
         {
+            header( 'Content-Type: txt/html' );
+            echo "show png failed";
+            die;
             $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
-            @readfile(
+            readfile(
                 APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
                     . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
                     . '300x1.png'

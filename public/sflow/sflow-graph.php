@@ -32,6 +32,7 @@
 
 
 
+
 set_include_path(get_include_path() . PATH_SEPARATOR . dirname( __FILE__ ) . "/../../library".PATH_SEPARATOR.'/opt/ixpmanager/vendor/zendframework/zendframework1/library/');
 require '/opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Config/Ini.php';
 //require '../../library/Zend/Config/Ini.php';
@@ -112,12 +113,9 @@ if($rrdtype=='pkts'){
 }
 
 
-	//== 'pkts') ? 'pkts' : 'bytes';
-
-# /data/ixpmatrix/ipv6/pkts/p2p/src-00043/p2p.ipv6.pkts.src-00043.dst-00131.rrd 
-
 
 $filename=sprintf ($config->sflow->rootdir."/ipv$protocol/$file_type/p2p/src-%05d/p2p.ipv$protocol.$file_type.src-%05d.dst-%05d.rrd", $srcvli, $srcvli, $dstvli);
+
 
 $rrdfilename=$filename;
 
@@ -242,7 +240,6 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
 	$args = '';
 
 
-
 	foreach(array_keys ($options) as $key) {
 		# this is necessary both for sanity / security and
 		# compatibility with rrd_graph
@@ -261,9 +258,10 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
 
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
  	$fp = popen($cmdline, "r");
-
- 	// echo $cmdline;
- 	// die;
+  
+    // header( 'Content-Type: image/png' );
+    // echo $cmdline;
+    // die;
 
         	
 	if (isset($fp) && is_resource($fp)) {

@@ -1,9 +1,38 @@
-{tmplinclude file="header.phtml"}
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 15:47:22
+         compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
+<?php /*%%SmartyHeaderCode:166645539258ae936feb6d23-51093663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8463a3ea558614d781352091e58ed128fc8aae8c' => 
+    array (
+      0 => '/opt/ixpmanager/application/views/static/support.phtml',
+      1 => 1487836040,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '166645539258ae936feb6d23-51093663',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58ae936fed7389_71924511',
+  'variables' => 
+  array (
+    'user' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58ae936fed7389_71924511')) {function content_58ae936fed7389_71924511($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
+?><?php echo smarty_function_tmplinclude(array('file'=>"header.phtml"),$_smarty_tpl);?>
 
-{if isset( $user ) and $user->getPrivs() eq 3}
+
+<?php if (isset($_smarty_tpl->tpl_vars['user']->value)&&$_smarty_tpl->tpl_vars['user']->value->getPrivs()==3) {?>
     <ul class="breadcrumb">
         <li>
-            <a href="{genUrl}">Home</a> <span class="divider">/</span>
+            <a href="<?php echo smarty_function_genUrl(array(),$_smarty_tpl);?>
+">Home</a> <span class="divider">/</span>
         </li>
         <li>
             Documentation <span class="divider">/</span>
@@ -12,12 +41,12 @@
             Technical Support and Contact Information
         </li>
     </ul>
-{else}
+<?php } else { ?>
     <div class="page-content">
         <div class="page-header">
             <h1>Technical Support</h1>
         </div>
-{/if}
+<?php }?>
 
 
 
@@ -213,9 +242,11 @@ sysctl -w net.core.rmem_max=8388608
 
 
 
-{if not isset( $user ) or $user->getPrivs() neq 3}
+<?php if (!isset($_smarty_tpl->tpl_vars['user']->value)||$_smarty_tpl->tpl_vars['user']->value->getPrivs()!=3) {?>
     </div>
-{/if}
+<?php }?>
 
-{tmplinclude file="footer.phtml"}
+<?php echo smarty_function_tmplinclude(array('file'=>"footer.phtml"),$_smarty_tpl);?>
 
+
+<?php }} ?>
