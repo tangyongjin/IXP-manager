@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 12:27:56
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 21:38:09
          compiled from "/opt/ixpmanager/application/views/header-documentation.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:76295494258ae64ccab7b18-26406983%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '87d220c75bcf45f3416bb37ea8470f39158dc1f2' => 
     array (
       0 => '/opt/ixpmanager/application/views/header-documentation.phtml',
-      1 => 1487821144,
+      1 => 1487857085,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
   'unifunc' => 'content_58ae64ccabfb15_53605786',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58ae64ccabfb15_53605786')) {function content_58ae64ccabfb15_53605786($_smarty_tpl) {?><?php if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 ?><li class="dropdown">
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <li class="divider"></li>
         <li>
             <a href="<?php echo smarty_function_genUrl(array('controller'=>"index",'action'=>"about"),$_smarty_tpl);?>
-">About</a>
+">Docker操作</a>
         </li>
     </ul>
 </li>

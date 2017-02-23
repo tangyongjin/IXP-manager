@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 15:47:22
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 17:50:46
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:166645539258ae936feb6d23-51093663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1487836040,
+      1 => 1487842989,
       2 => 'file',
     ),
   ),
@@ -234,8 +234,18 @@ sysctl -w net.core.rmem_max=8388608
 </pre>
 </div>
 
+<div class="well">
+<h3>Docker配置文件</h3>
+<pre>
+
+
+/etc/systemd/system/docker.service.d/ixp.docker.conf
+
+</pre>
+</div>
 
  
+
 
 
 
