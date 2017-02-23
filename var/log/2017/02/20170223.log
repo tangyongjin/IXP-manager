@@ -1,0 +1,446 @@
+2017-02-23T12:18:46+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:18:46+08:00 DEBUG (7) [118.186.202.187]: 
+
+2017-02-23T12:18:46+08:00 DEBUG (7) [118.186.202.187]: ErrorController::errorAction()
+2017-02-23T12:18:46+08:00 ERR (3) [118.186.202.187]: 
+
+************************************************************************
+****************************** EXCEPTIONS *******************************
+************************************************************************
+
+--------------------------- EXCEPTION --------------------------
+
+Message: unable to write file /opt/ixpmanager/application/../var/templates_c/wrt58ae62a680dbe4_23717189
+Line: 44
+File: /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_write_file.php
+
+Trace:
+
+#0 /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_template.php(200): Smarty_Internal_Write_File::writeFile('/opt/ixpmanager...', '<?php /* Smarty...', Object(Smarty))
+#1 /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_templatebase.php(149): Smarty_Internal_Template->compileTemplateSource()
+#2 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/View/Smarty.php(300): Smarty_Internal_TemplateBase->fetch('auth/login.phtm...')
+#3 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(912): OSS_View_Smarty->render('auth/login.phtm...')
+#4 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(933): Zend_Controller_Action_Helper_ViewRenderer->renderScript('auth/login.phtm...', NULL)
+#5 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(972): Zend_Controller_Action_Helper_ViewRenderer->render()
+#6 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#7 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#8 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('loginAction')
+#9 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php(105): Zend_Controller_Front->dispatch()
+#11 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php(384): Zend_Application_Bootstrap_Bootstrap->run()
+#12 /opt/ixpmanager/public/index.php(83): Zend_Application->run()
+#13 {main}
+
+Array
+(
+    [0] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Error.php
+            [line] => 78
+            [function] => compact_debug_backtrace
+            [class] => OSS_Debug
+        )
+
+    [1] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php
+            [line] => 516
+            [function] => errorAction
+            [class] => ErrorController
+        )
+
+    [2] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php
+            [line] => 308
+            [function] => dispatch
+            [class] => Zend_Controller_Action
+        )
+
+    [3] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php
+            [line] => 954
+            [function] => dispatch
+            [class] => Zend_Controller_Dispatcher_Standard
+        )
+
+    [4] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php
+            [line] => 105
+            [function] => dispatch
+            [class] => Zend_Controller_Front
+        )
+
+    [5] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php
+            [line] => 384
+            [function] => run
+            [class] => Zend_Application_Bootstrap_Bootstrap
+        )
+
+    [6] => Array
+        (
+            [file] => /opt/ixpmanager/public/index.php
+            [line] => 83
+            [function] => run
+            [class] => Zend_Application
+        )
+
+)
+
+
+------------------------
+
+HTTP_HOST : 114.113.88.2
+HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+HTTP_COOKIE: IXP_Manager=44r4tp71o05pcl485pm2nfkii4; PHPSESSID=i559jp5jnvrmaognrd4gdrpql6
+REMOTE_PORT: 65528
+REQUEST_METHOD: GET
+REQUEST_URI: /ixp/auth/login
+
+
+2017-02-23T12:18:49+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:18:49+08:00 DEBUG (7) [118.186.202.187]: 
+
+2017-02-23T12:18:49+08:00 DEBUG (7) [118.186.202.187]: ErrorController::errorAction()
+2017-02-23T12:18:49+08:00 ERR (3) [118.186.202.187]: 
+
+************************************************************************
+****************************** EXCEPTIONS *******************************
+************************************************************************
+
+--------------------------- EXCEPTION --------------------------
+
+Message: unable to write file /opt/ixpmanager/application/../var/templates_c/wrt58ae62a9235d83_34163683
+Line: 44
+File: /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_write_file.php
+
+Trace:
+
+#0 /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_template.php(200): Smarty_Internal_Write_File::writeFile('/opt/ixpmanager...', '<?php /* Smarty...', Object(Smarty))
+#1 /opt/ixpmanager/vendor/smarty/smarty/libs/sysplugins/smarty_internal_templatebase.php(149): Smarty_Internal_Template->compileTemplateSource()
+#2 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/View/Smarty.php(300): Smarty_Internal_TemplateBase->fetch('auth/login.phtm...')
+#3 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(912): OSS_View_Smarty->render('auth/login.phtm...')
+#4 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(933): Zend_Controller_Action_Helper_ViewRenderer->renderScript('auth/login.phtm...', NULL)
+#5 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/Helper/ViewRenderer.php(972): Zend_Controller_Action_Helper_ViewRenderer->render()
+#6 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#7 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#8 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('loginAction')
+#9 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php(105): Zend_Controller_Front->dispatch()
+#11 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php(384): Zend_Application_Bootstrap_Bootstrap->run()
+#12 /opt/ixpmanager/public/index.php(83): Zend_Application->run()
+#13 {main}
+
+Array
+(
+    [0] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Error.php
+            [line] => 78
+            [function] => compact_debug_backtrace
+            [class] => OSS_Debug
+        )
+
+    [1] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php
+            [line] => 516
+            [function] => errorAction
+            [class] => ErrorController
+        )
+
+    [2] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php
+            [line] => 308
+            [function] => dispatch
+            [class] => Zend_Controller_Action
+        )
+
+    [3] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php
+            [line] => 954
+            [function] => dispatch
+            [class] => Zend_Controller_Dispatcher_Standard
+        )
+
+    [4] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php
+            [line] => 105
+            [function] => dispatch
+            [class] => Zend_Controller_Front
+        )
+
+    [5] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php
+            [line] => 384
+            [function] => run
+            [class] => Zend_Application_Bootstrap_Bootstrap
+        )
+
+    [6] => Array
+        (
+            [file] => /opt/ixpmanager/public/index.php
+            [line] => 83
+            [function] => run
+            [class] => Zend_Application
+        )
+
+)
+
+
+------------------------
+
+HTTP_HOST : 114.113.88.2
+HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+HTTP_COOKIE: IXP_Manager=44r4tp71o05pcl485pm2nfkii4; PHPSESSID=i559jp5jnvrmaognrd4gdrpql6
+REMOTE_PORT: 65528
+REQUEST_METHOD: GET
+REQUEST_URI: /ixp/auth/login
+
+
+2017-02-23T12:19:20+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:19:20+08:00 DEBUG (7) [118.186.202.187]: 
+
+2017-02-23T12:19:20+08:00 DEBUG (7) [118.186.202.187]: ErrorController::errorAction()
+2017-02-23T12:19:20+08:00 ERR (3) [118.186.202.187]: 
+
+************************************************************************
+****************************** EXCEPTIONS *******************************
+************************************************************************
+
+--------------------------- EXCEPTION --------------------------
+
+Message: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Line: 36
+File: /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php
+
+Trace:
+
+#0 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(36): PDO->__construct('mysql:host=loca...', 'root', 'cnix@1234', Array)
+#1 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(47): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'root', 'cnix@1234', Array)
+#2 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(350): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', 'cnix@1234', Array)
+#3 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(627): Doctrine\DBAL\Connection->connect()
+#4 /opt/ixpmanager/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/BasicEntityPersister.php(691): Doctrine\DBAL\Connection->executeQuery('SELECT t0.usern...', Array, Array)
+#5 /opt/ixpmanager/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php(171): Doctrine\ORM\Persisters\BasicEntityPersister->load(Array, NULL, NULL, Array, 0, 1, NULL)
+#6 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Auth/Doctrine2Adapter.php(131): Doctrine\ORM\EntityRepository->findOneBy(Array)
+#7 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Auth.php(117): OSS_Auth_Doctrine2Adapter->authenticate()
+#8 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Auth.php(124): Zend_Auth->authenticate(Object(OSS_Auth_Doctrine2Adapter))
+#9 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php(516): AuthController->loginAction()
+#10 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('loginAction')
+#11 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php(105): Zend_Controller_Front->dispatch()
+#13 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php(384): Zend_Application_Bootstrap_Bootstrap->run()
+#14 /opt/ixpmanager/public/index.php(83): Zend_Application->run()
+#15 {main}
+
+Array
+(
+    [0] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Error.php
+            [line] => 78
+            [function] => compact_debug_backtrace
+            [class] => OSS_Debug
+        )
+
+    [1] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php
+            [line] => 516
+            [function] => errorAction
+            [class] => ErrorController
+        )
+
+    [2] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php
+            [line] => 308
+            [function] => dispatch
+            [class] => Zend_Controller_Action
+        )
+
+    [3] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php
+            [line] => 954
+            [function] => dispatch
+            [class] => Zend_Controller_Dispatcher_Standard
+        )
+
+    [4] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php
+            [line] => 105
+            [function] => dispatch
+            [class] => Zend_Controller_Front
+        )
+
+    [5] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php
+            [line] => 384
+            [function] => run
+            [class] => Zend_Application_Bootstrap_Bootstrap
+        )
+
+    [6] => Array
+        (
+            [file] => /opt/ixpmanager/public/index.php
+            [line] => 83
+            [function] => run
+            [class] => Zend_Application
+        )
+
+)
+
+
+------------------------
+
+HTTP_HOST : 114.113.88.2
+HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+HTTP_COOKIE: IXP_Manager=44r4tp71o05pcl485pm2nfkii4; PHPSESSID=i559jp5jnvrmaognrd4gdrpql6
+REMOTE_PORT: 49153
+REQUEST_METHOD: POST
+REQUEST_URI: /ixp/auth/login
+
+
+2017-02-23T12:23:38+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:23:38+08:00 DEBUG (7) [118.186.202.187]: 
+
+2017-02-23T12:23:38+08:00 DEBUG (7) [118.186.202.187]: ErrorController::errorAction()
+2017-02-23T12:23:38+08:00 ERR (3) [118.186.202.187]: 
+
+************************************************************************
+****************************** EXCEPTIONS *******************************
+************************************************************************
+
+--------------------------- EXCEPTION --------------------------
+
+Message: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Line: 36
+File: /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php
+
+Trace:
+
+#0 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(36): PDO->__construct('mysql:host=loca...', 'root', 'cnix@1234', Array)
+#1 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(47): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'root', 'cnix@1234', Array)
+#2 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(350): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', 'cnix@1234', Array)
+#3 /opt/ixpmanager/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(627): Doctrine\DBAL\Connection->connect()
+#4 /opt/ixpmanager/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/BasicEntityPersister.php(691): Doctrine\DBAL\Connection->executeQuery('SELECT t0.usern...', Array, Array)
+#5 /opt/ixpmanager/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php(171): Doctrine\ORM\Persisters\BasicEntityPersister->load(Array, NULL, NULL, Array, 0, 1, NULL)
+#6 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Auth/Doctrine2Adapter.php(131): Doctrine\ORM\EntityRepository->findOneBy(Array)
+#7 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Auth.php(117): OSS_Auth_Doctrine2Adapter->authenticate()
+#8 /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Auth.php(124): Zend_Auth->authenticate(Object(OSS_Auth_Doctrine2Adapter))
+#9 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php(516): AuthController->loginAction()
+#10 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('loginAction')
+#11 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php(105): Zend_Controller_Front->dispatch()
+#13 /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php(384): Zend_Application_Bootstrap_Bootstrap->run()
+#14 /opt/ixpmanager/public/index.php(83): Zend_Application->run()
+#15 {main}
+
+Array
+(
+    [0] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/opensolutions/oss-framework/src/OSS/Controller/Trait/Error.php
+            [line] => 78
+            [function] => compact_debug_backtrace
+            [class] => OSS_Debug
+        )
+
+    [1] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Action.php
+            [line] => 516
+            [function] => errorAction
+            [class] => ErrorController
+        )
+
+    [2] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Dispatcher/Standard.php
+            [line] => 308
+            [function] => dispatch
+            [class] => Zend_Controller_Action
+        )
+
+    [3] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Controller/Front.php
+            [line] => 954
+            [function] => dispatch
+            [class] => Zend_Controller_Dispatcher_Standard
+        )
+
+    [4] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application/Bootstrap/Bootstrap.php
+            [line] => 105
+            [function] => dispatch
+            [class] => Zend_Controller_Front
+        )
+
+    [5] => Array
+        (
+            [file] => /opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Application.php
+            [line] => 384
+            [function] => run
+            [class] => Zend_Application_Bootstrap_Bootstrap
+        )
+
+    [6] => Array
+        (
+            [file] => /opt/ixpmanager/public/index.php
+            [line] => 83
+            [function] => run
+            [class] => Zend_Application
+        )
+
+)
+
+
+------------------------
+
+HTTP_HOST : 114.113.88.2
+HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+HTTP_COOKIE: IXP_Manager=44r4tp71o05pcl485pm2nfkii4; PHPSESSID=i559jp5jnvrmaognrd4gdrpql6
+REMOTE_PORT: 49259
+REQUEST_METHOD: POST
+REQUEST_URI: /ixp/auth/login
+
+
+2017-02-23T12:27:16+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:16+08:00 INFO (6) [118.186.202.187]: jason logged in
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-23T12:27:56+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png for mrtg/retrieveImageAction
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-cnix-statistics by jason
+2017-02-23T12:27:56+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png to jason
+2017-02-23T12:27:56+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png for mrtg/retrieveImageAction
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-23T12:27:57+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png for mrtg/retrieveImageAction
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-cnix-statistics by jason
+2017-02-23T12:27:57+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png to jason
+2017-02-23T12:27:57+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png for mrtg/retrieveImageAction
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-23T12:27:58+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-aggregate_graph_name-bits-month.png for mrtg/retrieveImageAction
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Logger instantiated
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Request for X_Peering-aggregate-bits-month-cnix-statistics by jason
+2017-02-23T12:27:58+08:00 DEBUG (7) [118.186.202.187]: Serving /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png to jason
+2017-02-23T12:27:58+08:00 NOTICE (5) [118.186.202.187]: Could not load /media/ramedisk_ixp/mrtg/ixp_peering-cnix-statistics-bits-month.png for mrtg/retrieveImageAction

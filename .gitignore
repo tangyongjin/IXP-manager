@@ -1,7 +1,0 @@
-var/cache/*
-var/log/*
-var/meetings/*
-var/session/*
-var/templates_c/*
-var/tmp/*
-var/spool/*
