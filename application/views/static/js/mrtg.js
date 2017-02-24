@@ -1,5 +1,9 @@
 function re_generate_mrtg_cfg(){
-   url='http://'+document.domain+'/ixp/ajax.php'
+   
+    var timestamp = new Date();
+    alert('生成新的配置文件')
+
+    url='http://'+document.domain+'/ixp/ajax.php?t='+timestamp
     $.post(url).done(function(data){
       $('#mrtg_file').html('');
       $('#mrtg_file').html(data);

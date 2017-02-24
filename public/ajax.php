@@ -13,8 +13,11 @@
 // www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 
 
-$f1= exec('ls -l  /ixpdata/mrtgcfg/mrtg.cfg');
-$output = exec('/opt/ixpmanager/bin/ixptool.php -a statistics-cli.gen-mrtg-conf');
+
+exec("/opt/ixpmanager/bin/ixptool.php -a statistics-cli.gen-mrtg-conf  2>&1", $output, $return_var);
+// print_r($return_var);
+// print_r($output);
+
 
 echo htmlspecialchars(file_get_contents('/ixpdata/mrtgcfg/mrtg.cfg'));
 

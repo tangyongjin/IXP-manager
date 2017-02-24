@@ -208,14 +208,19 @@ sysctl -w net.core.rmem_max=8388608
 <div class="well">
 <h3>Docker配置文件</h3>
 <pre>
-
-
 /etc/systemd/system/docker.service.d/ixp.docker.conf
-
 </pre>
 </div>
 
  
+<div class="well">
+<h3>Docker管理者</h3>
+<pre>
+ docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</pre>
+</div>
+
+
 
 
 

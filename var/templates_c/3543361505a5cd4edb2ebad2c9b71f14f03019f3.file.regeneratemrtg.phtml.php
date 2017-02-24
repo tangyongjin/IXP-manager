@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 12:44:39
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 23:47:40
          compiled from "/opt/ixpmanager/application/views/static/regeneratemrtg.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:123790865558ae68b7353a37-89765766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3543361505a5cd4edb2ebad2c9b71f14f03019f3' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/regeneratemrtg.phtml',
-      1 => 1487821144,
+      1 => 1487864857,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58ae68b73c7bb6_04966725',
   'variables' => 
   array (
     'user' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae68b73c7bb6_04966725',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58ae68b73c7bb6_04966725')) {function content_58ae68b73c7bb6_04966725($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
@@ -58,9 +58,6 @@ if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application
 <br/><br/>
 
 <input class="btn"  id="recreate_mrtg_cfg" value="重新生成配置文件" type="submit">
-
-<input class="btn"  id="restart_mrtg" value="重新运行mrtg" type="submit">
-
 <br/>
 
 <pre><div id="mrtg_file"  class="well well-lg"></div></pre>
