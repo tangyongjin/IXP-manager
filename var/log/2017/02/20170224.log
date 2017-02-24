@@ -732,3 +732,440 @@
 2017-02-24T16:31:10+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
 2017-02-24T16:31:10+08:00 DEBUG (7) [106.2.238.133]: Request for shijihulian-1-bits-day- by jason
 2017-02-24T16:31:10+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-aggregate-bits-day- by jason
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-19-bits-day- by jason
+2017-02-24T16:43:18+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-19-bits-day.png to jason
+2017-02-24T16:43:21+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:21+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:22+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:22+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:22+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:22+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:23+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:23+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=4&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:23+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:23+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:24+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:24+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:24+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:24+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:25+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:25+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:25+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:25+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:26+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:26+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:26+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:26+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:27+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:27+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=8&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:27+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:27+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=6&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:28+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:28+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=13&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:28+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:28+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=15&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:29+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:29+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=12&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:29+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:29+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=2&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:30+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:30+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:30+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:30+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=9&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:34+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:34+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=week to jason
+2017-02-24T16:43:35+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:35+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=year to jason
+2017-02-24T16:43:35+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:35+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:36+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:36+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=month to jason
+2017-02-24T16:43:37+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:37+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:37+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:37+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:38+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=4&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-bits-day- by jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-day.png to jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-18-bits-day- by jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-18-bits-day.png to jason
+2017-02-24T16:43:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:38+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-bits-day- by jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-day.png to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-bits-week- by jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-week.png to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-bits-month- by jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-month.png to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-bits-year- by jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-year.png to jason
+2017-02-24T16:43:39+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:39+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:40+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:40+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-pkts-day- by jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-day.png to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-pkts-week- by jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-week.png to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-pkts-year- by jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-year.png to jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-aggregate-pkts-month- by jason
+2017-02-24T16:43:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-month.png to jason
+2017-02-24T16:43:42+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:42+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:42+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:42+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=6&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:43+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:43+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=13&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:43+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:43+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=12&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:44+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:44+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=8&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:44+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:44+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=2&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:45+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:45+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=15&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:45+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:45+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=9&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:46+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:43:46+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=day to jason
+2017-02-24T16:43:49+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:49+08:00 DEBUG (7) [106.2.238.133]: Request for zhld-18-bits-day- by jason
+2017-02-24T16:43:49+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/zhld/zhld-18-bits-day.png to jason
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-day- by jason
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-day.png to jason
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-1-bits-day- by jason
+2017-02-24T16:43:56+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-1-bits-day.png to jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-day- by jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-day.png to jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-week- by jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-week.png to jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-month- by jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-month.png to jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-year- by jason
+2017-02-24T16:43:58+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-year.png to jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-day- by jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-day.png to jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-week- by jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-week.png to jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-month- by jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-month.png to jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-year- by jason
+2017-02-24T16:44:02+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-year.png to jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-day- by jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-day.png to jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-week- by jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-week.png to jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-month- by jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-month.png to jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-bits-year- by jason
+2017-02-24T16:44:08+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-year.png to jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-day- by jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-day.png to jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-week- by jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-week.png to jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-month- by jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-month.png to jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Request for leshi-aggregate-pkts-year- by jason
+2017-02-24T16:44:11+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-year.png to jason
+2017-02-24T16:44:17+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:17+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-bits-day- by jason
+2017-02-24T16:44:17+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-day.png to jason
+2017-02-24T16:44:18+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:18+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-1-bits-day- by jason
+2017-02-24T16:44:18+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-1-bits-day.png to jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-bits-day- by jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-day.png to jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-bits-week- by jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-week.png to jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-bits-month- by jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-month.png to jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-bits-year- by jason
+2017-02-24T16:44:19+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-year.png to jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-pkts-day- by jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-day.png to jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-pkts-week- by jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-week.png to jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-pkts-month- by jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-month.png to jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Request for hongweixinda-aggregate-pkts-year- by jason
+2017-02-24T16:44:22+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-year.png to jason
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-bits-day- by jason
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-day.png to jason
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-1-bits-day- by jason
+2017-02-24T16:44:37+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-1-bits-day.png to jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-bits-day- by jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-day.png to jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-bits-week- by jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-week.png to jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-bits-year- by jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-year.png to jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-bits-month- by jason
+2017-02-24T16:44:40+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-month.png to jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-pkts-day- by jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-pkts-day.png to jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-pkts-month- by jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-pkts-month.png to jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-pkts-week- by jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-pkts-week.png to jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Request for sohu-aggregate-pkts-year- by jason
+2017-02-24T16:44:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-pkts-year.png to jason
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-bits-day- by jason
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-day.png to jason
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-1-bits-day- by jason
+2017-02-24T16:44:49+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-1-bits-day.png to jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-bits-day- by jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-day.png to jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-bits-week- by jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-week.png to jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-bits-month- by jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-month.png to jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-bits-year- by jason
+2017-02-24T16:44:50+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-year.png to jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-pkts-day- by jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-day.png to jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-pkts-week- by jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-week.png to jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-pkts-month- by jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-month.png to jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Request for fzkd-aggregate-pkts-year- by jason
+2017-02-24T16:44:53+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-year.png to jason
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-0-bits-day- by jason
+2017-02-24T16:45:20+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-0-bits-day.png to jason
+2017-02-24T16:45:23+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:23+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-24T16:45:23+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-bits-week- by jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-week.png to jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-bits-month- by jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-month.png to jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-bits-year- by jason
+2017-02-24T16:45:24+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-year.png to jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-pkts-day- by jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-day.png to jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-pkts-week- by jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-week.png to jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-pkts-month- by jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-month.png to jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Request for kuntime-aggregate-pkts-year- by jason
+2017-02-24T16:45:27+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-year.png to jason
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-bits-day- by jason
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-19-bits-day- by jason
+2017-02-24T16:45:39+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-19-bits-day.png to jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-bits-day- by jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-bits-week- by jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-week.png to jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-bits-month- by jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-month.png to jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-bits-year- by jason
+2017-02-24T16:45:41+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-year.png to jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-pkts-day- by jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-day.png to jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-pkts-week- by jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-week.png to jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-pkts-year- by jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-year.png to jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Request for baidu-aggregate-pkts-month- by jason
+2017-02-24T16:45:43+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-month.png to jason
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-1-bits-day- by jason
+2017-02-24T16:46:21+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-1-bits-day.png to jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-bits-week- by jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-week.png to jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-bits-month- by jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-month.png to jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-bits-year- by jason
+2017-02-24T16:46:23+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-year.png to jason
+2017-02-24T16:46:24+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:24+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-pkts-day- by jason
+2017-02-24T16:46:24+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-day.png to jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-pkts-month- by jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-month.png to jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-pkts-week- by jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-week.png to jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Logger instantiated
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Request for alibaba-aggregate-pkts-year- by jason
+2017-02-24T16:46:25+08:00 DEBUG (7) [106.2.238.133]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-year.png to jason
+2017-02-24T16:47:51+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:47:51+08:00 INFO (6) [61.49.172.4]: jason logged out
+2017-02-24T16:47:57+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:47:57+08:00 INFO (6) [61.49.172.4]: jason logged in
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-month-cnix-statistics by jason
+2017-02-24T16:47:58+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-cnix-statistics-bits-month.png to jason
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Request for cctv-aggregate-bits-day- by jason
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/cctv/cctv-aggregate-bits-day.png to jason
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Request for cctv-1-bits-day- by jason
+2017-02-24T16:48:10+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/cctv/cctv-1-bits-day.png to jason
+2017-02-24T16:48:11+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:11+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:12+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:12+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:12+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:12+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:13+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:13+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:13+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:13+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:14+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:14+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:14+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:14+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:15+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:15+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:15+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:15+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:16+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:16+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=4&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-aggregate-bits-day- by jason
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-19-bits-day- by jason
+2017-02-24T16:48:20+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-19-bits-day.png to jason
+2017-02-24T16:48:22+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:22+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:22+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:22+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:23+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:23+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:23+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:23+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=4&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:24+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:24+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:24+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:24+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:25+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:25+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:25+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:25+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:26+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:26+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:26+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:26+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:27+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:27+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:27+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:27+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=8&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:28+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:28+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=6&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:28+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:28+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=12&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:29+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:29+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=13&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:29+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:29+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=2&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:30+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:30+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=1&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:30+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:30+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=15&protocol=4&type=bits&period=day to jason
+2017-02-24T16:48:31+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-24T16:48:31+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=5&dstvli=9&protocol=4&type=bits&period=day to jason

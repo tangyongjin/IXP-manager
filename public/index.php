@@ -21,6 +21,9 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
+
+date_default_timezone_set('Asia/Chongqing');
+
 require_once( __DIR__ . '/../vendor/autoload.php' );
 
 if( file_exists( '../MAINT_MODE_ENABLED' ) )
