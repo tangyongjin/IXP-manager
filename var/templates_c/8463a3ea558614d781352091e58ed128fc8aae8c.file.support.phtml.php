@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 23:42:18
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 03:49:42
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:166645539258ae936feb6d23-51093663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1487864532,
+      1 => 1488052177,
       2 => 'file',
     ),
   ),
@@ -249,6 +249,32 @@ sysctl -w net.core.rmem_max=8388608
 </pre>
 </div>
 
+
+<div class="well">
+<h3>Schema管理</h3>
+<pre>
+
+
+数据库配置文件:
+/opt/ixpmanager/doctrine/schema
+
+重新生成步骤:
+https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
+
+./doctrine2-cli.php orm:validate-schema
+./doctrine2-cli.php orm:schema-tool:update --dump-sql
+./doctrine2-cli.php orm:schema-tool:update --force
+
+
+/etc/init.d/memcached restart    # (or as appropriate for your system)
+./doctrine2-cli.php orm:generate-entities ../application/
+./doctrine2-cli.php orm:generate-proxies
+./doctrine2-cli.php orm:generate-repositories ../application/
+
+
+
+</pre>
+</div>
 
 
 

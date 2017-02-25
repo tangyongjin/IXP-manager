@@ -129,10 +129,22 @@ class CustomerNote extends \Entities\CustomerNote implements \Doctrine\ORM\Proxy
         return parent::getUpdated();
     }
 
+    public function setFixxx($fixxx)
+    {
+        $this->__load();
+        return parent::setFixxx($fixxx);
+    }
+
+    public function getFixxx()
+    {
+        $this->__load();
+        return parent::getFixxx();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'private', 'title', 'note', 'created', 'updated', 'id', 'Customer');
+        return array('__isInitialized__', 'private', 'title', 'note', 'created', 'updated', 'fixxx', 'id', 'Customer');
     }
 
     public function __clone()

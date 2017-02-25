@@ -26,4 +26,28 @@ PING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.
 --- 210.51.7.11 ping statistics ---
 2 packets transmitted, 0 received, 100% packet loss, time 1006ms
 
+root@ixp:~# send: sending "ping -c 2 210.51.7.11  \r" to { exp6 }
+
+expect: does " " (spawn_id exp6) match glob pattern "#"? no
+ping -c 
+expect: does " ping -c " (spawn_id exp6) match glob pattern "#"? no
+2 210.51.7.
+expect: does " ping -c 2 210.51.7." (spawn_id exp6) match glob pattern "#"? no
+11  
+
+expect: does " ping -c 2 210.51.7.11  \r\n" (spawn_id exp6) match glob pattern "#"? no
+PING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.
+
+expect: does " ping -c 2 210.51.7.11  \r\nPING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.\r\n" (spawn_id exp6) match glob pattern "#"? no
+
+--- 210.51.7.11 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 999ms
+
+
+expect: does " ping -c 2 210.51.7.11  \r\nPING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.\r\n\r\n--- 210.51.7.11 ping statistics ---\r\n2 packets transmitted, 0 received, 100% packet loss, time 999ms\r\n\r\n" (spawn_id exp6) match glob pattern "#"? no
 root@ixp:~# 
+expect: does " ping -c 2 210.51.7.11  \r\nPING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.\r\n\r\n--- 210.51.7.11 ping statistics ---\r\n2 packets transmitted, 0 received, 100% packet loss, time 999ms\r\n\r\nroot@ixp:~# " (spawn_id exp6) match glob pattern "#"? yes
+expect: set expect_out(0,string) "#"
+expect: set expect_out(spawn_id) "exp6"
+expect: set expect_out(buffer) " ping -c 2 210.51.7.11  \r\nPING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.\r\n\r\n--- 210.51.7.11 ping statistics ---\r\n2 packets transmitted, 0 received, 100% packet loss, time 999ms\r\n\r\nroot@ixp:~#"
+send: sending "exit\r" to { exp6 }

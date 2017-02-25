@@ -1130,3 +1130,748 @@
 2017-02-25T19:00:40+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
 2017-02-25T19:00:40+08:00 DEBUG (7) [118.26.186.241]: Request for tencent2-aggregate-bits-month- by jason
 2017-02-25T19:00:40+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-month.png to jason
+2017-02-25T21:27:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:37+08:00 INFO (6) [221.222.31.254]: jason logged in
+2017-02-25T21:27:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:37+08:00 DEBUG (7) [221.222.31.254]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-25T21:27:37+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-25T21:27:38+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:38+08:00 DEBUG (7) [221.222.31.254]: Request for X_Peering-aggregate-bits-month-cnix-statistics by jason
+2017-02-25T21:27:38+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/ixp_peering-cnix-statistics-bits-month.png to jason
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:27:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-month- by jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-month.png to jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-year- by jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-year.png to jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-week- by jason
+2017-02-25T21:27:43+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-week.png to jason
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-0-bits-day- by jason
+2017-02-25T21:30:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-0-bits-day.png to jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-week- by jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-week.png to jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-month- by jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-month.png to jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-year- by jason
+2017-02-25T21:30:23+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-year.png to jason
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-bits-day- by jason
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-bits-day.png to jason
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-1-bits-day- by jason
+2017-02-25T21:30:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-1-bits-day.png to jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-bits-day- by jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-bits-day.png to jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-bits-week- by jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-bits-week.png to jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-bits-month- by jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-bits-month.png to jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-bits-year- by jason
+2017-02-25T21:30:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-bits-year.png to jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-pkts-day- by jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-pkts-day.png to jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-pkts-week- by jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-pkts-week.png to jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-pkts-month- by jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-pkts-month.png to jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-aggregate-pkts-year- by jason
+2017-02-25T21:30:53+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-aggregate-pkts-year.png to jason
+2017-02-25T21:31:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:02+08:00 DEBUG (7) [221.222.31.254]: Request for 21vianet-1-bits-day- by jason
+2017-02-25T21:31:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/21vianet/21vianet-1-bits-day.png to jason
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:31:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Request for aipu-aggregate-bits-day- by jason
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/aipu/aipu-aggregate-bits-day.png to jason
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Request for aipu-1-bits-day- by jason
+2017-02-25T21:31:07+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/aipu/aipu-1-bits-day.png to jason
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Request for cctv-aggregate-bits-day- by jason
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/cctv/cctv-aggregate-bits-day.png to jason
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Request for cctv-1-bits-day- by jason
+2017-02-25T21:31:08+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/cctv/cctv-1-bits-day.png to jason
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanshixun-aggregate-bits-day- by jason
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanshixun/guanghuanshixun-aggregate-bits-day.png to jason
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanshixun-1-bits-day- by jason
+2017-02-25T21:31:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanshixun/guanghuanshixun-1-bits-day.png to jason
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-aggregate-bits-day- by jason
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-aggregate-bits-day.png to jason
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-1-bits-day- by jason
+2017-02-25T21:31:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-1-bits-day.png to jason
+2017-02-25T21:31:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:13+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:31:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-week- by jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-week.png to jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-month- by jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-month.png to jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-year- by jason
+2017-02-25T21:31:14+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-year.png to jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-day- by jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-day.png to jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-month- by jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-month.png to jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-week- by jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-week.png to jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-year- by jason
+2017-02-25T21:31:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-year.png to jason
+2017-02-25T21:31:34+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:34+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:31:34+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:31:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-aggregate-bits-day- by jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-aggregate-bits-day.png to jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-aggregate-bits-week- by jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-aggregate-bits-week.png to jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-aggregate-bits-month- by jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-aggregate-bits-month.png to jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Request for guanghuanxinwang-aggregate-bits-year- by jason
+2017-02-25T21:31:54+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/guanghuanxinwang/guanghuanxinwang-aggregate-bits-year.png to jason
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-bits-day- by jason
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-day.png to jason
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-1-bits-day- by jason
+2017-02-25T21:32:05+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-1-bits-day.png to jason
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Request for kuandaiyi-aggregate-bits-day- by jason
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuandaiyi/kuandaiyi-aggregate-bits-day.png to jason
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Request for kuandaiyi-1-bits-day- by jason
+2017-02-25T21:32:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuandaiyi/kuandaiyi-1-bits-day.png to jason
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-day- by jason
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-day.png to jason
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-1-bits-day- by jason
+2017-02-25T21:32:08+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-1-bits-day.png to jason
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-day- by jason
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-day.png to jason
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-1-bits-day- by jason
+2017-02-25T21:32:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-1-bits-day.png to jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-bits-day- by jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-day.png to jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-bits-week- by jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-week.png to jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-bits-month- by jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-month.png to jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-bits-year- by jason
+2017-02-25T21:32:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-year.png to jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-pkts-day- by jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-pkts-day.png to jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-pkts-week- by jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-pkts-week.png to jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-pkts-month- by jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-pkts-month.png to jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Request for ksyun-aggregate-pkts-year- by jason
+2017-02-25T21:32:16+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-pkts-year.png to jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-day- by jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-day.png to jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-week- by jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-week.png to jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-month- by jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-month.png to jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-bits-year- by jason
+2017-02-25T21:32:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-bits-year.png to jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-pkts-day- by jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-pkts-day.png to jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-pkts-week- by jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-pkts-week.png to jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-pkts-year- by jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-pkts-year.png to jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Request for tencent-aggregate-pkts-month- by jason
+2017-02-25T21:32:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent/tencent-aggregate-pkts-month.png to jason
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:32:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-week- by jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-week.png to jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-month- by jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-month.png to jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-bits-year- by jason
+2017-02-25T21:32:42+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-year.png to jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-day- by jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-day.png to jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-month- by jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-month.png to jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-week- by jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-week.png to jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Request for shijihulian-aggregate-pkts-year- by jason
+2017-02-25T21:32:44+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-pkts-year.png to jason
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-day- by jason
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-day.png to jason
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-1-bits-day- by jason
+2017-02-25T21:32:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-1-bits-day.png to jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-week- by jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-week.png to jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-month- by jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-month.png to jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-year- by jason
+2017-02-25T21:32:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-year.png to jason
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-day- by jason
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-day.png to jason
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-1-bits-day- by jason
+2017-02-25T21:32:57+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-1-bits-day.png to jason
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Request for yiantianxia-aggregate-bits-day- by jason
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/yiantianxia/yiantianxia-aggregate-bits-day.png to jason
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Request for yiantianxia-1-bits-day- by jason
+2017-02-25T21:32:58+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/yiantianxia/yiantianxia-1-bits-day.png to jason
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-bits-day- by jason
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-day.png to jason
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-1-bits-day- by jason
+2017-02-25T21:32:59+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-1-bits-day.png to jason
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-bits-day- by jason
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-day.png to jason
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-18-bits-day- by jason
+2017-02-25T21:33:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-18-bits-day.png to jason
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-bits-day- by jason
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-day.png to jason
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-1-bits-day- by jason
+2017-02-25T21:33:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-1-bits-day.png to jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-day- by jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-day.png to jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-week- by jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-week.png to jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-month- by jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-month.png to jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-bits-year- by jason
+2017-02-25T21:33:03+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-bits-year.png to jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-pkts-day- by jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-pkts-day.png to jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-pkts-week- by jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-pkts-week.png to jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-pkts-month- by jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-pkts-month.png to jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Request for tencent2-aggregate-pkts-year- by jason
+2017-02-25T21:33:06+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/tencent2/tencent2-aggregate-pkts-year.png to jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-bits-day- by jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-day.png to jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-bits-week- by jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-week.png to jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-bits-month- by jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-month.png to jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-bits-year- by jason
+2017-02-25T21:33:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-year.png to jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-pkts-day- by jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-pkts-day.png to jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-pkts-week- by jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-pkts-week.png to jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-pkts-month- by jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-pkts-month.png to jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Request for shanghaiyouchi-aggregate-pkts-year- by jason
+2017-02-25T21:33:18+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-pkts-year.png to jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-bits-day- by jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-day.png to jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-bits-week- by jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-week.png to jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-bits-month- by jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-month.png to jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-bits-year- by jason
+2017-02-25T21:33:27+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-bits-year.png to jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-pkts-day- by jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-day.png to jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-pkts-week- by jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-week.png to jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-pkts-month- by jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-month.png to jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Request for zhld-aggregate-pkts-year- by jason
+2017-02-25T21:33:30+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/zhld/zhld-aggregate-pkts-year.png to jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-bits-day- by jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-day.png to jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-bits-week- by jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-week.png to jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-bits-month- by jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-month.png to jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-bits-year- by jason
+2017-02-25T21:33:37+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-bits-year.png to jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-pkts-day- by jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-day.png to jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-pkts-week- by jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-week.png to jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-pkts-month- by jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-month.png to jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Request for leshi-aggregate-pkts-year- by jason
+2017-02-25T21:33:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/leshi/leshi-aggregate-pkts-year.png to jason
+2017-02-25T21:33:44+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:44+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-1-bits-day- by jason
+2017-02-25T21:33:44+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-1-bits-day.png to jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-bits-day- by jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-day.png to jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Request for sohu-aggregate-bits-day- by jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/sohu/sohu-aggregate-bits-day.png to jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Request for sohu-1-bits-day- by jason
+2017-02-25T21:33:45+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/sohu/sohu-1-bits-day.png to jason
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-1-bits-day- by jason
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-1-bits-day.png to jason
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-bits-day- by jason
+2017-02-25T21:33:47+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-day.png to jason
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-0-bits-day- by jason
+2017-02-25T21:33:48+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-0-bits-day.png to jason
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-bits-day- by jason
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-19-bits-day- by jason
+2017-02-25T21:33:49+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-19-bits-day.png to jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-bits-day- by jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-day.png to jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-bits-week- by jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-week.png to jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-bits-month- by jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-month.png to jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-bits-year- by jason
+2017-02-25T21:33:50+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-bits-year.png to jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-pkts-day- by jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-day.png to jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-pkts-week- by jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-week.png to jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-pkts-month- by jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-month.png to jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Request for hongweixinda-aggregate-pkts-year- by jason
+2017-02-25T21:33:52+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/hongweixinda/hongweixinda-aggregate-pkts-year.png to jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-bits-day- by jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-day.png to jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-bits-week- by jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-week.png to jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-bits-month- by jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-month.png to jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-bits-year- by jason
+2017-02-25T21:34:00+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-bits-year.png to jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-pkts-day- by jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-day.png to jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-pkts-week- by jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-week.png to jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-pkts-year- by jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-year.png to jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Request for fzkd-aggregate-pkts-month- by jason
+2017-02-25T21:34:02+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/fzkd/fzkd-aggregate-pkts-month.png to jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-week- by jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-week.png to jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-month- by jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-month.png to jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-bits-year- by jason
+2017-02-25T21:34:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-year.png to jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-pkts-day- by jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-day.png to jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-pkts-month- by jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-month.png to jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-pkts-week- by jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-week.png to jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Request for kuntime-aggregate-pkts-year- by jason
+2017-02-25T21:34:12+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-pkts-year.png to jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-bits-day- by jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-bits-week- by jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-week.png to jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-bits-month- by jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-month.png to jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-bits-year- by jason
+2017-02-25T21:34:22+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-year.png to jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-pkts-day- by jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-day.png to jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-pkts-week- by jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-week.png to jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-pkts-month- by jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-month.png to jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Request for baidu-aggregate-pkts-year- by jason
+2017-02-25T21:34:25+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-pkts-year.png to jason
+2017-02-25T21:34:38+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:38+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T21:34:38+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-1-bits-day- by jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-1-bits-day.png to jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-week- by jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-week.png to jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-month- by jason
+2017-02-25T21:34:39+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-month.png to jason
+2017-02-25T21:34:40+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:40+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-year- by jason
+2017-02-25T21:34:40+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-year.png to jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-day- by jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-day.png to jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-week- by jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-week.png to jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-year- by jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-year.png to jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-month- by jason
+2017-02-25T21:34:41+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-month.png to jason
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-1-bits-day- by jason
+2017-02-25T21:35:09+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-1-bits-day.png to jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-week- by jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-week.png to jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-month- by jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-month.png to jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-year- by jason
+2017-02-25T21:35:11+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-year.png to jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-day- by jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-day.png to jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-week- by jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-week.png to jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-month- by jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-month.png to jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-year- by jason
+2017-02-25T21:35:13+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-year.png to jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-week- by jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-week.png to jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-month- by jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-month.png to jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-bits-year- by jason
+2017-02-25T21:35:15+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-year.png to jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-day- by jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-day.png to jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-week- by jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-week.png to jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-month- by jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-month.png to jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Logger instantiated
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Request for alibaba-aggregate-pkts-year- by jason
+2017-02-25T21:36:29+08:00 DEBUG (7) [221.222.31.254]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-pkts-year.png to jason
+2017-02-25T21:40:49+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:40:49+08:00 DEBUG (7) [118.26.186.241]: Request for tencent2-1-bits-day- by jason
+2017-02-25T21:40:49+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/tencent2/tencent2-1-bits-day.png to jason
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Request for shijihulian-aggregate-bits-day- by jason
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-aggregate-bits-day.png to jason
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Request for shijihulian-1-bits-day- by jason
+2017-02-25T21:40:55+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/shijihulian/shijihulian-1-bits-day.png to jason
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Request for ksyun-aggregate-bits-day- by jason
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/ksyun/ksyun-aggregate-bits-day.png to jason
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Request for ksyun-1-bits-day- by jason
+2017-02-25T21:41:50+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/ksyun/ksyun-1-bits-day.png to jason
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Request for shanghaiyouchi-1-bits-day- by jason
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-1-bits-day.png to jason
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Request for shanghaiyouchi-aggregate-bits-day- by jason
+2017-02-25T21:42:00+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/shanghaiyouchi/shanghaiyouchi-aggregate-bits-day.png to jason
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Request for kuntime-aggregate-bits-day- by jason
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/kuntime/kuntime-aggregate-bits-day.png to jason
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Request for kuntime-0-bits-day- by jason
+2017-02-25T21:42:08+08:00 DEBUG (7) [118.26.186.241]: Serving /ixpdata/mrtg/members/kuntime/kuntime-0-bits-day.png to jason
+2017-02-25T21:42:16+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:16+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:16+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:16+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:17+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:17+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:17+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:17+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:18+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:18+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=4&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:18+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:18+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:19+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:19+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:19+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:19+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:20+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:20+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:20+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:20+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:21+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:21+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:22+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:22+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=8&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:22+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:22+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=6&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:23+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:23+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=13&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:23+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:23+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=12&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:24+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:24+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=15&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:24+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:24+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=2&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:25+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:25+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=9&protocol=4&type=bits&period=day to jason
+2017-02-25T21:42:25+08:00 DEBUG (7) [118.26.186.241]: Logger instantiated
+2017-02-25T21:42:25+08:00 DEBUG (7) [118.26.186.241]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=1&dstvli=5&protocol=4&type=bits&period=day to jason
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-aggregate-bits-day- by jason
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-aggregate-bits-day.png to jason
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Request for baidu-19-bits-day- by jason
+2017-02-25T23:11:44+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/baidu/baidu-19-bits-day.png to jason
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Request for alibaba-aggregate-bits-day- by jason
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/alibaba/alibaba-aggregate-bits-day.png to jason
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Request for alibaba-1-bits-day- by jason
+2017-02-25T23:12:35+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/members/alibaba/alibaba-1-bits-day.png to jason
+2017-02-25T23:12:37+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:37+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=10&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:38+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=16&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:38+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=20&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:39+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:39+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=4&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:39+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:39+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=17&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:40+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=18&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:40+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=3&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:41+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:41+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=19&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:41+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:41+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=14&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:42+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:42+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=7&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:42+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:42+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=11&protocol=4&type=bits&period=day to jason
+2017-02-25T23:12:43+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:12:43+08:00 DEBUG (7) [61.49.172.4]: Serving P2P http://127.0.0.1/ixp/sflow/sflow-graph.php?srcvli=9&dstvli=8&protocol=4&type=bits&period=day to jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-day-aggregate_graph_name by jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-day.png to jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-week-aggregate_graph_name by jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-week.png to jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-year-aggregate_graph_name by jason
+2017-02-25T23:20:31+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-year.png to jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Request for X_SwitchAggregate-aggregate-bits-day-114.113.88.21 by jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/switches/switch-aggregate-114.113.88.21-bits-day.png to jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Request for X_SwitchAggregate-aggregate-bits-week-114.113.88.21 by jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/switches/switch-aggregate-114.113.88.21-bits-week.png to jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Request for X_SwitchAggregate-aggregate-bits-month-114.113.88.21 by jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/switches/switch-aggregate-114.113.88.21-bits-month.png to jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Request for X_SwitchAggregate-aggregate-bits-year-114.113.88.21 by jason
+2017-02-25T23:20:38+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/switches/switch-aggregate-114.113.88.21-bits-year.png to jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-day-aggregate_graph_name by jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-day.png to jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-week-aggregate_graph_name by jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-week.png to jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-month-aggregate_graph_name by jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-month.png to jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Logger instantiated
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Request for X_Peering-aggregate-bits-year-aggregate_graph_name by jason
+2017-02-25T23:36:40+08:00 DEBUG (7) [61.49.172.4]: Serving /ixpdata/mrtg/ixp_peering-aggregate_graph_name-bits-year.png to jason

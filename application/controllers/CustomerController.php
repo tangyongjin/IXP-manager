@@ -378,7 +378,6 @@ class CustomerController extends IXP_Controller_FrontEnd
                 $this->loadIxpById( $form->getValue( "ixp" ) )
             );
         }
-
         return $this->_setReseller( $form, $object );
     }
 
@@ -539,7 +538,6 @@ class CustomerController extends IXP_Controller_FrontEnd
             $form->assignEntityToForm( $object->getRegistrationDetails(), $this );
             $form->updateCancelLocation( OSS_Utils::genUrl( 'customer', 'overview', null, [ 'id' => $object->getId() ] ) );
         }
-
         return true;
      }
 

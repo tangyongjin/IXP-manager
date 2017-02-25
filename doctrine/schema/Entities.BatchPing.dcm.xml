@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Entities\BatchPing" table="batchping" tableName="batchping" repository-class="Repositories\BatchPing">
+    <id name="id" type="bigint">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="custid" type="integer" length="255" nullable="false"/>
+    <field name="sub_ip" type="string" length="255"  nullable="false"/>
+    <field name="packetloss" type="string" length="255"  nullable="false"/>
+    <field name="min_t" type="float" length="255"  nullable="false"/>
+    <field name="max_t" type="float" length="255"  nullable="false"/>
+    <field name="avg_t" type="float" length="255"  nullable="false"/>
+    <field name="mdev" type="float" length="255"  nullable="false"/>
+    <field name="pingdate" type="datetime" length="255"  nullable="false"/>
+
+  </entity>
+</doctrine-mapping>
+

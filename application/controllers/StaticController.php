@@ -61,7 +61,6 @@ class StaticController extends IXP_Controller_Action
     {
         // FIXME Add options to enforce authentication based on name of page
         // e,g, auth- or auth1/2/3-
-        
         if( substr( $method, -6 ) != 'Action' )
             throw new Zend_Exception( "Bad action in static controller" );
 
@@ -79,8 +78,14 @@ class StaticController extends IXP_Controller_Action
     {}
 
     public function regeneratemrtgAction()
-    {}
+    {
+        
+    }
 
+    public function regeneratemrtgAction2()
+    {
+        
+    }
 
 
     public function feesAction()

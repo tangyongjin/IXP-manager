@@ -221,6 +221,32 @@ sysctl -w net.core.rmem_max=8388608
 </div>
 
 
+<div class="well">
+<h3>Schema管理</h3>
+<pre>
+
+
+数据库配置文件:
+/opt/ixpmanager/doctrine/schema
+
+重新生成步骤:
+https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
+
+./doctrine2-cli.php orm:validate-schema
+./doctrine2-cli.php orm:schema-tool:update --dump-sql
+./doctrine2-cli.php orm:schema-tool:update --force
+
+
+/etc/init.d/memcached restart    # (or as appropriate for your system)
+./doctrine2-cli.php orm:generate-entities ../application/
+./doctrine2-cli.php orm:generate-proxies
+./doctrine2-cli.php orm:generate-repositories ../application/
+
+
+
+</pre>
+</div>
+
 
 
 
