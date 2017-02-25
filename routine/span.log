@@ -1,0 +1,29 @@
+ping -c 2 210.51.7.27  
+PING 210.51.7.27 (210.51.7.27) 56(84) bytes of data.
+64 bytes from 210.51.7.27: icmp_seq=1 ttl=115 time=2.75 ms
+64 bytes from 210.51.7.27: icmp_seq=2 ttl=115 time=2.46 ms
+
+--- 210.51.7.27 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 2.467/2.609/2.751/0.142 ms
+root@ixp:~# ping -c 2 210.51.7.27  
+PING 210.51.7.27 (210.51.7.27) 56(84) bytes of data.
+64 bytes from 210.51.7.27: icmp_seq=1 ttl=115 time=2.74 ms
+64 bytes from 210.51.7.27: icmp_seq=2 ttl=115 time=2.54 ms
+
+--- 210.51.7.27 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 2.542/2.642/2.743/0.112 ms
+root@ixp:~# ping -c 2 210.51.7.11  
+PING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.
+
+--- 210.51.7.11 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1008ms
+
+root@ixp:~# ping -c 2 210.51.7.11  
+PING 210.51.7.11 (210.51.7.11) 56(84) bytes of data.
+
+--- 210.51.7.11 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1006ms
+
+root@ixp:~# 

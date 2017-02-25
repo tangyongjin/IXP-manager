@@ -22,7 +22,7 @@
  */
 
 
-date_default_timezone_set('Asia/Chongqing');
+//date_default_timezone_set('Asia/Chongqing');
 
 require_once( __DIR__ . '/../vendor/autoload.php' );
 

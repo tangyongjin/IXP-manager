@@ -434,9 +434,12 @@ class StatisticsCliController extends IXP_Controller_CliAction
 
         // Smarty has variable scope which OSS' skinning does not yet support so we need to use the native {include}
         // As such, we need to resolve here for skinning for these templates:
-        date_default_timezone_set('Asia/Chongqing');
+        //date_default_timezone_set('Asia/Chongqing');
 
-        $this->view->tyj_time=date("Y-m-d H:i:s");                           // 20010310
+        $this->view->tyj_time=date("Y-m-d H:i:s",time()+8*60*60);                           // 20010310
+
+        //echo date("Y-m-d H:i:s",time()+8*60*60); 
+
 
         
         $this->view->tmplMemberPort          = $this->view->resolveTemplate( 'statistics-cli/mrtg/member-port.cfg' );
