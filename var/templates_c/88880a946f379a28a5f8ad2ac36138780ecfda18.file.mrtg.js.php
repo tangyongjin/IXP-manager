@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-24 15:52:24
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:28
          compiled from "/opt/ixpmanager/application/views/static/js/mrtg.js" */ ?>
-<?php /*%%SmartyHeaderCode:33644147758ae68b73d27a4-75924299%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:131718279658b28c841b4291-77672488%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '33644147758ae68b73d27a4-75924299',
+  'nocache_hash' => '131718279658b28c841b4291-77672488',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae68b73d5f21_69960081',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b28c841b79c0_78459841',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae68b73d5f21_69960081')) {function content_58ae68b73d5f21_69960081($_smarty_tpl) {?>function re_generate_mrtg_cfg(){
+<?php if ($_valid && !is_callable('content_58b28c841b79c0_78459841')) {function content_58b28c841b79c0_78459841($_smarty_tpl) {?>function re_generate_mrtg_cfg(){
    
     var timestamp = new Date();
     alert('生成新的配置文件')

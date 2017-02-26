@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 12:45:12
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:54:30
          compiled from "/opt/ixpmanager/application/views/customer/overview-tabs/ports/physintstatus.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:133695624858ae68d8d09508-47222259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:182221611058b297c65bd465-07391573%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '133695624858ae68d8d09508-47222259',
+  'nocache_hash' => '182221611058b297c65bd465-07391573',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae68d8d1de67_60176532',
+  'unifunc' => 'content_58b297c65d1956_14565826',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae68d8d1de67_60176532')) {function content_58ae68d8d1de67_60176532($_smarty_tpl) {?><?php if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
+<?php if ($_valid && !is_callable('content_58b297c65d1956_14565826')) {function content_58b297c65d1956_14565826($_smarty_tpl) {?><?php if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 ?><?php if ($_smarty_tpl->tpl_vars['pi']->value&&!$_smarty_tpl->tpl_vars['pi']->value->statusIsConnected()) {?>
     <a href="<?php echo smarty_function_genUrl(array('controller'=>'physical-interface','action'=>'edit','id'=>$_smarty_tpl->tpl_vars['pi']->value->getId(),'vintid'=>$_smarty_tpl->tpl_vars['vi']->value->getId()),$_smarty_tpl);?>
 ">

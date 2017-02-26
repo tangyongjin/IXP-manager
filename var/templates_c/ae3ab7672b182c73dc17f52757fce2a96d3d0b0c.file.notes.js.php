@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 12:45:12
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:54:30
          compiled from "/opt/ixpmanager/application/views/customer/js/overview/notes.js" */ ?>
-<?php /*%%SmartyHeaderCode:122056643258ae68d8e40c82-29921537%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:118648124858b297c66ed689-66416318%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '122056643258ae68d8e40c82-29921537',
+  'nocache_hash' => '118648124858b297c66ed689-66416318',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae68d8e71982_91750469',
+  'unifunc' => 'content_58b297c671d414_70308937',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae68d8e71982_91750469')) {function content_58ae68d8e71982_91750469($_smarty_tpl) {?><?php if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
+<?php if ($_valid && !is_callable('content_58b297c671d414_70308937')) {function content_58b297c671d414_70308937($_smarty_tpl) {?><?php if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 ?>
 function coNotesOpenDialog( event ) {
 	$( "#co-notes-dialog" ).modal();

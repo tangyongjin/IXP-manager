@@ -43,30 +43,28 @@ class BatchPingController extends IXP_Controller_FrontEnd
         $this->assertPrivilege( \Entities\User::AUTH_SUPERUSER );
     
         $this->view->feParams = $this->_feParams = (object)[
-            'entity'        => '\\Entities\\ContactGroup',
-            'form'          => 'IXP_Form_ContactGroup',
-            'pagetitle'     => 'Contact Groups',
+            'entity'        => '\\Entities\\BatchPing',
+             'form'          => 'IXP_Form_ContactGroup',
+            'pagetitle'     => 'BatchPing',
         
-            'titleSingular' => 'Contact Group',
-            'nameSingular'  => 'a contact group',
+            'titleSingular' => 'BatchPing',
+            'nameSingular'  => 'ping item',
         
             'defaultAction' => 'list',                    // OPTIONAL; defaults to 'list'
         
-            'listOrderBy'    => 'name',
-            'listOrderByDir' => 'ASC',
+            'listOrderBy'    => 'id',
+            'listOrderByDir' => 'desc',
         
             'listColumns'    => [
-                'id'        => [ 'title' => 'UID', 'display' => false ],
-                'name'      => 'Name',
-                'type'        => [
-                    'title'          => 'Type',
-                    'type'           => self::$FE_COL_TYPES[ 'XLATE' ],
-                    'xlator'         => $this->_options['contact']['group']['types']
-                ],
-                'created'        => [
-                    'title'         => 'Created',
-                    'type'          => self::$FE_COL_TYPES[ 'DATETIME' ]
-                ]
+                'id'        => [ 'title' => '序列号', 'display' => false ],
+                'pingdate'=>'测试时间',
+                'custname'      => 'custname',
+                'sub_ip' =>'sub_ip',
+                'packetloss'=>'packetloss',
+                'min_t'=>'min_t',
+                'max_t'=>'max_t',
+                'avg_t'=>'avg_t',
+                'mdev'=>'mdev'
             ]
         ];
     
@@ -79,7 +77,6 @@ class BatchPingController extends IXP_Controller_FrontEnd
                 'description' => 'Description'
             ]
         );
-        
     }
     
     
@@ -91,12 +88,9 @@ class BatchPingController extends IXP_Controller_FrontEnd
     protected function listGetData( $id = null )
     {
 
-
-
-
-       
+  
         $qb = $this->getD2EM()->createQueryBuilder()
-            ->select( 'o.id AS id, 
+            ->select( 'o.id AS id, o.pingdate, o.id as custname, 
                     o.sub_ip AS sub_ip, o.packetloss AS packetloss,
                     o.min_t AS min_t, o.max_t AS max_t,o.avg_t AS avg_t,o.mdev AS mdev'
             )
@@ -130,7 +124,8 @@ class BatchPingController extends IXP_Controller_FrontEnd
      */
     protected function formPostProcess( $form, $object, $isEdit, $options = null, $cancelLocation = null )
     {
-        $form->getElement( 'type' )->setMultiOptions( $this->_options['contact']['group']['types'] );
+        return;
+        //$form->getElement( 'type' )->setMultiOptions( $this->_options['contact']['group']['types'] );
     }
     
     
@@ -144,11 +139,8 @@ class BatchPingController extends IXP_Controller_FrontEnd
      */
     protected function addPostValidate( $form, $group, $isEdit )
     {
-        if( !$isEdit )
-            $group->setCreated( new DateTime() );
-
-        return true;
-    }
+        return false;
+     }
     
 }
 

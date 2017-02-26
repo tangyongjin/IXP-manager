@@ -35,8 +35,14 @@ class StaticController extends IXP_Controller_Action
 {
 
 
+
+    
+
+
     public function preDispatch()
     {
+                    $this->_requireAuth();
+
         if( substr( $this->getRequest()->getActionName(), 0, 4 ) == 'auth' )
             $this->_requireAuth();
     }
@@ -69,13 +75,22 @@ class StaticController extends IXP_Controller_Action
 
 
     public function supportAction()
-    {}
+    {
+                $this->_requireAuth();
+
+    }
 
     public function exampleAction()
-    {}
+    {
+                $this->_requireAuth();
+
+    }
 
     public function example2Action()
-    {}
+    {
+                $this->_requireAuth();
+
+    }
 
     public function regeneratemrtgAction()
     {
@@ -84,7 +99,7 @@ class StaticController extends IXP_Controller_Action
 
     public function regeneratemrtgAction2()
     {
-        
+
     }
 
 

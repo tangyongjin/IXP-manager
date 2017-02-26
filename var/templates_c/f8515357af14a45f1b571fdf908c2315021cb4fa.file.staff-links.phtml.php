@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 12:27:56
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:28
          compiled from "/opt/ixpmanager/application/views/staff-links.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:30711313958ae64ccac1ce0-73721337%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:41944240358b28c840b7de0-52411113%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30711313958ae64ccac1ce0-73721337',
+  'nocache_hash' => '41944240358b28c840b7de0-52411113',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae64ccac3003_96695532',
+  'unifunc' => 'content_58b28c840b8fa1_69352052',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae64ccac3003_96695532')) {function content_58ae64ccac3003_96695532($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_58b28c840b8fa1_69352052')) {function content_58b28c840b8fa1_69352052($_smarty_tpl) {?>
 
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Staff Links<b class="caret"></b></a>
