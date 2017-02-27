@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:28
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-28 01:11:19
          compiled from "/opt/ixpmanager/application/views/static/js/mrtg.js" */ ?>
 <?php /*%%SmartyHeaderCode:131718279658b28c841b4291-77672488%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '88880a946f379a28a5f8ad2ac36138780ecfda18' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/js/mrtg.js',
-      1 => 1487922664,
+      1 => 1488215440,
       2 => 'file',
     ),
   ),
@@ -15,16 +15,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
   'unifunc' => 'content_58b28c841b79c0_78459841',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b28c841b79c0_78459841')) {function content_58b28c841b79c0_78459841($_smarty_tpl) {?>function re_generate_mrtg_cfg(){
    
     var timestamp = new Date();
     alert('生成新的配置文件')
 
-    url='http://'+document.domain+'/ixp/ajax.php?t='+timestamp
+    url='http://'+document.domain+'/ixp/ajax.php?action=create&t='+timestamp
     $.post(url).done(function(data){
       $('#mrtg_file').html('');
       $('#mrtg_file').html(data);
@@ -32,10 +32,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 }
 
 
-function restart_mrtg(){
+function view_mrtg_cfg(){
 
 
-alert('在属主机执行: docker-compose -f  /ixpdata/webapp/opt/ixpmanager/docker/docker-compose.yml stop mrtg&&docker-compose -f  /ixpdata/webapp/opt/ixpmanager/docker/docker-compose.yml start mrtg '); 
+ var timestamp = new Date();
+    alert('查看配置文件')
+
+    url='http://'+document.domain+'/ixp/ajax.php?action=preview&t='+timestamp
+    $.post(url).done(function(data){
+      $('#mrtg_file').html('');
+      $('#mrtg_file').html(data);
+    });
+
+
+}
+
+
+
+function refreshmac(){
+
+
+ var timestamp = new Date();
+    alert('刷新MAC地址')
+
+    url='http://'+document.domain+'/ixp/ajax.php?action=refreshmac&t='+timestamp
+    $.post(url).done(function(data){
+      $('#mrtg_file').html('');
+      $('#mrtg_file').html(data);
+    });
 
 
 }
@@ -48,9 +72,15 @@ $( 'document' ).ready( function(){
            re_generate_mrtg_cfg();
         });
 
-        $('#restart_mrtg').click(function(){
-           restart_mrtg();
+        $('#view_mrtg_cfg').click(function(){
+           view_mrtg_cfg();
         });
+
+          $('#refreshmac').click(function(){
+           refreshmac();
+        });
+
+
 
 
 

@@ -97,11 +97,6 @@ class StaticController extends IXP_Controller_Action
         
     }
 
-    public function regeneratemrtgAction2()
-    {
-
-    }
-
 
     public function feesAction()
     {

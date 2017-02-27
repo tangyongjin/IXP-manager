@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-23 13:33:50
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 18:00:11
          compiled from "/opt/ixpmanager/application/views/statistics/p2p-single.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:60806973458ae743edd4210-46170769%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:169107196158b2a72b522cf8-71730529%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '60806973458ae743edd4210-46170769',
+  'nocache_hash' => '169107196158b2a72b522cf8-71730529',
   'function' => 
   array (
   ),
@@ -43,9 +43,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae743eedc276_84879224',
+  'unifunc' => 'content_58b2a72b5c9532_31129898',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae743eedc276_84879224')) {function content_58ae743eedc276_84879224($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+<?php if ($_valid && !is_callable('content_58b2a72b5c9532_31129898')) {function content_58b2a72b5c9532_31129898($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 if (!is_callable('smarty_function_OSS_Message')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.OSS_Message.php';
 if (!is_callable('smarty_function_genMrtgP2pImgUrl')) include '/opt/ixpmanager/application/../library/inex-smarty/functions/function.genMrtgP2pImgUrl.php';

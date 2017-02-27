@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-24 16:39:59
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-27 03:40:52
          compiled from "/opt/ixpmanager/application/views/statistics-cli/mrtg/header.cfg" */ ?>
-<?php /*%%SmartyHeaderCode:46552011158ae668ad9ff87-38912104%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:42481169258b39fc42d6d43-70641082%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,20 +11,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '46552011158ae668ad9ff87-38912104',
+  'nocache_hash' => '42481169258b39fc42d6d43-70641082',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58ae668adb6165_77161962',
   'variables' => 
   array (
     'tyj_time' => 0,
     'options' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b39fc42efb25_15473810',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ae668adb6165_77161962')) {function content_58ae668adb6165_77161962($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/opt/ixpmanager/application/../vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_58b39fc42efb25_15473810')) {function content_58b39fc42efb25_15473810($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/opt/ixpmanager/application/../vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
 ?>
 #
 # IXP Manager MRTG configuration file

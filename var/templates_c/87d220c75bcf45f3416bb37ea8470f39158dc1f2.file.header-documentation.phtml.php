@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 17:08:46
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-28 01:15:18
          compiled from "/opt/ixpmanager/application/views/header-documentation.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:187498033158b28c840a9d89-43400882%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '87d220c75bcf45f3416bb37ea8470f39158dc1f2' => 
     array (
       0 => '/opt/ixpmanager/application/views/header-documentation.phtml',
-      1 => 1488100124,
+      1 => 1488215716,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <ul class="dropdown-menu">
 
         <li>
-            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"regeneratemrtg"),$_smarty_tpl);?>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"noc",'action'=>"regeneratemrtg"),$_smarty_tpl);?>
 ">生成MRTG配置文件</a>
         </li>
 
@@ -39,22 +39,40 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
         <li>
-            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
-">采集MAC地址(Underbuild)</a>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"noc",'action'=>"refreshmac"),$_smarty_tpl);?>
+">采集MAC地址</a>
         </li>
-<!-- 
+
         <li>
             <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
-">BatchPing(under build..)</a>
+">Feature1(under build..)</a>
         </li>
- -->
+
+
+        <li>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
+">Feature2(under build..)</a>
+        </li>
+
+
+
+        <li>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
+">Feature3(under build..)</a>
+        </li>
+
+
+
+
 
         
         <li class="divider"></li>
+
         <li>
-            <a href="<?php echo smarty_function_genUrl(array('controller'=>"index",'action'=>"about"),$_smarty_tpl);?>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"noc",'action'=>"docker"),$_smarty_tpl);?>
 ">Docker操作</a>
         </li>
+        
     </ul>
 </li>
 <?php }} ?>

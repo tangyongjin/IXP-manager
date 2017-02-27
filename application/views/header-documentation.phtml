@@ -3,7 +3,7 @@
     <ul class="dropdown-menu">
 
         <li>
-            <a href="{genUrl controller="static" action="regeneratemrtg"}">生成MRTG配置文件</a>
+            <a href="{genUrl controller="noc" action="regeneratemrtg"}">生成MRTG配置文件</a>
         </li>
 
 
@@ -15,18 +15,34 @@
 
 
         <li>
-            <a href="{genUrl controller="static" action="example"}">采集MAC地址(Underbuild)</a>
+            <a href="{genUrl controller="noc" action="refreshmac"}">采集MAC地址</a>
         </li>
-<!-- 
+
         <li>
-            <a href="{genUrl controller="static" action="example"}">BatchPing(under build..)</a>
+            <a href="{genUrl controller="static" action="example"}">Feature1(under build..)</a>
         </li>
- -->
+
+
+        <li>
+            <a href="{genUrl controller="static" action="example"}">Feature2(under build..)</a>
+        </li>
+
+
+
+        <li>
+            <a href="{genUrl controller="static" action="example"}">Feature3(under build..)</a>
+        </li>
+
+
+
+
 
         {* PLEASE LEAVE THIS SOMEWHERE!  IT'S ONLY FAIR INEX GETS SOME CREDIT :D *}
         <li class="divider"></li>
+
         <li>
-            <a href="{genUrl controller="index" action="about"}">Docker操作</a>
+            <a href="{genUrl controller="noc" action="docker"}">Docker操作</a>
         </li>
+        
     </ul>
 </li>
