@@ -8,7 +8,7 @@ class BatchPingController extends IXP_Controller_FrontEnd
      */
     protected function _feInit()
     {
-        $this->assertPrivilege( \Entities\User::AUTH_SUPERUSER );
+      //  $this->assertPrivilege( \Entities\User::AUTH_SUPERUSER );
     
         $this->view->feParams = $this->_feParams = (object)[
             'entity'        => '\\Entities\\BatchPing',
@@ -21,11 +21,18 @@ class BatchPingController extends IXP_Controller_FrontEnd
             'defaultAction' => 'list',                    // OPTIONAL; defaults to 'list'
         
             'listOrderBy'    => 'id',
-            'listOrderByDir' => 'desc',
+            'listOrderByDir' => 'DESC',
         
             'listColumns'    => [
-                'id'        => [ 'title' => '序列号', 'display' => false ],
-                'pingdate'=>'测试时间',
+                'id'        => [ 'title' => '序列号', 'display' => true ],
+               
+
+             'pingdate'       => [
+                    'title'     => 'pingdate',
+                    'type'      => self::$FE_COL_TYPES[ 'DATETIME' ]
+                ],
+
+
                 'custname'      => 'custname',
                 'sub_ip' =>'sub_ip',
                 'packetloss'=>'packetloss',
@@ -62,15 +69,9 @@ class BatchPingController extends IXP_Controller_FrontEnd
                     o.sub_ip AS sub_ip, o.packetloss AS packetloss,
                     o.min_t AS min_t, o.max_t AS max_t,o.avg_t AS avg_t,o.mdev AS mdev'
             )
-            ->from( '\\Entities\\BatchPing', 'o' );
+            ->from( '\\Entities\\BatchPing', 'o' )->orderBy('o.id', 'DESC');;
     
-
-        // if( isset( $this->_feParams->listOrderBy ) )
-        //     $qb->orderBy( $this->_feParams->listOrderBy, isset( $this->_feParams->listOrderByDir ) ? $this->_feParams->listOrderByDir : 'ASC' );
-
-        // if( $id !== null )
-        //     $qb->andWhere( 'o.id = ?2' )->setParameter( 2, $id );
-
+ 
         return $qb->getQuery()->getResult();
     }
     

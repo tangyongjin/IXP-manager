@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:48
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 02:39:29
          compiled from "/opt/ixpmanager/application/views/customer/list-postamble.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:52975443858b28c98ae6196-29859266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:206885880758b71561988b83-77981936%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0307547114122af557d34fa6f840b8c33355f2dc' => 
     array (
       0 => '/opt/ixpmanager/application/views/customer/list-postamble.phtml',
-      1 => 1487821144,
+      1 => 1488392551,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '52975443858b28c98ae6196-29859266',
+  'nocache_hash' => '206885880758b71561988b83-77981936',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b28c98af2310_20217416',
+  'unifunc' => 'content_58b71561994d83_88640083',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58b28c98af2310_20217416')) {function content_58b28c98af2310_20217416($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_58b71561994d83_88640083')) {function content_58b71561994d83_88640083($_smarty_tpl) {?>
 <?php if (isset($_smarty_tpl->tpl_vars['validCustomers']->value)) {?>
     <div class="modal hide fade" id="cust-assign-dialog">
         <div class="modal-header">

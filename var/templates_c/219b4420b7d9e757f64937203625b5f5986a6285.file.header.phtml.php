@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:27
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 02:39:22
          compiled from "/opt/ixpmanager/application/views/header.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:62361113358b28c83eb8be1-63807235%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:68321329758b7155a9be060-26252917%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '219b4420b7d9e757f64937203625b5f5986a6285' => 
     array (
       0 => '/opt/ixpmanager/application/views/header.phtml',
-      1 => 1487821144,
+      1 => 1488392551,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62361113358b28c83eb8be1-63807235',
+  'nocache_hash' => '68321329758b7155a9be060-26252917',
   'function' => 
   array (
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b28c84068412_09854570',
+  'unifunc' => 'content_58b7155aaadc38_25560970',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58b28c84068412_09854570')) {function content_58b28c84068412_09854570($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+<?php if ($_valid && !is_callable('content_58b7155aaadc38_25560970')) {function content_58b7155aaadc38_25560970($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 ?><?php echo smarty_function_tmplinclude(array('file'=>"header-base.phtml"),$_smarty_tpl);?>
 

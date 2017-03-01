@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:07:08
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 03:11:48
          compiled from "/opt/ixpmanager/application/views/error/error.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:2094967258b28cacf19359-91061343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:141400382058b71cf461b035-16588048%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c1fafbd0a766adf576f23360abcfefad9f6deece' => 
     array (
       0 => '/opt/ixpmanager/application/views/error/error.phtml',
-      1 => 1487821144,
+      1 => 1488392551,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2094967258b28cacf19359-91061343',
+  'nocache_hash' => '141400382058b71cf461b035-16588048',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b28cad003299_99955859',
+  'unifunc' => 'content_58b71cf4645845_36773485',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58b28cad003299_99955859')) {function content_58b28cad003299_99955859($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+<?php if ($_valid && !is_callable('content_58b71cf4645845_36773485')) {function content_58b71cf4645845_36773485($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_OSS_Message')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.OSS_Message.php';
 if (!is_callable('smarty_function_mailto')) include '/opt/ixpmanager/application/../vendor/smarty/smarty/libs/plugins/function.mailto.php';
 ?><?php echo smarty_function_tmplinclude(array('file'=>"header.phtml"),$_smarty_tpl);?>

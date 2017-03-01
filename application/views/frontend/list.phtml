@@ -54,14 +54,23 @@
     {if $listPreamble}{tmplinclude file=$listPreamble}{/if}
 
     {if count( $data )}
-    <table id='frontend-list-table' class="table hide">
+     
+    
+    <table id='frontend-list-table' class="table  ">
     
     <thead>
+
         <tr>
             {foreach $feParams->listColumns as $col => $cconf}
+
                 {if not is_array( $cconf ) or not isset( $cconf.display ) or $cconf.display}
+            
                     <th>{if is_array( $cconf )}{$cconf.title}{else}{$cconf}{/if}</th>
+            
                 {/if}
+            
+
+
             {/foreach}
             <th></th>
         </tr>
@@ -70,6 +79,7 @@
     <tbody>
         {foreach $data as $idx => $row}
         <tr>
+
             {foreach $feParams->listColumns as $col => $cconf}
                 {if not is_array( $cconf )}
                     <td>{$row.$col}</td>

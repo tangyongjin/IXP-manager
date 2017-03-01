@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 17:46:13
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 03:00:41
          compiled from "/opt/ixpmanager/application/views/admin/index.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:132265604358b2a3e5d20128-77305864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:111146243558b71a59989939-51568690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd556016874476ebd1d0d3d15ab32bef805b68b3b' => 
     array (
       0 => '/opt/ixpmanager/application/views/admin/index.phtml',
-      1 => 1487821144,
+      1 => 1488392551,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '132265604358b2a3e5d20128-77305864',
+  'nocache_hash' => '111146243558b71a59989939-51568690',
   'function' => 
   array (
   ),
@@ -39,9 +39,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b2a3e5df23f8_13019278',
+  'unifunc' => 'content_58b71a59a52009_34237792',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58b2a3e5df23f8_13019278')) {function content_58b2a3e5df23f8_13019278($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+<?php if ($_valid && !is_callable('content_58b71a59a52009_34237792')) {function content_58b71a59a52009_34237792($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 if (!is_callable('smarty_function_OSS_Message')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.OSS_Message.php';
 if (!is_callable('smarty_function_genMrtgGraphBox')) include '/opt/ixpmanager/application/../library/inex-smarty/functions/function.genMrtgGraphBox.php';

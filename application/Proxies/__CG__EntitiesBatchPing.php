@@ -42,75 +42,6 @@ class BatchPing extends \Entities\BatchPing implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
-    public function setTitle($title)
-    {
-        $this->__load();
-        return parent::setTitle($title);
-    }
-
-    public function getTitle()
-    {
-        $this->__load();
-        return parent::getTitle();
-    }
-
-    public function setNote($note)
-    {
-        $this->__load();
-        return parent::setNote($note);
-    }
-
-    public function getNote()
-    {
-        $this->__load();
-        return parent::getNote();
-    }
-
-    public function setCreated($created)
-    {
-        $this->__load();
-        return parent::setCreated($created);
-    }
-
-    public function getCreated()
-    {
-        $this->__load();
-        return parent::getCreated();
-    }
-
-    public function setUpdated($updated)
-    {
-        $this->__load();
-        return parent::setUpdated($updated);
-    }
-
-    public function getUpdated()
-    {
-        $this->__load();
-        return parent::getUpdated();
-    }
-
-    public function setFixxx($fixxx)
-    {
-        $this->__load();
-        return parent::setFixxx($fixxx);
-    }
-
-    public function getFixxx()
-    {
-        $this->__load();
-        return parent::getFixxx();
-    }
-
-    public function getId()
-    {
-        if ($this->__isInitialized__ === false) {
-            return $this->_identifier["id"];
-        }
-        $this->__load();
-        return parent::getId();
-    }
-
     public function setCustid($custid)
     {
         $this->__load();
@@ -205,6 +136,15 @@ class BatchPing extends \Entities\BatchPing implements \Doctrine\ORM\Proxy\Proxy
     {
         $this->__load();
         return parent::getPingdate();
+    }
+
+    public function getId()
+    {
+        if ($this->__isInitialized__ === false) {
+            return $this->_identifier["id"];
+        }
+        $this->__load();
+        return parent::getId();
     }
 
 

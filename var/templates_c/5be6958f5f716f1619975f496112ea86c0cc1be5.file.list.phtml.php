@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-02-26 16:06:30
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 03:02:04
          compiled from "/opt/ixpmanager/application/views/frontend/list.phtml" */ ?>
-<?php /*%%SmartyHeaderCode:38651669858b28c86395615-04611763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102862905058b7155d83d444-89961546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5be6958f5f716f1619975f496112ea86c0cc1be5' => 
     array (
       0 => '/opt/ixpmanager/application/views/frontend/list.phtml',
-      1 => 1487821144,
+      1 => 1488394923,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '38651669858b28c86395615-04611763',
+  'nocache_hash' => '102862905058b7155d83d444-89961546',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b7155d90f4b7_98075342',
   'variables' => 
   array (
     'user' => 0,
@@ -35,10 +37,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'listAddonScript' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b28c8646cee8_72406028',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58b28c8646cee8_72406028')) {function content_58b28c8646cee8_72406028($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
+<?php if ($_valid && !is_callable('content_58b7155d90f4b7_98075342')) {function content_58b7155d90f4b7_98075342($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
 if (!is_callable('smarty_function_OSS_Message')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.OSS_Message.php';
 if (!is_callable('smarty_modifier_date_format')) include '/opt/ixpmanager/application/../vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
@@ -109,9 +109,12 @@ if (!is_callable('smarty_modifier_date_format')) include '/opt/ixpmanager/applic
 <?php }?>
 
     <?php if (count($_smarty_tpl->tpl_vars['data']->value)) {?>
-    <table id='frontend-list-table' class="table hide">
+     
+    
+    <table id='frontend-list-table' class="table  ">
     
     <thead>
+
         <tr>
             <?php  $_smarty_tpl->tpl_vars['cconf'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cconf']->_loop = false;
  $_smarty_tpl->tpl_vars['col'] = new Smarty_Variable;
@@ -120,11 +123,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['cconf']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['cconf']->_loop = true;
  $_smarty_tpl->tpl_vars['col']->value = $_smarty_tpl->tpl_vars['cconf']->key;
 ?>
+
                 <?php if (!is_array($_smarty_tpl->tpl_vars['cconf']->value)||!isset($_smarty_tpl->tpl_vars['cconf']->value['display'])||$_smarty_tpl->tpl_vars['cconf']->value['display']) {?>
+            
                     <th><?php if (is_array($_smarty_tpl->tpl_vars['cconf']->value)) {?><?php echo $_smarty_tpl->tpl_vars['cconf']->value['title'];?>
 <?php } else { ?><?php echo $_smarty_tpl->tpl_vars['cconf']->value;?>
 <?php }?></th>
+            
                 <?php }?>
+            
+
+
             <?php } ?>
             <th></th>
         </tr>
@@ -139,6 +148,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
  $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['row']->key;
 ?>
         <tr>
+
             <?php  $_smarty_tpl->tpl_vars['cconf'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cconf']->_loop = false;
  $_smarty_tpl->tpl_vars['col'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['feParams']->value->listColumns; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

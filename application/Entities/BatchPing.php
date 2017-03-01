@@ -10,161 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
 class BatchPing
 {
     /**
-     * @var string
-     */
-    private $title;
-
-    /**
-     * @var string
-     */
-    private $note;
-
-    /**
-     * @var \DateTime
-     */
-    private $created;
-
-    /**
-     * @var \DateTime
-     */
-    private $updated;
-
-    /**
-     * @var \DateTime
-     */
-    private $fixxx;
-
-    /**
-     * @var integer
-     */
-    private $id;
-
-
-    /**
-     * Set title
-     *
-     * @param string $title
-     * @return BatchPing
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    
-        return $this;
-    }
-
-    /**
-     * Get title
-     *
-     * @return string 
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * Set note
-     *
-     * @param string $note
-     * @return BatchPing
-     */
-    public function setNote($note)
-    {
-        $this->note = $note;
-    
-        return $this;
-    }
-
-    /**
-     * Get note
-     *
-     * @return string 
-     */
-    public function getNote()
-    {
-        return $this->note;
-    }
-
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     * @return BatchPing
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-    
-        return $this;
-    }
-
-    /**
-     * Get created
-     *
-     * @return \DateTime 
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * Set updated
-     *
-     * @param \DateTime $updated
-     * @return BatchPing
-     */
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-    
-        return $this;
-    }
-
-    /**
-     * Get updated
-     *
-     * @return \DateTime 
-     */
-    public function getUpdated()
-    {
-        return $this->updated;
-    }
-
-    /**
-     * Set fixxx
-     *
-     * @param \DateTime $fixxx
-     * @return BatchPing
-     */
-    public function setFixxx($fixxx)
-    {
-        $this->fixxx = $fixxx;
-    
-        return $this;
-    }
-
-    /**
-     * Get fixxx
-     *
-     * @return \DateTime 
-     */
-    public function getFixxx()
-    {
-        return $this->fixxx;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-    /**
      * @var integer
      */
     private $custid;
@@ -203,6 +48,11 @@ class BatchPing
      * @var \DateTime
      */
     private $pingdate;
+
+    /**
+     * @var integer
+     */
+    private $id;
 
 
     /**
@@ -387,5 +237,15 @@ class BatchPing
     public function getPingdate()
     {
         return $this->pingdate;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

@@ -6,12 +6,13 @@
     </id>
     <field name="custid" type="integer" length="255" nullable="false"/>
     <field name="sub_ip" type="string" length="255"  nullable="false"/>
-    <field name="packetloss" type="string" length="255"  nullable="false"/>
+    <field name="packetloss" type="integer" length="255"  nullable="false"/>
     <field name="min_t" type="float" length="255"  nullable="false"/>
     <field name="max_t" type="float" length="255"  nullable="false"/>
     <field name="avg_t" type="float" length="255"  nullable="false"/>
     <field name="mdev" type="float" length="255"  nullable="false"/>
-    <field name="pingdate" type="datetime" length="255"  nullable="false"/>
+    <field name="pingdate"  type="datetime" nullable="false"/>
+    
 
   </entity>
 </doctrine-mapping>
