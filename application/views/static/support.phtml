@@ -248,11 +248,25 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </div>
 
 
+<div class="well">
+<h3>RawSql</h3>
+<pre>
+    $conn = $this->getD2EM()->getConnection();
+    $sql = " select  * from table ";
+    $stmt = $conn->prepare($sql);
+     
+    $stmt->execute();
+    return  $stmt->fetchAll();
+</pre>
+</div>
 
-
-
-
-
+<div class="well">
+<h3>Docker Debug</h3>
+<pre>
+    docker events&
+</pre>
+</div>
+      
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
     </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 02:44:15
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 17:20:16
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:203086688058b7167f1cc848-04594222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1488392551,
+      1 => 1488446415,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b7167f1e9107_04600917',
   'variables' => 
   array (
     'user' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b7167f1e9107_04600917',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b7167f1e9107_04600917')) {function content_58b7167f1e9107_04600917($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
@@ -277,8 +277,24 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </div>
 
 
+<div class="well">
+<h3>RawSql</h3>
+<pre>
 
 
+    $conn = $this->getD2EM()->getConnection();
+    $sql = " select  * from table ";
+    $stmt = $conn->prepare($sql);
+     
+    $stmt->execute();
+    return  $stmt->fetchAll();
+
+
+
+</pre>
+</div>
+
+      
 
 
 

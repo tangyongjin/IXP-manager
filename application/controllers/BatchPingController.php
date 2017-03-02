@@ -39,7 +39,6 @@ class BatchPingController extends IXP_Controller_FrontEnd
                 'min_t'=>'min_t',
                 'max_t'=>'max_t',
                 'avg_t'=>'avg_t',
-                'mdev'=>'mdev'
             ]
         ];
     
@@ -55,6 +54,20 @@ class BatchPingController extends IXP_Controller_FrontEnd
     }
     
     
+
+
+    public function list2Action()
+{
+    // $this->listGetData();
+
+    // $this->view->viewPreamble  = $this->_resolveTemplate( 'view-preamble.phtml'  );
+    // $this->view->viewPostamble = $this->_resolveTemplate( 'view-postamble.phtml' );
+    // $this->view->viewToolbar   = $this->_resolveTemplate( 'view-toolbar.phtml' );
+    // $this->view->viewScript    = $this->_resolveTemplate( 'js/view.js' );
+    // $this->_display( 'view.phtml' );
+
+}
+
     /**
      * Provide array of objects for the listAction and viewAction
      *
@@ -62,17 +75,27 @@ class BatchPingController extends IXP_Controller_FrontEnd
      */
     protected function listGetData( $id = null )
     {
-
-  
-        $qb = $this->getD2EM()->createQueryBuilder()
-            ->select( 'o.id AS id, o.pingdate, o.id as custname, 
-                    o.sub_ip AS sub_ip, o.packetloss AS packetloss,
-                    o.min_t AS min_t, o.max_t AS max_t,o.avg_t AS avg_t,o.mdev AS mdev'
-            )
-            ->from( '\\Entities\\BatchPing', 'o' )->orderBy('o.id', 'DESC');;
-    
  
-        return $qb->getQuery()->getResult();
+
+
+        $conn = $this->getD2EM()->getConnection();
+
+        //$sql = " select IF(packetloss>0,'red', 'blue') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
+        
+        $sql = " select IF(packetloss>0,'red', 'black') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
+        //$sql = " select IF(packetloss>0,'red', 'blue') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
+ 
+ 
+
+
+
+        $sql.= " from batchping order by id desc limit 100 ";
+        $stmt = $conn->prepare($sql);
+         
+        $stmt->execute();
+        return  $stmt->fetchAll();
+ 
+  
     }
     
      /**
