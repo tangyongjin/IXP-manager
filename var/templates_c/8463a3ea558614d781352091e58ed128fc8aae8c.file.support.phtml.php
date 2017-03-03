@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 17:20:16
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-03 00:13:20
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:203086688058b7167f1cc848-04594222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1488446415,
+      1 => 1488468792,
       2 => 'file',
     ),
   ),
@@ -280,24 +280,22 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 <div class="well">
 <h3>RawSql</h3>
 <pre>
-
-
     $conn = $this->getD2EM()->getConnection();
     $sql = " select  * from table ";
     $stmt = $conn->prepare($sql);
      
     $stmt->execute();
     return  $stmt->fetchAll();
-
-
-
 </pre>
 </div>
 
+<div class="well">
+<h3>Docker Debug</h3>
+<pre>
+    docker events&
+</pre>
+</div>
       
-
-
-
 
 <?php if (!isset($_smarty_tpl->tpl_vars['user']->value)||$_smarty_tpl->tpl_vars['user']->value->getPrivs()!=3) {?>
     </div>
