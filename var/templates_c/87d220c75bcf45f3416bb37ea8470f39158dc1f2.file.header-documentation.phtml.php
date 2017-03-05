@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-03 12:04:11
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-06 04:52:12
          compiled from "/opt/ixpmanager/application/views/header-documentation.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:12827255558b7155aaee857-42158566%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '87d220c75bcf45f3416bb37ea8470f39158dc1f2' => 
     array (
       0 => '/opt/ixpmanager/application/views/header-documentation.phtml',
-      1 => 1488513847,
+      1 => 1488747130,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <li>
             <a href="<?php echo smarty_function_genUrl(array('controller'=>"ticket",'action'=>"list"),$_smarty_tpl);?>
-">故障(under build..)</a>
+">故障(路由变化)</a>
         </li>
 
 

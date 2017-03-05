@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">  
+  <entity name="Entities\Ticket" table="ticket" tableName="ticket" repository-class="Repositories\Ticket"> 
+    <id name="id" type="bigint"> 
+      <generator strategy="AUTO"/> 
+    </id>  
+    <field name="sub_ip" type="string" length="255" nullable="yes"/>
+    <field name="msg" type="string" length="255" nullable="yes"/>
+    <field name="reason" type="string" length="255" nullable="yes"/>
+    <field name="memo" type="text" length="255" nullable="yes"/>
+    <field name="issuedate" type="datetime" nullable="yes"/>
+    <field name="fixed" type="string" length="255" nullable="yes"/>
+    <field name="fixedby" type="string" length="255" nullable="yes"/>
+    <field name="raisedby" type="string" length="255" nullable="yes"/>
+    <field name="custrelate" type="integer" length="255" nullable="yes"/>
+    <field name="custnamerelate" type="string" length="255" nullable="yes"/>
+    <field name="event_id" type="integer" length="255" nullable="yes"/>
+    <field name="rt_diff" type="text" length="255" nullable="yes"/>
+    <field name="price" type="float" length="255" nullable="yes"/> 
+  </entity> 
+</doctrine-mapping>

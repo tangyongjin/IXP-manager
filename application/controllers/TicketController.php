@@ -11,7 +11,7 @@ class TicketController extends IXP_Controller_FrontEnd
       //  $this->assertPrivilege( \Entities\User::AUTH_SUPERUSER );
     
         $this->view->feParams = $this->_feParams = (object)[
-            //'entity'        => '\\Entities\\Ticket',
+             'entity'        => '\\Entities\\Ticket',
              'form'          => 'IXP_Form_ContactGroup',
             'pagetitle'     => 'Ticket',
         
@@ -27,18 +27,17 @@ class TicketController extends IXP_Controller_FrontEnd
                 'id'        => [ 'title' => '序列号', 'display' => true ],
                
 
-             'pingdate'       => [
-                    'title'     => 'pingdate',
+             'issuedate'       => [
+                    'title'     => 'issuedate',
                     'type'      => self::$FE_COL_TYPES[ 'DATETIME' ]
                 ],
 
-
-                'custname'      => 'custname',
                 'sub_ip' =>'sub_ip',
-                'packetloss'=>'packetloss',
-                'min_t'=>'min_t',
-                'max_t'=>'max_t',
-                'avg_t'=>'avg_t',
+                'reason'      => 'reason',
+                //'memo' =>'memo',
+                'rt_diff' =>'rt_diff',
+                  
+              
             ]
         ];
     
@@ -64,14 +63,9 @@ class TicketController extends IXP_Controller_FrontEnd
     protected function listGetData( $id = null )
     {
  
-
-
         $conn = $this->getD2EM()->getConnection();
-
-        $sql = " select IF(packetloss>0,'red', 'black') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t   ";
-        $sql.= " from batchping order by id desc limit 100 ";
+        $sql = " select * from ticket   where  sub_ip <>'119.38.219.7' ";
         $stmt = $conn->prepare($sql);
-         
         $stmt->execute();
         return  $stmt->fetchAll();
  
