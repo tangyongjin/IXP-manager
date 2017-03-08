@@ -1,1 +1,5 @@
 cache/*
+session/*
+cache/*  
+log/*  
+templates_c/*
