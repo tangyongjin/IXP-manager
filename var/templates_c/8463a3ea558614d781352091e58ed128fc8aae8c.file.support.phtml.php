@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-03 00:13:20
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-08 23:01:34
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:203086688058b7167f1cc848-04594222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1488468792,
+      1 => 1488985291,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b7167f1e9107_04600917')) {function content_58b7167f1e9107_04600917($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
+if (!is_callable('smarty_function_fetch')) include '/opt/ixpmanager/application/../vendor/smarty/smarty/libs/plugins/function.fetch.php';
 ?><?php echo smarty_function_tmplinclude(array('file'=>"header.phtml"),$_smarty_tpl);?>
 
 
@@ -55,126 +56,54 @@ if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application
 <br /><br />
 
 <div class="well">
-<h3>Dockers </h3>
+<h3>Docker-Web</h3>
+ <pre>
+ <?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/web/Dockerfile.webframework'),$_smarty_tpl);?>
 
-    <table border="1">
-    <tr>
+</pre>
 
-        <td align="right"><strong>Dockername</strong></td>
-        <td>配置</td>
-        <td align="left">备注</td>
-    </tr>
-    <tr>
-        <td align="right"><strong>ixp.mrtg</strong></td>
-        <td>CONFFILE=/ixpdata/mrtgcfg/mrtg.cfg</td>
-        <td align="left">
-           
-           mrtg.cfg根据数据库配置生成<br/>
-           ixp.webframework运行时会自动生成配置文件.<br/>
-           也可以由ixpmanager菜单Action手工生成.
-            
-            
-        </td>
-    </tr>
-    <tr>
-        <td align="right"><strong>ixp.sflow</strong></td>
-        <td>/usr/local/etc/ixpmanager.conf</td>
-        <td align="left">
-           每5分钟更新数据库mactable一次.<br/>
-           &nbsp;&nbsp; */5 * * * * root  /usr/local/bin/update-l2database.pl
-           <br/>
-           supervisord.conf.sflow文件使用supervisord机制,运行:<br />
-           <pre style="padding:1px;margin:0px;">
+<h3>Docker-sflow</h3>
+ <pre>
+ <?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/sflow/Dockerfile.sflow'),$_smarty_tpl);?>
 
-[program:sflow-receiver]
- command =/usr/local/bin/sflowtool  -p 6343 -l -f 127.0.0.1/5500 -f 127.0.0.1/5501
+</pre>
 
-[program:sflow-to-rrd]
- priority=1004
- command =/usr/local/bin/sflow-to-rrd-handler
- startsecs=100
- autorestart=false
- startretries=10
+<h3>Docker-query</h3>
+ <pre>
+ <?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/query/dockerfile.query'),$_smarty_tpl);?>
+
+</pre>
 
 
-[program:sflow-detect-ixp-bgp-sessions]
- priority=1005
- command =/usr/local/bin/sflow-detect-ixp-bgp-sessions
- startsecs=100
- autorestart=false
- startretries=10
-            </pre>
+<h3>Docker-mrtg</h3>
+ <pre>
+ <?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/mrtg/Dockerfile.mrtg'),$_smarty_tpl);?>
 
-        </td>
-    </tr>
-    <tr>
-        <td align="right"><strong>ixp.webframework</strong></td>
-        <td>
-        /usr/local/etc/ixpmanager.conf <br/>
-        /etc/ixpmanager.conf
-        </td>
-        <td align="left">中文字体文件:<br/>
-        /usr/local/share/fonts/truetype/simhei/chinese.simhei.ttf
-        </td>
-    </tr>
-    </table>
+</pre>
+
+
+<h3>Docker-bird</h3>
+ <pre>
+ <?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/bird/Dockerfile.bird'),$_smarty_tpl);?>
+
+</pre>
 </div>
 
 
 <div class="well">
 <h3> docker-compose.yml </h3>
+
 <pre>
-version: '2'
-services:
 
-  mysql:
-    image: ixp.mysql
-    container_name: ixpmysql
-    ports:
-     - "3306:3306"
-    volumes:
-      - "/ixpdata/mysql/:/var/lib/mysql"
-    environment:
-      MYSQL_ROOT_PASSWORD: cnix@1234
+<?php echo smarty_function_fetch(array('file'=>'/ixpdata/webapp/opt/ixpmanager/docker/docker-compose.yml'),$_smarty_tpl);?>
 
-  web:
-    image: ixp.webframework
-    container_name: web
-    volumes:
-       - "/ixpdata/:/ixpdata"
-       - "/ixpdata/webapp/opt/:/opt"
-
-    depends_on:
-       -  mysql
-    ports:
-     - "80:80"
-    tty: true
-
-  sflow:
-    image: ixp.sflow
-    container_name: sflow
-    volumes:
-      - "/ixpdata/:/ixpdata"
-    depends_on:
-       -  mysql
-    ports:
-      - "6343:6343/udp"
-
-  mrtg:
-    image: ixp.mrtg
-    container_name: mrtg
-    volumes:
-      - "/ixpdata/:/ixpdata"
-    depends_on:
-       -  mysql
-       -  web
-    tty: true
 </pre>
 </div>
 
 
 <div class="well">
 <h3>Timeing </h3>
+
 <pre>
 
 mac地址表:
@@ -295,6 +224,20 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
     docker events&
 </pre>
 </div>
+
+<div class="well">
+<h3>Centos7 Open port</h3>
+<pre>
+  firewall-cmd --zone=public --add-port=80/tcp --permanent
+  firewall-cmd --reload
+
+</pre>
+</div>
+
+
+
+ 
+
       
 
 <?php if (!isset($_smarty_tpl->tpl_vars['user']->value)||$_smarty_tpl->tpl_vars['user']->value->getPrivs()!=3) {?>

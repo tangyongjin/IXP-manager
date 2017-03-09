@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 09:06:30
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-09 23:26:41
          compiled from "/opt/ixpmanager/application/views/auth/login.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:102004104658b7701603fcd2-32041783%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '66fb0c8d7dc732b014c9f647249e6764836ad374' => 
     array (
       0 => '/opt/ixpmanager/application/views/auth/login.phtml',
-      1 => 1488392551,
+      1 => 1489073199,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b77016058693_78860050',
   'variables' => 
   array (
     'options' => 0,
     'form' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b77016058693_78860050',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b77016058693_78860050')) {function content_58b77016058693_78860050($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_OSS_Message')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.OSS_Message.php';
@@ -33,7 +33,7 @@ if (!is_callable('smarty_function_mailto')) include '/opt/ixpmanager/application
 <div class="page-content">
 
     <div class="page-header">
-        <h1>Login to IXP Manager</h1>
+        <h1>Login to CNIX Manager</h1>
     </div>
 
 <?php echo smarty_function_OSS_Message(array(),$_smarty_tpl);?>
