@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-08 23:01:34
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-11 16:28:47
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:203086688058b7167f1cc848-04594222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1488985291,
+      1 => 1489217966,
       2 => 'file',
     ),
   ),
@@ -54,6 +54,34 @@ if (!is_callable('smarty_function_fetch')) include '/opt/ixpmanager/application/
 
 
 <br /><br />
+
+
+
+
+
+
+<div class="well">
+<h3>重要目录</h3>
+
+<pre>
+  /ixpdata/webapp/opt/ixpmanager/library/inex-smarty/functions
+
+-rw-r--r-- 1 root root 4395 Mar  2 02:22 function.genDoctrinePagerLinks.php
+-rw-r--r-- 1 root root 2250 Mar  2 02:22 function.genMrtgGraphBox.php
+-rw-r--r-- 1 root root  972 Mar  2 02:22 function.genMrtgImgUrl.php
+-rw-r--r-- 1 root root 1062 Mar  2 02:22 function.genMrtgImgUrlTag.php
+-rw-r--r-- 1 root root  997 Mar  2 02:22 function.genMrtgP2pImgUrl.php
+-rw-r--r-- 1 root root 1658 Mar  2 02:22 function.getMrtgStatistics.php
+-rw-r--r-- 1 root root 1180 Mar  2 02:22 function.mrtgScale.php
+-rw-r--r-- 1 root root 1341 Mar  2 02:22 modifier.asnumber.php
+-rw-r--r-- 1 root root  953 Mar  2 02:22 modifier.pmasn.php
+-rw-r--r-- 1 root root 1307 Mar  2 02:22 modifier.underline.php
+</pre>
+</div>
+
+
+
+
 
 <div class="well">
 <h3>Docker-Web</h3>
@@ -234,10 +262,7 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </pre>
 </div>
 
-
-
  
-
       
 
 <?php if (!isset($_smarty_tpl->tpl_vars['user']->value)||$_smarty_tpl->tpl_vars['user']->value->getPrivs()!=3) {?>

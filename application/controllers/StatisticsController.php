@@ -387,4 +387,159 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         
         }
     }
+
+public function ip2ipAction()
+    {
+
+
+
+         $shortname = $this->getParam( 'shortname', false );
+         $sql="select mac from  macaddress where virtualinterfaceid in ";
+         $sql.="(select virtualinterfaceid from view_vlaninterface_details_by_custid  where  custid in";
+         $sql.=" (select id as custid  from cust where  shortname='$shortname') ) ";
+
+        $conn = $this->getD2EM()->getConnection();
+        $xquery = $conn->prepare($sql);
+        $xquery->execute();
+
+        $rows=$xquery->fetchAll();
+        $mac=$rows[0]['mac'];
+
+        $destdir="/ixpdata/rrd/ip2ip/$mac/";
+        $ip_related=array();
+        $index=0;
+        $dir = new DirectoryIterator( $destdir);
+           foreach ($dir as $fileinfo) {
+            if (!$fileinfo->isDot()) {
+
+                $ip_related[]=$fileinfo->getFilename();
+                 // $ip_related[]= array('filename'=>$fileinfo->getFilename(),
+                 //                     'picurl'=>'http://127.0.0.1/sflow/ip2ip-graph.php'
+                 //                     );
+
+
+
+                $index++;
+                if($index>20){
+                    break;
+                }
+            }
+        }
+
+
+        $this->view->src_mac =$mac;
+        $this->view->ip_related =$ip_related;
+
+
+
+
+        $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
+
+        $this->setIXP( $cust );
+        $category = $this->setCategory( 'category', true );
+        
+
+
+        $period   = $this->setPeriod();
+        $proto    = $this->setProtocol();
+
+        // Find the possible VLAN interfaces that this customer has for the given IXP
+        if( !count( $srcVlis = $this->view->srcVlis = $this->getD2R( '\\Entities\\VlanInterface' )->getForCustomer( $cust, $this->ixp ) ) )
+        {
+
+            $this->addMessage( 'There were no interfaces available for the given criteria. Returning to default view.' );
+            $this->redirect( 'statistics/p2p' );
+        }
+
+
+
+        if( ( $svlid = $this->getParam( 'svli', false ) ) && isset( $srcVlis[ $svlid ] ) )
+            $this->view->srcVli = $srcVli = $srcVlis[ $svlid ];
+        else
+            $this->view->srcVli = $srcVli = $srcVlis[ array_keys( $srcVlis )[0] ];
+
+        // Now find the possible other VLAN interfaces that this customer could exchange traffic with
+        // (as well as removing the source vli)
+        $dstVlis = $this->getD2R( '\\Entities\\VlanInterface' )->getObjectsForVlan( $srcVli->getVlan() );
+        unset( $dstVlis[ $srcVli->getId() ] );
+        $this->view->dstVlis = $dstVlis;
+
+        if( !count( $dstVlis ) )
+        {
+            $this->addMessage( 'There were no other interfaces available for traffic exchange for the given criteria. Returning to default view.' );
+          //  $this->redirect( 'statistics/p2p' );
+        }
+
+        if( ( $dvlid = $this->getParam( 'dvli', false ) ) && isset( $dstVlis[ $dvlid ] ) )
+            $this->view->dstVli = $dstVli = $dstVlis[ $dvlid ];
+        else
+            $this->view->dstVli = $dstVli = false;
+
+        if( $dstVli )
+        {
+
+           Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
+           $this->view->display( 'statistics/p2p-single.phtml' );
+        
+        }
+    }
+
+
+    //   public function ip2ipAction()
+    // {
+
+    //      $shortname = $this->getParam( 'shortname', false );
+    //      $sql="select mac from  macaddress where virtualinterfaceid in ";
+    //      $sql.="(select virtualinterfaceid from view_vlaninterface_details_by_custid  where  custid in";
+    //      $sql.=" (select id as custid  from cust where  shortname='$shortname') ) ";
+
+    //     $conn = $this->getD2EM()->getConnection();
+    //     $xquery = $conn->prepare($sql);
+    //     $xquery->execute();
+
+    //     $rows=$xquery->fetchAll();
+    //     $mac=$rows[0]['mac'];
+
+    //     $destdir="/ixpdata/rrd/ip2ip/$mac/";
+    //     $ip_related=array();
+    //     $index=0;
+    //     $dir = new DirectoryIterator( $destdir);
+    //        foreach ($dir as $fileinfo) {
+    //         if (!$fileinfo->isDot()) {
+
+    //             $ip_related[]=$fileinfo->getFilename();
+    //             $index++;
+    //             if($index>20){
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+
+    //     $this->view->src_mac =$mac;
+    //     $this->view->ip_related =$ip_related;
+
+    //     //9c37f40cee9d =优克得
+        
+    //     $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
+    //     $this->setIXP( $cust );
+    //     $category = $this->setCategory( 'category', true );
+        
+    //     $period   = $this->setPeriod();
+    //     $proto    = $this->setProtocol();
+  
+    //     $this->view->period=$period;
+
+    //     $this->view->proto=$proto;
+    // }
+
+
+
+
+
+
+
+
+
+
 }

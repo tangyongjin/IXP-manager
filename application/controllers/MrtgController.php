@@ -44,6 +44,7 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
         
         header( 'Content-Type: image/png' );
+
         header( 'Expires: Thu, 01 Jan 1970 00:00:00 GMT' );
     }
 
@@ -176,4 +177,71 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
             );
         }
     }
+
+    function retrieveIp2ipImageAction()
+    {
+
+
+  
+     //  Zend_Controller_Action_HelperBroker::addHelper( 'viewRenderer' );
+       header("Content-Type: text/css;X-Content-Type-Options: nosniff;");
+
+              header( 'Expires: Thu, 01 Jan 1970 00:00:00 GMT' );
+
+       
+        $period   = $this->setPeriod();
+        $src_mac=$this->getParam( 'src_mac') ;
+        $dst_ip=$this->getParam('dst_ip');
+
+        
+        
+        $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
+        
+        $this->setIXP( $cust );
+
+        $category=$this->getParam( 'category') ;
+
+
+        $period   = $this->setPeriod();
+        $proto    = $this->setProtocol();
+
+        
+        
+
+        $ip2ip_graph_url="http://127.0.0.1/ixp/sflow/ip2ip-graph.php";
+
+
+        $filename = $ip2ip_graph_url."?src_mac=$src_mac&dst_ip=$dst_ip&category=$category&period=$period&proto=$proto";
+        // IXP_Mrtg::getMrtgP2pFilePath( $ip2ip_graph_url, $src_mac, $dst_ip, $category, $period, $proto );
+
+        echo $filename;
+        die;
+
+        
+        $this->getLogger()->debug( "Serving  ip2ip $filename to {$this->getUser()->getUsername()}" );
+
+        if( readfile( $filename ) === false )
+        {
+            header( 'Content-Type: txt/html' );
+            echo "show png failed";
+            die;
+            $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
+            readfile(
+                APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+                    . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
+                    . '300x1.png'
+            );
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

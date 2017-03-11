@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 09:07:07
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-11 15:16:05
          compiled from "/opt/ixpmanager/application/views/statistics/p2p-single.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:153728475658b7703b001bc0-68234792%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6aa96325cc7edc2b506eea6fe4f59f0a53375672' => 
     array (
       0 => '/opt/ixpmanager/application/views/statistics/p2p-single.phtml',
-      1 => 1488392551,
+      1 => 1489216561,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b7703b0a6db0_14972545',
   'variables' => 
   array (
     'keys' => 0,
@@ -42,8 +44,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'count' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b7703b0a6db0_14972545',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b7703b0a6db0_14972545')) {function content_58b7703b0a6db0_14972545($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';

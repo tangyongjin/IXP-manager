@@ -315,6 +315,7 @@ class IXP_Mrtg
      * @param array $params Array of parameters to make up the URL
      * @return string The URL
      */
+    
     public static function generateZendFrontendUrl( $params )
     {
         $url = Zend_Controller_Front::getInstance()->getBaseUrl();
@@ -323,6 +324,9 @@ class IXP_Mrtg
             $url .= '/mrtg/retrieve-p2p-image';
         else
             $url .= '/mrtg/retrieve-image';
+
+
+
 
         if( isset( $params['ixp'] ) && $params['ixp'] )
             $url .= "/ixp/{$params['ixp']}";
@@ -367,6 +371,78 @@ class IXP_Mrtg
 
         if( isset( $params['graph'] ) )
             $url .= "/graph/{$params['graph']}";
+
+        return $url;
+    }
+
+ 
+
+
+  public static function generateZendFrontendUrl_ip2ip( $params )
+    {
+        $url = Zend_Controller_Front::getInstance()->getBaseUrl();
+
+        if( isset( $params['p2p'] ) && $params['p2p'] )
+            $url .= '/mrtg/retrieve-ip2ip-image';
+        else
+            $url .= '/mrtg/retrieve-image';
+
+
+        if( isset( $params['ixp'] ) && $params['ixp'] )
+            $url .= "/ixp/{$params['ixp']}";
+        else
+            $url .= '/ixp/1';
+
+        if( isset( $params['shortname'] ) )
+            $url .= "/shortname/{$params['shortname']}";
+
+        if( isset( $params['monitorindex'] ) )
+            $url .= "/monitorindex/{$params['monitorindex']}";
+        else if( !isset( $params['p2p'] ) || !$params['p2p'] )
+            $url .= "/monitorindex/aggregate";
+
+        if( isset( $params['period'] ) )
+            $url .= "/period/{$params['period']}";
+        else
+            $url .= "/period/day";
+
+
+        if( isset( $params['category'] ) )
+            $url .= "/category/{$params['category']}";
+        else
+            $url .= "/category/bits";
+
+        if( isset( $params['p2p'] ) && $params['p2p'] )
+        {
+            if( isset( $params['svli'] ) )
+                $url .= "/svli/{$params['svli']}";
+            else
+                die();
+
+            if( isset( $params['dvli'] ) )
+                $url .= "/dvli/{$params['dvli']}";
+            else
+                die();
+
+            if( isset( $params['proto'] ) )
+                $url .= "/proto/{$params['proto']}";
+            else
+                $url .= "/proto/4";
+        }
+
+        if( isset( $params['graph'] ) )
+            $url .= "/graph/{$params['graph']}";
+
+
+        if( isset( $params['src_mac'] ) )
+            $url .= "/src_mac/{$params['src_mac']}";
+
+        if( isset( $params['dst_ip'] ) )
+            $url .= "/dst_ip/{$params['dst_ip']}";
+
+
+ 
+
 
         return $url;
     }

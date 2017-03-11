@@ -75,6 +75,12 @@ set_include_path(
 );
 
 require_once( APPLICATION_PATH . '/../library/IXP/Version.php' );
+require_once( APPLICATION_PATH . '/../library/Alex/functions.php' );
+
+
+
+
+
 
 // Create application, bootstrap, and run
 $application = new Zend_Application(

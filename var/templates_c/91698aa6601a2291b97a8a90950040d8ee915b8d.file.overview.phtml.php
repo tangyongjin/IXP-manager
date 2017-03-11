@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-02 09:06:46
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-09 23:45:45
          compiled from "/opt/ixpmanager/application/views/customer/overview.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:147858937358b7702677c090-18364869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '91698aa6601a2291b97a8a90950040d8ee915b8d' => 
     array (
       0 => '/opt/ixpmanager/application/views/customer/overview.phtml',
-      1 => 1488392551,
+      1 => 1489074341,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19-dev',
+  'unifunc' => 'content_58b77026850342_74742695',
   'variables' => 
   array (
     'cust' => 0,
@@ -33,8 +35,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'rsRoutes' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19-dev',
-  'unifunc' => 'content_58b77026850342_74742695',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b77026850342_74742695')) {function content_58b77026850342_74742695($_smarty_tpl) {?><?php if (!is_callable('smarty_function_tmplinclude')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.tmplinclude.php';
 if (!is_callable('smarty_function_genUrl')) include '/opt/ixpmanager/application/../vendor/opensolutions/oss-framework/src/OSS/Smarty/functions/function.genUrl.php';
@@ -248,6 +248,15 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
 ">P2P &raquo;</a>
                 </li>
             <?php }?>
+
+            <?php if (isset($_smarty_tpl->tpl_vars['options']->value['sflow']['enabled'])&&$_smarty_tpl->tpl_vars['options']->value['sflow']['enabled']) {?>
+                <li>
+                    <a href="<?php echo smarty_function_genUrl(array('controller'=>"statistics",'action'=>"ip2ip",'shortname'=>$_smarty_tpl->tpl_vars['cust']->value->getShortname()),$_smarty_tpl);?>
+">IP2IP &raquo;</a>
+                </li>
+            <?php }?>
+
+
         <?php }?>
         
         </ul>

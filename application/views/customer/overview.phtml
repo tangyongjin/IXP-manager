@@ -175,6 +175,14 @@
                     <a href="{genUrl controller="statistics" action="p2p" shortname=$cust->getShortname()}">P2P &raquo;</a>
                 </li>
             {/if}
+
+            {if isset( $options.sflow.enabled ) and $options.sflow.enabled}
+                <li>
+                    <a href="{genUrl controller="statistics" action="ip2ip" shortname=$cust->getShortname()}">IP2IP &raquo;</a>
+                </li>
+            {/if}
+
+
         {/if}
         
         </ul>
