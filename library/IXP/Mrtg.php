@@ -414,15 +414,7 @@ class IXP_Mrtg
 
         if( isset( $params['p2p'] ) && $params['p2p'] )
         {
-            if( isset( $params['svli'] ) )
-                $url .= "/svli/{$params['svli']}";
-            else
-                die();
-
-            if( isset( $params['dvli'] ) )
-                $url .= "/dvli/{$params['dvli']}";
-            else
-                die();
+            
 
             if( isset( $params['proto'] ) )
                 $url .= "/proto/{$params['proto']}";

@@ -56,13 +56,8 @@
     <td valign="middle"><strong>Network:</strong></td>
     <td>
         &nbsp;
-        <select name="svli" style="width: 200px;" class="chzn-select">
-            {foreach $srcVlis as $id => $vli}
-                <option value="{$id}" {if $srcVli eq $vli}selected="selected"{/if}>
-                    {$vli->getVlan()->getName()}
-                </option>
-            {/foreach}
-        </select>
+       
+
     </td>
     <td width="20"></td>
     <td valign="middle"><strong>Graph Type:</strong></td>
@@ -113,22 +108,32 @@
 
 {foreach $ip_related as $one_ip}
 
-    {$one_ip}
-
+ 
 
     <h5>
-                    {genMrtgIp2ipImgUrl
+                                {genMrtgIp2ipImgUrl
                                 ixp=$ixp->getId()
                                 shortname=$cust->getShortname()
-                                svli=$srcVli->getId()
-                                dvli=0
                                 category=$category
                                 src_mac=$src_mac
                                 dst_ip=$one_ip
                                 period=$period
                                 proto=$proto}
-
                                 </h5>
+
+
+
+ <img
+                            src="{genMrtgIp2ipImgUrl
+                                ixp=$ixp->getId()
+                                shortname=$cust->getShortname()
+                                category=$category
+                                src_mac=$src_mac
+                                dst_ip=$one_ip
+                                period=$period
+                                proto=$proto}"
+                            width="300"
+                        />
 
 
 
@@ -137,32 +142,18 @@
 {assign var='count' value=0}
 {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
 
-    {foreach $dstVlis as $dvli}
+   <!--  {foreach $dstVlis as $dvli}
 
         <div class="span3">
+            
             <div class="well">
-                <h4 style="vertical-align: middle">
-                    {$dvli->getVirtualInterface()->getCustomer()->getName()}
-                </h4>
+                
     
                 <p>
                     <br />
-                    <h5>
-                    {genMrtgIp2ipImgUrl
-                                ixp=$ixp->getId()
-                                shortname=$cust->getShortname()
-                                svli=$srcVli->getId()
-                                dvli=$dvli->getId()
-                                category=$category
-                                src_mac=$src_mac
-                                period=$period
-                                proto=$proto}
+                   
 
-                                </h5>
-
-
-
-                    <a href="{genUrl controller="statistics" action="ip2ip"
+                     <a href="{genUrl controller="statistics" action="ip2ip"
                             ixp=$ixp->getId()
                             shortname=$cust->getShortname()
                             svli=$srcVli->getId()
@@ -182,8 +173,10 @@
                             width="300"
                         />
                     </a>
+                      
                 </p>
             </div>
+
         </div>
     
         {assign var='count' value=$count+1}
@@ -191,7 +184,7 @@
         {if $count%4 eq 0}
             </div><br /><div class="row-fluid">
         {/if}
-    {/foreach}
+    {/foreach} -->
     
     {if $count%4 neq 0}
         <div class="span3"></div>

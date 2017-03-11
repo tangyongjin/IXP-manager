@@ -227,7 +227,16 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </div>
 
  
-      
+
+<div class="well">
+<h3>开机mount</h3>
+<pre>
+ /dev/mapper/ixp_vg-dev_sda7 on /ixpdata type ext4 (rw,noatime,nodiratime,seclabel,data=ordered)
+
+</pre>
+</div>
+
+
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
     </div>

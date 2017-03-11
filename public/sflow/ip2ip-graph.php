@@ -23,8 +23,7 @@ $dst_ip=$_REQUEST['dst_ip'];
 $filename=sprintf ($config->sflow->rootdir."ip2ip/%05s/%05s", $src_mac, $dst_ip);
 
 
-echo $filename;
-
+ 
 $rrdfilename=$filename;
 
 // don't send error messages back to the end user (barryo)
@@ -99,16 +98,16 @@ if ($separated_maxima) {
 
 $avg_label = $separated_maxima ? 'Avg. ' : '';
 
-$options[] = 'AREA:cdefc#00CF00:'.'avg_label'.$src_mac.' to '.$dst_ip;
+// $options[] = 'AREA:cdefc#00CF00:'.'avg_label'.$src_mac.' to '.$dst_ip;
 
 if (!$separated_maxima)
-	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
+$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
 $options[] = 'LINE1:cdefa#002A97FF:'.'avg_label'.$src_mac.' to '.$dst_ip;
 if (!$separated_maxima)
-	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';
+$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_in:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_in:\tCur\\:%8.2lf%s\l';
 
@@ -118,13 +117,13 @@ $options[] = 'COMMENT:\s';
 
 $output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options,$rrdfilename);
 
-// if ($output) {
-// 	ob_start();
-// 	header("Content-type: image/png");
-// 	ob_end_clean();
-// 	session_write_close();
-// 	print $output;
-// }
+if ($output) {
+	ob_start();
+	header("Content-type: image/png");
+	ob_end_clean();
+	session_write_close();
+	print $output;
+}
 
 exit;
 
@@ -136,32 +135,14 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
 {
 	/* clean up headers, session stuff, configure appropriate MIME stuff */
 	$args = '';
-
-
 	foreach(array_keys ($options) as $key) {
-		# this is necessary both for sanity / security and
-		# compatibility with rrd_graph
-		//$args .= ' '.escapeshellarg($options[$key]);
      	$args .= ' '."'".$options[$key]."'";
 			
 	}
-
-    // echo '<pre>';
-    // print_r($options);
-    // echo '</pre>';
-    
-//	$font_cfg=' --font DEFAULT:0:"SimHei,黑体" ';
-
 	$font_cfg=' ';
-
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
  	$fp = popen($cmdline, "r");
   
-    // header( 'Content-Type: image/png' );
-    echo "</br>";
-    echo $cmdline;
-    die;
-
         	
 	if (isset($fp) && is_resource($fp)) {
 		$line = "";
