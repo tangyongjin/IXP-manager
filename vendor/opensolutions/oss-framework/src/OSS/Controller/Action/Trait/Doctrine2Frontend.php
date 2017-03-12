@@ -674,6 +674,11 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
      */
     public function addAction()
     {
+
+
+        
+
+
         $this->addPreamble();
         
         if( $this->feGetParam( 'readonly' ) === true )
@@ -712,6 +717,12 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
                     $this->redirectAndEnsureDie( $this->_getBaseUrl() . "/index" );
                 }
             }
+        }
+        else
+        {
+
+
+
         }
     
         $this->view->addPreamble  = $this->_resolveTemplate( 'add-preamble.phtml'  );

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-06 04:52:12
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-12 15:22:43
          compiled from "/opt/ixpmanager/application/views/header-documentation.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:12827255558b7155aaee857-42158566%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '87d220c75bcf45f3416bb37ea8470f39158dc1f2' => 
     array (
       0 => '/opt/ixpmanager/application/views/header-documentation.phtml',
-      1 => 1488747130,
+      1 => 1489303359,
       2 => 'file',
     ),
   ),
@@ -45,20 +45,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a href="<?php echo smarty_function_genUrl(array('controller'=>"ticket",'action'=>"list"),$_smarty_tpl);?>
 ">故障(路由变化)</a>
         </li>
+         
+         <li>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"aipbiz",'action'=>"list"),$_smarty_tpl);?>
+">Ip2Biz配置(under build..)</a>
+        </li>
 
 
         <li>
-            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
+            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"list"),$_smarty_tpl);?>
 ">Feature2(under build..)</a>
         </li>
 
-
-
-        <li>
-            <a href="<?php echo smarty_function_genUrl(array('controller'=>"static",'action'=>"example"),$_smarty_tpl);?>
-">Feature3(under build..)</a>
-        </li>
-
+        
 
 
 

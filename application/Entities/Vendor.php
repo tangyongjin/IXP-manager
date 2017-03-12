@@ -72,7 +72,7 @@ class Vendor
      * @return Vendor
      */
     public function addSwitche(\Entities\Switcher $switches)
-    {
+    {   
         $this->Switches[] = $switches;
     
         return $this;

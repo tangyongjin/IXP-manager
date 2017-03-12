@@ -62,6 +62,7 @@ class Zend_Controller_Dispatcher_Standard extends Zend_Controller_Dispatcher_Abs
     public function __construct(array $params = array())
     {
         parent::__construct($params);
+
         $this->_curModule = $this->getDefaultModule();
     }
 
@@ -201,17 +202,27 @@ class Zend_Controller_Dispatcher_Standard extends Zend_Controller_Dispatcher_Abs
      */
     public function isDispatchable(Zend_Controller_Request_Abstract $request)
     {
-        $className = $this->getControllerClass($request);
+
+       
+         // $writer = new Zend_Log_Writer_Stream('/ixpdata/logs/zend.log', 'a');
+         // require_once 'Zend/Log/Exception.php';
+         // $logger=new Zend_Log($writer);
+
+         $className = $this->getControllerClass($request);
         if (!$className) {
+           
+
             return false;
         }
 
         $finalClass  = $className;
+
         if (($this->_defaultModule != $this->_curModule)
             || $this->getParam('prefixDefaultModule'))
         {
             $finalClass = $this->formatClassName($this->_curModule, $className);
         }
+
         if (class_exists($finalClass, false)) {
             return true;
         }
@@ -236,16 +247,23 @@ class Zend_Controller_Dispatcher_Standard extends Zend_Controller_Dispatcher_Abs
      */
     public function dispatch(Zend_Controller_Request_Abstract $request, Zend_Controller_Response_Abstract $response)
     {
-        $this->setResponse($response);
+
+
+         $this->setResponse($response);
+
+ 
 
         /**
          * Get controller class
          */
         if (!$this->isDispatchable($request)) {
             $controller = $request->getControllerName();
+          
+
+
             if (!$this->getParam('useDefaultControllerAlways') && !empty($controller)) {
                 require_once 'Zend/Controller/Dispatcher/Exception.php';
-                throw new Zend_Controller_Dispatcher_Exception('Invalid controller specified (' . $request->getControllerName() . ')');
+                throw new Zend_Controller_Dispatcher_Exception($controller.'----Invalid controller specified (' . $request->getControllerName() . ')');
             }
 
             $className = $this->getDefaultControllerClass($request);
@@ -255,6 +273,11 @@ class Zend_Controller_Dispatcher_Standard extends Zend_Controller_Dispatcher_Abs
                 $className = $this->getDefaultControllerClass($request);
             }
         }
+
+         
+         
+         
+ 
 
         /**
          * If we're in a module or prefixDefaultModule is on, we must add the module name

@@ -175,6 +175,9 @@ sysctl -w net.core.rmem_max=8388608
 <h3>Schema管理</h3>
 <pre>
 
+自动生成配置文件:
+http://114.113.88.2/ixp/ajax.php?action=dbtool&table=Tablename
+
 
 数据库配置文件:
 /opt/ixpmanager/doctrine/schema
@@ -192,11 +195,8 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 ./doctrine2-cli.php orm:generate-proxies
 ./doctrine2-cli.php orm:generate-repositories ../application/
 
-
-
 </pre>
 </div>
-
 
 <div class="well">
 <h3>RawSql</h3>
@@ -237,6 +237,33 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </div>
 
 
+<div class="well">
+<h3>新增控制器与URL,Form</h3>
+<pre>
+
+
+Debug::
+/ixpdata/webapp/opt/ixpmanager/library/Alex/functions.php
+
+
+url:  hello-world-again 则控制器为HelloWorldAgainController.php
+
+url:  helloworldagain 则控制器为HelloworldagainController.php
+
+
+表单目录:
+
+/ixpdata/webapp/opt/ixpmanager/library/IXP/Form
+
+
+增删改查:
+
+/ixpdata/webapp/opt/ixpmanager/vendor/opensolutions/oss-framework/OSS/Controller/Action/Trait/Doctrine2Frontend.php
+
+</pre>
+</div>
+
+ 
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
     </div>

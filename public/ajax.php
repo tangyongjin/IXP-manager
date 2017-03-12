@@ -108,7 +108,7 @@ switch ($action) {
         $bigname=ucfirst($smallname);
         
 
-        echo "Entities.$bigname.dcm.xml</br>";
+        echo "touch /ixpdata/webapp/opt/ixpmanager/doctrine/schema/Entities.$bigname.dcm.xml</br>";
         
 
         $servername = "mysql";
@@ -126,7 +126,7 @@ switch ($action) {
     }
     
     // 与数据库交互
-    $query = 'desc ticket';
+    $query = "desc $smallname";
 
 
  
@@ -166,7 +166,7 @@ switch ($action) {
        echo    htmlentities($newtpl) ;
 
 		
-        // echo '<pre>', htmlentities($newtpl), '</pre>'; 
+       
 		
 		break;
 	
