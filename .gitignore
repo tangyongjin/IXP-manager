@@ -1,2 +1,3 @@
 *.log
 var/session/sess*
+var/templates_c/*

@@ -456,6 +456,8 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
      */
     protected function addPostValidate( $form, $object, $isEdit )
     {
+
+        xlog("addPostValidate called and return true ");
         return true;
     }
 
@@ -603,13 +605,25 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
      */
     protected function addProcessForm( $form, $object, $isEdit  )
     {
+
+         
+        
         do{
             try
             {
                 if( !$this->addPostValidate( $form, $object, $isEdit ) )
-                    break;
+
+                { 
+
+                  break;
+
+                }
+                    
 
                 $form->assignFormToEntity( $object, $this, $isEdit );
+                
+                xlog('after assignFormToEntity');
+
 
                 if( $this->addPreFlush( $form, $object, $isEdit ) )
                 {
@@ -617,7 +631,23 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
                     {
                         // make sure we're not already persist()ed:
                         if( $this->getD2EM()->getUnitOfWork()->getEntityState( $object ) == \Doctrine\ORM\UnitOfWork::STATE_NEW )
-                            $this->getD2EM()->persist( $object );
+
+                            //写数据库
+                       
+                        {
+                          // xlog('will save to db');
+                          // xlog($object);
+                          
+                          $this->getD2EM()->persist( $object );
+                        }
+                        else
+                        {
+
+                        }
+                        
+                    
+
+
                     }
     
                     $this->getD2EM()->flush();
@@ -634,9 +664,15 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
                         return true;
                     }
                 }
+                else
+                {
+                     xlog('not addPreFlush save to db');
+                }
             }
             catch( Exception $e )
             {
+
+                 xlog('Exception ');
                 $this->getLogger()->err(
                     sprintf( _( 'ERROR - FAILED: User %d %s %s object with id %d' ) . "\n" . $e,
                         $this->getUser()->getId(), $isEdit ? _( 'edited' ) : _( 'added' ),
@@ -674,9 +710,7 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
      */
     public function addAction()
     {
-
-
-        
+       
 
 
         $this->addPreamble();
@@ -707,15 +741,26 @@ trait OSS_Controller_Action_Trait_Doctrine2Frontend
     
         $this->addPrepare( $form, $object, $isEdit );
         
+
+        // xlog($form);
+        // xlog($object);
+
+
         if( $this->getRequest()->isPost() && $this->addPreValidate( $form, $object, $isEdit ) && $form->isValid( $_POST ) )
         {
             if( $this->addProcessForm( $form, $object, $isEdit ) )
             {
+                xlog('addProcessForm true');
                 if( $this->addDestinationOnSuccess( $form, $object, $isEdit ) === false )
                 {
                     $this->addMessage( $this->feGetParam( 'titleSingular' ) . ( $isEdit ? ' edited.' : ' added.' ), OSS_Message::SUCCESS );
                     $this->redirectAndEnsureDie( $this->_getBaseUrl() . "/index" );
                 }
+            }
+            else
+            {
+
+                xlog('addProcessForm false');
             }
         }
         else

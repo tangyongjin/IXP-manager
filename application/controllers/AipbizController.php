@@ -50,13 +50,14 @@ class AipbizController  extends IXP_Controller_FrontEnd
     protected function listGetData( $id = null )
     {
         $conn = $this->getD2EM()->getConnection();
-        $sql= "select  * from a_ip_biz ";
+       
+        $sql=" select a_ip_biz.id ,a_ip_biz.ip,a_ip_biz.ip_type,a_biz_type.biz_name as bizname from a_ip_biz,a_biz_type ";
+        $sql.=" where  a_ip_biz.bizname=a_biz_type.id ";
+
         $stmt = $conn->prepare($sql);
          
         $stmt->execute();
         return  $stmt->fetchAll();
- 
-  
     }
     
      /**
@@ -92,8 +93,8 @@ class AipbizController  extends IXP_Controller_FrontEnd
      */
     protected function addPostValidate( $form, $group, $isEdit )
     {
-        return false;
-     }
+        return true;
+    }
     
 }
 
