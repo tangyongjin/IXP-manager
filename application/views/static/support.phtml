@@ -125,6 +125,20 @@ sflow-to-rrd:
 
 
 <div class="well">
+<h3>Centos7 打开端口</h3>
+<pre>
+    firewall-cmd --zone=public --add-port=XXXX/tcp --permanent
+    firewall-cmd --reload
+
+</pre>
+</div>
+
+
+
+ 
+
+
+<div class="well">
 <h3>测试sflow 6343端口</h3>
 <pre>
       echo -n "foo" | nc -4u -w1   114.113.88.2  6343

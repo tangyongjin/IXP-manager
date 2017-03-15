@@ -27,8 +27,9 @@ class AipbizController  extends IXP_Controller_FrontEnd
                 'id'        => [ 'title' => '序列号', 'display' => true ],
               
                 'ip' =>'ip',
-                'ip_type'=>'ip_type',
-                'bizname'=>'bizname'
+                'content_type'=>'content_type',
+                'tag' => 'tag',
+                'name'=>'客户名称'
             ]
         ];
     
@@ -51,8 +52,9 @@ class AipbizController  extends IXP_Controller_FrontEnd
     {
         $conn = $this->getD2EM()->getConnection();
        
-        $sql=" select a_ip_biz.id ,a_ip_biz.ip,a_ip_biz.ip_type,a_biz_type.biz_name as bizname from a_ip_biz,a_biz_type ";
-        $sql.=" where  a_ip_biz.bizname=a_biz_type.id ";
+        $sql="  select a_ip_biz.id ,a_ip_biz.ip,a_ip_biz.content_type,tag ,name ";
+        $sql.=" from a_ip_biz,cust where  a_ip_biz.custid=cust.id ";
+       
 
         $stmt = $conn->prepare($sql);
          

@@ -87,10 +87,46 @@ class A_ip_biz extends \Entities\A_ip_biz implements \Doctrine\ORM\Proxy\Proxy
         return parent::getId();
     }
 
+    public function setContentType($contentType)
+    {
+        $this->__load();
+        return parent::setContentType($contentType);
+    }
+
+    public function getContentType()
+    {
+        $this->__load();
+        return parent::getContentType();
+    }
+
+    public function setCustid($custid)
+    {
+        $this->__load();
+        return parent::setCustid($custid);
+    }
+
+    public function getCustid()
+    {
+        $this->__load();
+        return parent::getCustid();
+    }
+
+    public function setTag($tag)
+    {
+        $this->__load();
+        return parent::setTag($tag);
+    }
+
+    public function getTag()
+    {
+        $this->__load();
+        return parent::getTag();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'ip', 'ip_type', 'bizname', 'id');
+        return array('__isInitialized__', 'ip', 'content_type', 'custid', 'tag', 'id');
     }
 
     public function __clone()

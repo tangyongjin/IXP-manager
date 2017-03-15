@@ -99,78 +99,28 @@
 </p>
 
 
-
-<h1>{$src_mac}</h1>
-
-
 <div class="row-fluid">
-
-
-{foreach $ip_related as $one_ip}
-
  
-
-    <h5>
-                                {genMrtgIp2ipImgUrl
-                                ixp=$ixp->getId()
-                                shortname=$cust->getShortname()
-                                category=$category
-                                src_mac=$src_mac
-                                dst_ip=$one_ip
-                                period=$period
-                                proto=$proto}
-                                </h5>
-
-
-
- <img
-                            src="{genMrtgIp2ipImgUrl
-                                ixp=$ixp->getId()
-                                shortname=$cust->getShortname()
-                                category=$category
-                                src_mac=$src_mac
-                                dst_ip=$one_ip
-                                period=$period
-                                proto=$proto}"
-                            width="300"
-                        />
-
-
-
-{/foreach}    
-
 {assign var='count' value=0}
-{if $user->getPrivs() eq USER::AUTH_SUPERUSER}
-
-   <!--  {foreach $dstVlis as $dvli}
-
-        <div class="span3">
-            
+ 
+     {foreach $tag_related as $one_ip}
+       <div class="span3" style="width: 550px;">
             <div class="well">
-                
-    
+             <h4>{$one_ip['ctag']}</h4>
                 <p>
                     <br />
-                   
 
-                     <a href="{genUrl controller="statistics" action="ip2ip"
-                            ixp=$ixp->getId()
-                            shortname=$cust->getShortname()
-                            svli=$srcVli->getId()
-                            dvli=$dvli->getId()
-                            category=$category
-                            period=$period
-                            proto=$proto}">
+                     <a href="#">
                         <img
                             src="{genMrtgIp2ipImgUrl
                                 ixp=$ixp->getId()
                                 shortname=$cust->getShortname()
-                                svli=$srcVli->getId()
-                                dvli=$dvli->getId()
                                 category=$category
+                                src_mac=$src_mac
+                                dst_ip=$one_ip['filename']
                                 period=$period
                                 proto=$proto}"
-                            width="300"
+                            width="600"
                         />
                     </a>
                       
@@ -181,18 +131,19 @@
     
         {assign var='count' value=$count+1}
     
-        {if $count%4 eq 0}
+        {if $count%2 eq 0}
             </div><br /><div class="row-fluid">
         {/if}
-    {/foreach} -->
+    {/foreach}
+ 
     
-    {if $count%4 neq 0}
+    {if $count%2 neq 0}
         <div class="span3"></div>
         {assign var='count' value=$count+1}
-        {if $count%4 neq 0}
+        {if $count%2 neq 0}
             <div class="span3"></div>
             {assign var='count' value=$count+1}
-            {if $count%4 neq 0}
+            {if $count%2 neq 0}
                 <div class="span3"></div>
                 {assign var='count' value=$count+1}
             {/if}
@@ -200,10 +151,7 @@
     {/if}
     
     
-{else}
-    
-{/if}
-    
+ 
 </div>
 
 </div>

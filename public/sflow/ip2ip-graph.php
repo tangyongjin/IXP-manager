@@ -1,13 +1,7 @@
 <?php
-# 
-
-
-
-
 
 set_include_path(get_include_path() . PATH_SEPARATOR . dirname( __FILE__ ) . "/../../library".PATH_SEPARATOR.'/opt/ixpmanager/vendor/zendframework/zendframework1/library/');
 require '/opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Config/Ini.php';
-//require '../../library/Zend/Config/Ini.php';
 require '../../bin/utils.inc';
 
 $config = new Zend_Config_Ini('../../application/configs/application.ini', scriptutils_get_application_env());

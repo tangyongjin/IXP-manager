@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-13 01:00:53
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2017-03-13 17:28:09
          compiled from "/opt/ixpmanager/application/views/static/support.phtml" */ ?>
 <?php /*%%SmartyHeaderCode:203086688058b7167f1cc848-04594222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8463a3ea558614d781352091e58ed128fc8aae8c' => 
     array (
       0 => '/opt/ixpmanager/application/views/static/support.phtml',
-      1 => 1489338050,
+      1 => 1489397284,
       2 => 'file',
     ),
   ),
@@ -161,6 +161,20 @@ sflow-to-rrd:
 
 
 <div class="well">
+<h3>Centos7 打开端口</h3>
+<pre>
+    firewall-cmd --zone=public --add-port=XXXX/tcp --permanent
+    firewall-cmd --reload
+
+</pre>
+</div>
+
+
+
+ 
+
+
+<div class="well">
 <h3>测试sflow 6343端口</h3>
 <pre>
       echo -n "foo" | nc -4u -w1   114.113.88.2  6343
@@ -295,6 +309,9 @@ url:  helloworldagain 则控制器为HelloworldagainController.php
 增删改查:
 
 /ixpdata/webapp/opt/ixpmanager/vendor/opensolutions/oss-framework/OSS/Controller/Action/Trait/Doctrine2Frontend.php
+
+入口 : addProcessForm--->  $this->getD2EM()->persist( $object );
+
 
 日志:
 

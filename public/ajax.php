@@ -5,12 +5,14 @@ $action=$_GET['action'];
 
 
 function getcol($col){
-  
-		 $col=(array)($col);
- 
 
-        $tpl1='<field name="COL" type="DB_TYPE" length="255"  nullable="NULL_OP"/>';
-	    $tpl2='<field name="COL"  type="DB_TYPE" nullable="NULL_OP"/>';
+		 $col=(array)($col);
+
+
+
+
+        $tpl1='         <field name="COL" type="DB_TYPE" length="255"  nullable="NULL_OP"/>';
+	    $tpl2='         <field name="COL"  type="DB_TYPE" nullable="NULL_OP"/>';
 
 		 $colmane=$col['Field'];
 
@@ -34,9 +36,22 @@ function getcol($col){
 		     $type='integer';
 		 }
 
+		if( $stype =='bigint'){
+		     $type='integer';
+		 }
+		 
+
+
 		 if($stype  =='char'){
 		    $type='string';
 		 }
+
+		if($stype  =='varchar'){
+		    $type='string';
+		 }
+
+		 
+
 		 
 		 if( $stype =='longtext'){
 		    $type='text';
@@ -74,8 +89,8 @@ function getcol($col){
             $ret = str_replace('DB_TYPE', $type, $ret);
             $ret = str_replace('NULL_OP', $nulltype, $ret);
         }
-         // echo '<pre>', htmlentities($ret), '</pre>'; 
-         return $ret;
+          
+         return $ret."\r";
 }
 
 
@@ -118,17 +133,17 @@ switch ($action) {
 		$mysqliConn = new mysqli();
  
 
-    $mysqliConn->connect($servername, $username, $password, 'ixp2');
-    if ($mysqliConn->connect_error)
-    {
-        printf("Unable to connect to the database:%s", $mysqliConn->connect_error);
-        exit();
-    }
+	    $mysqliConn->connect($servername, $username, $password, 'ixp2');
+	    if ($mysqliConn->connect_error)
+	    {
+	        printf("Unable to connect to the database:%s", $mysqliConn->connect_error);
+	        exit();
+	    }
     
-    // 与数据库交互
-    $query = "desc $smallname";
 
+        $query = "desc $smallname";
 
+        echo $query;
  
     // 发送查询给MySQL
         $result = $mysqliConn->query($query);
@@ -147,10 +162,10 @@ switch ($action) {
         $tpl='<?xml version="1.0"?>
 		<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
          <entity name="Entities\bigname" table="smallname" tableName="smallname" repository-class="Repositories\bigname">
-		    <id name="id" type="bigint">
-		      <generator strategy="AUTO"/>
-		    </id>
-            fileds
+	    <id name="id" type="bigint">
+	      <generator strategy="AUTO"/>
+	    </id>
+             fileds
          </entity>
 		</doctrine-mapping>';
 
@@ -162,10 +177,13 @@ switch ($action) {
   		$newtpl = str_replace('smallname', $smallname, $tpl);
         $newtpl = str_replace('bigname', $bigname, $newtpl);
         $newtpl = str_replace('fileds', $col_string, $newtpl);
+        
+        echo  "<pre>";
 
-       echo    htmlentities($newtpl) ;
+        echo    htmlentities($newtpl) ;
 
-		
+		echo  "</pre>";
+
        
 		
 		break;

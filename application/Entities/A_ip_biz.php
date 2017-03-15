@@ -108,4 +108,88 @@ class A_ip_biz
     {
         return $this->id;
     }
+    /**
+     * @var string
+     */
+    private $content_type;
+
+    /**
+     * @var string
+     */
+    private $custid;
+
+    /**
+     * @var string
+     */
+    private $tag;
+
+
+    /**
+     * Set content_type
+     *
+     * @param string $contentType
+     * @return A_ip_biz
+     */
+    public function setContentType($contentType)
+    {
+        $this->content_type = $contentType;
+    
+        return $this;
+    }
+
+    /**
+     * Get content_type
+     *
+     * @return string 
+     */
+    public function getContentType()
+    {
+        return $this->content_type;
+    }
+
+    /**
+     * Set custid
+     *
+     * @param string $custid
+     * @return A_ip_biz
+     */
+    public function setCustid($custid)
+    {
+        $this->custid = $custid;
+    
+        return $this;
+    }
+
+    /**
+     * Get custid
+     *
+     * @return string 
+     */
+    public function getCustid()
+    {
+        return $this->custid;
+    }
+
+    /**
+     * Set tag
+     *
+     * @param string $tag
+     * @return A_ip_biz
+     */
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
+    
+        return $this;
+    }
+
+    /**
+     * Get tag
+     *
+     * @return string 
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
 }

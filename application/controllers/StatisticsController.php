@@ -391,10 +391,8 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 public function ip2ipAction()
     {
 
-         $shortname = $this->getParam( 'shortname', false );
-         $sql="select mac from  macaddress where virtualinterfaceid in ";
-         $sql.="(select virtualinterfaceid from view_vlaninterface_details_by_custid  where  custid in";
-         $sql.=" (select id as custid  from cust where  shortname='$shortname') ) ";
+        $shortname = $this->getParam( 'shortname', false );
+        $sql="select * from view_cust_mac where shortname='$shortname' ";
 
         $conn = $this->getD2EM()->getConnection();
         $xquery = $conn->prepare($sql);
@@ -404,22 +402,24 @@ public function ip2ipAction()
         $mac=$rows[0]['mac'];
 
         $destdir="/ixpdata/rrd/ip2ip/$mac/";
-        $ip_related=array();
-        $index=0;
+        $tag_related=array();
+        
         $dir = new DirectoryIterator( $destdir);
            foreach ($dir as $fileinfo) {
             if (!$fileinfo->isDot()) {
+                // $tag_related[]=$fileinfo->getFilename();
 
-                $ip_related[]=$fileinfo->getFilename();
-                $index++;
-                if($index>100){
-                    break;
-                }
+                $ctag=$this->rrdfile_to_ctag( $fileinfo->getFilename() );
+                $tag_related[]=array('filename'=>$fileinfo->getFilename(),
+                                     'ctag'=>$ctag);
+                // $fileinfo->getFilename();
+
+
             }
         }
 
         $this->view->src_mac =$mac;
-        $this->view->ip_related =$ip_related;
+        $this->view->tag_related =$tag_related;
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
         $this->setIXP( $cust );
         $category = $this->setCategory( 'category', true );
@@ -427,9 +427,26 @@ public function ip2ipAction()
         $period   = $this->setPeriod();
         $proto    = $this->setProtocol();
 
-
-        
-
     }
+
+
+public function rrdfile_to_ctag($rrdname){
+
+
+        if($rrdname=='UNKNOW.rrd'){
+            return '未知';
+        }
+//select distinct tag from a_ip_biz where  concat(tag,'.rrd')='xunlei.rrd'
+        $sql="select distinct content_type from a_ip_biz where  concat(tag,'.rrd')='$rrdname'";
+        $conn = $this->getD2EM()->getConnection();
+        $xquery = $conn->prepare($sql);
+        $xquery->execute();
+        $rows=$xquery->fetchAll();
+        $ctag=$rows[0]['content_type'];
+        return $ctag;
+
+
+}
+
 
 }

@@ -35,6 +35,19 @@ class IXP_Form_Aipbiz extends IXP_Form
 {
     public function init()
     {
+
+         $custid = $this::getPopulatedSelect( 'custid' )
+            ->setRequired( true );
+         $custid->setLabel( _( '客户' ) );
+
+         
+         $custid->addValidator( 'between', false, array( 1, $custid->getAttrib( 'data-maxId' ) ) )
+            ->setAttrib( 'class', 'chzn-select' );
+         $this->addElement( $custid );
+
+
+
+
         $ip = $this->createElement( 'text', 'ip' );
         $ip->addValidator( 'stringLength', false, array( 1, 20, 'UTF-8' ) )
             ->setRequired( true )
@@ -44,26 +57,29 @@ class IXP_Form_Aipbiz extends IXP_Form
             ->addFilter( new OSS_Filter_StripSlashes() );
         $this->addElement( $ip );
         
-        $ip_type = $this->createElement( 'text', 'ip_type' );
-        $ip_type->addValidator( 'stringLength', false, array( 0, 255, 'UTF-8' ) )
+        $content_type = $this->createElement( 'text', 'content_type' );
+        $content_type->addValidator( 'stringLength', false, array( 0, 255, 'UTF-8' ) )
             ->setRequired( false )
-            ->setLabel( 'ip_type' )
+            ->setLabel( 'content_type' )
             ->setAttrib( 'class', 'span3' )
             ->addFilter( 'StringTrim' )
             ->addFilter( new OSS_Filter_StripSlashes() );
-        $this->addElement( $ip_type );
+        $this->addElement( $content_type );
+
+
+        $tag = $this->createElement( 'text', 'tag' );
+        $tag->addValidator( 'stringLength', false, array( 0, 255, 'UTF-8' ) )
+            ->setRequired( false )
+            ->setLabel( 'tag' )
+            ->setAttrib( 'class', 'span3' )
+            ->addFilter( 'StringTrim' )
+            ->addFilter( new OSS_Filter_StripSlashes() );
+        $this->addElement( $tag );
+        
+
        
 
-
-         $biz = $this::getPopulatedSelect( 'bizname' )
-            ->setRequired( true );
-         $biz->setLabel( _( '业务类型' ) );
-
-         
-         $biz->addValidator( 'between', false, array( 1, $biz->getAttrib( 'data-maxId' ) ) )
-            ->setAttrib( 'class', 'chzn-select' );
-         $this->addElement( $biz );
-
+    
 
 
         $this->addElement( self::createSubmitElement( 'submit', _( 'Add' ) ) );
@@ -71,22 +87,14 @@ class IXP_Form_Aipbiz extends IXP_Form
     }
 
 
-       public static function getPopulatedSelect( $name = 'bizname' )
+       public static function getPopulatedSelect( $name = 'custid' )
     {
         $sw = new Zend_Form_Element_Select( $name );
 
          $qb = Zend_Registry::get( 'd2em' )['default']->createQueryBuilder()
-            ->select( 'e.id AS id, e.biz_name AS biz_name' )
-            ->from( '\\Entities\\A_biz_type', 'e' );
-
-
-
-      // populateSelectFromDatabaseQuery( $query, $element, $entity, $indexElement, $displayElements, $orderBy = null, $orderDir = 'ASC' )
-
-      // $maxId = self::populateSelectFromDatabaseQuery( $qb->getQuery(), $sw, '\\Entities\\Infrastructure', 'id', [ 'ixp', 'name' ], 'ixp', 'ASC' );
-
-
-         $maxId = self::populateSelectFromDatabaseQuery( $qb->getQuery(), $sw,'\\Entities\\A_biz_type','id',[ 'id', 'biz_name' ],null,null );
+            ->select( 'e.id AS id, e.name AS name' )
+            ->from( '\\Entities\\Customer', 'e' );
+         $maxId = self::populateSelectFromDatabaseQuery( $qb->getQuery(), $sw,'\\Entities\\Customer','id',[ 'id', 'name' ],null,null );
    
 
 
