@@ -367,10 +367,14 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
  
         unset( $dstVlis[ $srcVli->getId() ] );
 
-
-        if( count($dstVlis)>2){
+        
+         $url_dvli=intval($this->getParam( 'dvli', false ));
+ 
+        if(  $url_dvli == 0)  // 只是在 1:N时候需要排序,否则不需要.
+        {
            $dstVlis=  $this->sortRRD($proto,$srcVli,$dstVlis);
         } 
+        
 
 
         $this->view->dstVlis = $dstVlis;
@@ -391,11 +395,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
            Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
            $this->view->display( 'statistics/p2p-single.phtml' );
-        
         }
-
-        
-
 }
 
 
