@@ -362,10 +362,17 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         else
             $this->view->srcVli = $srcVli = $srcVlis[ array_keys( $srcVlis )[0] ];
 
-        // Now find the possible other VLAN interfaces that this customer could exchange traffic with
-        // (as well as removing the source vli)
+
         $dstVlis = $this->getD2R( '\\Entities\\VlanInterface' )->getObjectsForVlan( $srcVli->getVlan() );
+ 
         unset( $dstVlis[ $srcVli->getId() ] );
+
+
+        if( count($dstVlis)>2){
+           $dstVlis=  $this->sortRRD($proto,$srcVli,$dstVlis);
+        } 
+
+
         $this->view->dstVlis = $dstVlis;
 
         if( !count( $dstVlis ) )
@@ -386,7 +393,60 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
            $this->view->display( 'statistics/p2p-single.phtml' );
         
         }
-    }
+
+        
+
+}
+
+
+public function sortRRD($proto,$srcVli,$dstVlis){
+ 
+          
+             $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV);
+             $xxx=array();
+             foreach ($dstVlis as $key => $one_dvli) {
+                   $tmp_dstvli=$one_dvli->getId();
+                   $filename=sprintf ($config->sflow->rootdir."ipv$proto/bytes/p2p/src-%05d/p2p.ipv$proto.bytes.src-%05d.dst-%05d.rrd", $srcVli->getId(), $srcVli->getId(), $tmp_dstvli);
+                   $traffic_avg=$this->getRRD_avg_traffice($filename,'traffic_out');
+                   $xxx[]=array('index'=>$tmp_dstvli,'filename'=>$filename,'traffic_avg'=>$traffic_avg);
+  
+               }
+                
+              
+                usort($xxx, function($a, $b) {
+                    return $b['traffic_avg'] - $a['traffic_avg'];
+                });
+
+                
+                $sorted_dstVlis=array();
+                foreach ($xxx as $key => $one ) {
+                
+                    $sorted_dstVlis[]= $dstVlis[$one['index']];
+                }
+
+                return $sorted_dstVlis;
+
+}
+
+
+public function getRRD_avg_traffice($file,$traffic_type){
+        $result = rrd_fetch( $file,  array( "AVERAGE", "-r", "7200", "-s", "-24h" ) );
+        $traffic=array_values($result['data'][$traffic_type]);
+
+        $index=0;
+        $total=0;
+        $avg=0;
+        foreach ($traffic as $key => $one_value) {
+           if( is_nan  ($one_value)) 
+           {
+           }else
+           {
+             $index++;
+             $total= $total+  $one_value;
+           }
+        }
+       return   intval($total/$index);
+}
 
 
 public function getPoolMacs(){
