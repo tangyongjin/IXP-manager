@@ -31,7 +31,7 @@ function smarty_function_genMrtgIp2ipImgUrl( $params, &$smarty )
 {
     $params['ip2ip'] = true;
     $params['p2p'] = true;
-    
+    //file :
     return IXP_Mrtg::generateZendFrontendUrl_ip2ip( $params );
 }
 

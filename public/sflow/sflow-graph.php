@@ -116,8 +116,10 @@ if($rrdtype=='pkts'){
 
 $filename=sprintf ($config->sflow->rootdir."/ipv$protocol/$file_type/p2p/src-%05d/p2p.ipv$protocol.$file_type.src-%05d.dst-%05d.rrd", $srcvli, $srcvli, $dstvli);
 
-
 $rrdfilename=$filename;
+
+
+
 
 // don't send error messages back to the end user (barryo)
 if( !is_readable( $filename ) )
@@ -125,6 +127,9 @@ if( !is_readable( $filename ) )
     header("HTTP/1.0 404 Not Found $filename");
     die();
 }
+
+
+
 
 $period = isset ($_REQUEST['period']) ? $_REQUEST['period'] : 'day';
 
@@ -192,6 +197,11 @@ $options = array (
 	'VDEF:avg_out=cdefd,AVERAGE',
 );
 
+
+
+
+
+
 if ($separated_maxima) {
 	$options[] = 'LINE2:cdefb#ff00ff:Peak '.$dstvliowner.' to '.$srcvliowner;
 	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s\l';
@@ -208,7 +218,12 @@ if (!$separated_maxima)
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
-$options[] = 'LINE1:cdefa#002A97FF:'.$avg_label.$dstvliowner.' to '.$srcvliowner;
+ $options[] = 'LINE1:cdefa#002A97FF:'.$avg_label.$dstvliowner.' to '.$srcvliowner;
+
+// $options[] = 'LINE1:cdefa#FF0000:'.$avg_label.$dstvliowner.' to '.$srcvliowner;
+
+
+
 if (!$separated_maxima)
 	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_in:\tAvg\\:%8.2lf%s';

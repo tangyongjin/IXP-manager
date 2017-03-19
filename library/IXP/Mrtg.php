@@ -425,16 +425,17 @@ class IXP_Mrtg
         if( isset( $params['graph'] ) )
             $url .= "/graph/{$params['graph']}";
 
+        if( isset( $params['poolmac'] ) )
+            $url .= "/poolmac/{$params['poolmac']}";
+
 
         if( isset( $params['src_mac'] ) )
             $url .= "/src_mac/{$params['src_mac']}";
-
-        if( isset( $params['dst_ip'] ) )
-            $url .= "/dst_ip/{$params['dst_ip']}";
-
-
- 
-
+        
+        
+        
+        if( isset( $params['etag'] ) )
+            $url .= "/etag/{$params['etag']}";
 
         return $url;
     }

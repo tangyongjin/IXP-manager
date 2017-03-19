@@ -6,16 +6,14 @@ require '../../bin/utils.inc';
 
 $config = new Zend_Config_Ini('../../application/configs/application.ini', scriptutils_get_application_env());
 
- 
 $protocol = ($_REQUEST['proto'] == 6) ? 6 : 4;
 $file_type='bytes' ;
 
 $src_mac=$_REQUEST['src_mac'];
+$poolmac=$_REQUEST['poolmac'];
+$etag=$_REQUEST['etag'];
 
-$dst_ip=$_REQUEST['dst_ip'];
-
-$filename=sprintf ($config->sflow->rootdir."ip2ip/%05s/%05s", $src_mac, $dst_ip);
-
+$filename=sprintf ($config->sflow->rootdir."ip2ip/%05s/%05s/%05s", $poolmac, $src_mac,$etag);
 
  
 $rrdfilename=$filename;
@@ -28,6 +26,9 @@ if( !is_readable( $filename ) )
 }
 
 $period = isset ($_REQUEST['period']) ? $_REQUEST['period'] : 'day';
+
+
+$period='day';
 
 switch ($period) {
 	case 'year':
@@ -46,6 +47,8 @@ switch ($period) {
 
 $separated_maxima = ($timeperiod > 60*60*24*2) ? 1: 0;
 
+
+
 $multiplier=8;
 
 
@@ -60,13 +63,13 @@ $options = array (
 	'--slope-mode',
 	'--lower-limit=0',
 	'--start=' . (time() - $timeperiod),
-	// '--title='.$dstvliowner.' - '.$srcvliowner.' traffic - '.$config->identity->orgname.' '.$vlanname[$custinfo[$srcvli]['vlan']].' - IPv'.$protocol.'/'.$rrdtype.$multiplier,
+	 '--title='.$poolmac.' - '.$src_mac.' traffic - '.$config->identity->orgname,
 	
 	// '--vertical-label='.(($rrdtype == 'bytes') ? 'bits' : 'pkts' ).' / second',
     '--vertical-label='."bytes".'/second',
 
 	'--watermark=Copyright '. date('Y') .' '.$config->identity->orgname.$rrdfilename.'-'.date('Y-m-d G:i:s'),
-	'DEF:a='.$filename.':traffic_in:AVERAGE',
+    'DEF:a='.$filename.':traffic_in:AVERAGE',
 	'DEF:b='.$filename.':traffic_in:MAX',
 	'DEF:c='.$filename.':traffic_out:AVERAGE',
 	'DEF:d='.$filename.':traffic_out:MAX',
@@ -82,26 +85,36 @@ $options = array (
 	'VDEF:avg_out=cdefd,AVERAGE',
 );
 
+
 if ($separated_maxima) {
-	$options[] = 'LINE2:cdefb#ff00ff:Peak '.$dstvliowner.' to '.$srcvliowner;
+	$options[] = 'LINE2:cdefb#ff00ff:Peak '.$src_mac.' to '.$poolmac;
 	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s\l';
-	$options[] = 'AREA:cdefd#006600:Peak '.$srcvliowner.' to '.$dstvliowner;
+	$options[] = 'AREA:cdefd#006600:Peak '.$poolmac.' to '.$src_mac;
 	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s\l';
 	$options[] = 'COMMENT:\s';
 }
 
+
+
+
 $avg_label = $separated_maxima ? 'Avg. ' : '';
+ 
 
-// $options[] = 'AREA:cdefc#00CF00:'.'avg_label'.$src_mac.' to '.$dst_ip;
-
+$options[] = 'AREA:cdefc#00CF00:'.$avg_label."入";
 if (!$separated_maxima)
-$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
+	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
-$options[] = 'LINE1:cdefa#002A97FF:'.'avg_label'.$src_mac.' to '.$dst_ip;
+ $options[] = 'LINE1:cdefa#002A97FF:'."出";
+ 
+
+// $options[] = 'LINE1:cdefa#FF0000:'.$avg_label.$dstvliowner.' to '.$srcvliowner;
+
+
+
 if (!$separated_maxima)
-$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';
+	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_in:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_in:\tCur\\:%8.2lf%s\l';
 
@@ -118,6 +131,17 @@ if ($output) {
 	session_write_close();
 	print $output;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 exit;
 
@@ -137,6 +161,7 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
  	$fp = popen($cmdline, "r");
   
+
         	
 	if (isset($fp) && is_resource($fp)) {
 		$line = "";

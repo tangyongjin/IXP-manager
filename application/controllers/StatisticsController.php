@@ -388,8 +388,27 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         }
     }
 
+
+public function getPoolMacs(){
+
+   $sql="select name,mac  from view_cust_mac where view_cust_mac.custid in (select distinct custid from a_ip_biz )";
+   $conn = $this->getD2EM()->getConnection();
+   $xquery = $conn->prepare($sql);
+   $xquery->execute();
+   $rows=$xquery->fetchAll();
+   return $rows;
+
+}
+
+
+
 public function ip2ipAction()
     {
+
+        
+        $poolmacs=$this->getPoolMacs();
+        
+
 
         $shortname = $this->getParam( 'shortname', false );
         $sql="select * from view_cust_mac where shortname='$shortname' ";
@@ -401,23 +420,30 @@ public function ip2ipAction()
         $rows=$xquery->fetchAll();
         $mac=$rows[0]['mac'];
 
-        $destdir="/ixpdata/rrd/ip2ip/$mac/";
         $tag_related=array();
-        
-        $dir = new DirectoryIterator( $destdir);
-           foreach ($dir as $fileinfo) {
-            if (!$fileinfo->isDot()) {
-                // $tag_related[]=$fileinfo->getFilename();
+        foreach ($poolmacs as $key => $one_row) {
+              $one_pool_mac=$one_row['mac'];
+              $one_pool_name=$one_row['name'];
+              
+              if($one_pool_mac == $mac){
+               continue;
+              }
 
-                $ctag=$this->rrdfile_to_ctag( $fileinfo->getFilename() );
-                $tag_related[]=array('filename'=>$fileinfo->getFilename(),
-                                     'ctag'=>$ctag);
-                // $fileinfo->getFilename();
-
-
-            }
+              $destdir="/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/";
+              $dir = new DirectoryIterator( $destdir);
+              foreach ($dir as $fileinfo){
+                 if (!$fileinfo->isDot()){
+                    $ctag=$this->rrdfile_to_ctag( $fileinfo->getFilename() );
+                    $tag_related[]=array('filename'=>"/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/".$fileinfo->getFilename(),
+                                         'poolname' =>$one_pool_name,
+                                         'poolmac' =>$one_pool_mac,
+                                         'etag'=>$fileinfo->getFilename(),
+                                         'ctag'=>$ctag);
+                 }
+          }
         }
 
+ 
         $this->view->src_mac =$mac;
         $this->view->tag_related =$tag_related;
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
@@ -426,6 +452,8 @@ public function ip2ipAction()
         
         $period   = $this->setPeriod();
         $proto    = $this->setProtocol();
+
+        //load view  ip2ip.phtml
 
     }
 

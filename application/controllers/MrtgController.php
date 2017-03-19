@@ -183,8 +183,10 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
 
         $period   = $this->setPeriod();
         $src_mac=$this->getParam( 'src_mac') ;
-        $dst_ip=$this->getParam('dst_ip');
-        
+
+        $poolmac=$this->getParam( 'poolmac') ;
+        $etag=$this->getParam( 'etag') ;
+
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
         
         $this->setIXP( $cust );
@@ -197,11 +199,13 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
 
         
         $ip2ip_graph_url="http://127.0.0.1/ixp/sflow/ip2ip-graph.php";
-        $filename = $ip2ip_graph_url."?src_mac=$src_mac&dst_ip=$dst_ip&category=$category&period=$period&proto=$proto";
-
+        $filename = $ip2ip_graph_url."?poolmac=$poolmac&src_mac=$src_mac&etag=$etag&category=$category&period=$period&proto=$proto";
         
+      
 
-        
+
+
+
         $this->getLogger()->debug( "Serving  ip2ip $filename to {$this->getUser()->getUsername()}" );
 
         if( readfile( $filename ) === false )
