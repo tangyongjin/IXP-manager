@@ -5,20 +5,42 @@ require '/opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Config
 require '../../bin/utils.inc';
 
 $config = new Zend_Config_Ini('../../application/configs/application.ini', scriptutils_get_application_env());
+$dbopts = $config->resources->doctrine2->connection->options;
+$driver = $dbopts->driver;
+$driver = preg_replace('/^pdo_/', '', $driver);
+$db = new PDO($driver.":host=".$dbopts->host.";dbname=".$dbopts->dbname, $dbopts->user, $dbopts->password);
+
+
 
 $protocol = ($_REQUEST['proto'] == 6) ? 6 : 4;
 $file_type='bytes' ;
 
 $src_mac=$_REQUEST['src_mac'];
 $poolmac=$_REQUEST['poolmac'];
+
+
+//view_cust_mac
+
+$db->query('SET NAMES utf8 ');
+
+$sth = $db->query("SELECT * from  view_cust_mac where mac= '$src_mac' ");
+foreach ($sth as $row) {
+	 $src_custname = $row['name'];
+}
+
+$sth = $db->query("SELECT * from  view_cust_mac where mac= '$poolmac' ");
+foreach ($sth as $row) {
+	 $poolname = $row['name'];
+}
+
+
+
+
+
 $etag=$_REQUEST['etag'];
-
 $filename=sprintf ($config->sflow->rootdir."ip2ip/%05s/%05s/%05s", $poolmac, $src_mac,$etag);
-
- 
 $rrdfilename=$filename;
 
-// don't send error messages back to the end user (barryo)
 if( !is_readable( $filename ) )
 {
     header("HTTP/1.0 404 Not Found $filename");
@@ -26,8 +48,6 @@ if( !is_readable( $filename ) )
 }
 
 $period = isset ($_REQUEST['period']) ? $_REQUEST['period'] : 'day';
-
-
 $period='day';
 
 switch ($period) {
@@ -46,12 +66,7 @@ switch ($period) {
 }
 
 $separated_maxima = ($timeperiod > 60*60*24*2) ? 1: 0;
-
-
-
 $multiplier=8;
-
-
 
 
 
@@ -63,11 +78,9 @@ $options = array (
 	'--slope-mode',
 	'--lower-limit=0',
 	'--start=' . (time() - $timeperiod),
-	 '--title='.$poolmac.' - '.$src_mac.' traffic - '.$config->identity->orgname,
-	
+	 '--title='.$poolname.' - '.$src_custname.' traffic - '.$config->identity->orgname,
 	// '--vertical-label='.(($rrdtype == 'bytes') ? 'bits' : 'pkts' ).' / second',
     '--vertical-label='."bytes".'/second',
-
 	'--watermark=Copyright '. date('Y') .' '.$config->identity->orgname.$rrdfilename.'-'.date('Y-m-d G:i:s'),
     'DEF:a='.$filename.':traffic_in:AVERAGE',
 	'DEF:b='.$filename.':traffic_in:MAX',
@@ -87,9 +100,9 @@ $options = array (
 
 
 if ($separated_maxima) {
-	$options[] = 'LINE2:cdefb#ff00ff:Peak '.$src_mac.' to '.$poolmac;
+	$options[] = 'LINE2:cdefb#ff00ff:Peak '.$src_custname.' to '.$poolname;
 	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s\l';
-	$options[] = 'AREA:cdefd#006600:Peak '.$poolmac.' to '.$src_mac;
+	$options[] = 'AREA:cdefd#006600:Peak '.$poolname.' to '.$src_custname;
 	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s\l';
 	$options[] = 'COMMENT:\s';
 }
