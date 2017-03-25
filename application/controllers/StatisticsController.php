@@ -20,7 +20,7 @@
  *
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
-
+ 
 
 /**
  * Controller: Statistics / graphs
@@ -407,7 +407,7 @@ public function sortRRD($proto,$srcVli,$dstVlis){
              foreach ($dstVlis as $key => $one_dvli) {
                    $tmp_dstvli=$one_dvli->getId();
                    $filename=sprintf ($config->sflow->rootdir."ipv$proto/bytes/p2p/src-%05d/p2p.ipv$proto.bytes.src-%05d.dst-%05d.rrd", $srcVli->getId(), $srcVli->getId(), $tmp_dstvli);
-                   $traffic_avg=$this->getRRD_avg_traffice($filename,'traffic_out');
+                   $traffic_avg=$this->getRRD_avg_traffice($filename);
                    $xxx[]=array('index'=>$tmp_dstvli,'filename'=>$filename,'traffic_avg'=>$traffic_avg);
   
                }
@@ -428,24 +428,40 @@ public function sortRRD($proto,$srcVli,$dstVlis){
 
 }
 
-
-public function getRRD_avg_traffice($file,$traffic_type){
+//以红线和绿线(in/out)来排序  
+public function getRRD_avg_traffice($file){
         $result = rrd_fetch( $file,  array( "AVERAGE", "-r", "7200", "-s", "-24h" ) );
-        $traffic=array_values($result['data'][$traffic_type]);
 
+        $traffic_out=array_values($result['data']['traffic_out']);
+        $traffic_in=array_values($result['data']['traffic_in']);
         $index=0;
         $total=0;
+        $total_in=0;
+        $total_out=0;
+      
+
         $avg=0;
-        foreach ($traffic as $key => $one_value) {
+
+        foreach ($traffic_out as $key => $one_value) {
            if( is_nan  ($one_value)) 
            {
            }else
            {
              $index++;
-             $total= $total+  $one_value;
+             $total_out= $total_out+  $one_value;
            }
         }
-       return   intval($total/$index);
+   
+         foreach ($traffic_in as $key => $one_value) {
+           if( is_nan  ($one_value)) 
+           {
+           }else
+           {
+             $index++;
+             $total_in= $total_in+  $one_value;
+           }
+        }
+        return   intval( ($total_in + $total_out) /$index);
 }
 
 

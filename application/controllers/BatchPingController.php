@@ -82,14 +82,17 @@ class BatchPingController extends IXP_Controller_FrontEnd
 
         //$sql = " select IF(packetloss>0,'red', 'blue') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
         
-        $sql = " select IF(packetloss>0,'red', 'black') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
-        //$sql = " select IF(packetloss>0,'red', 'blue') as color,id,pingdate,id as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   ";
- 
- 
 
+        $sql=" select IF(packetloss>0,'red', 'black') as color,batchping.id,pingdate,name as custname,sub_ip,packetloss,min_t,max_t,avg_t,mdev   
+       from batchping 
+       LEFT JOIN cust 
+       on sub_ip=peeringmacro
+       
+       where  
+       pingdate < DATE_SUB(CURDATE(),INTERVAL -1 DAY)
+       
+       order by id desc limit 100  ";
 
-
-        $sql.= " from batchping order by id desc limit 100 ";
         $stmt = $conn->prepare($sql);
          
         $stmt->execute();

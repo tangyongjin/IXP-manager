@@ -355,6 +355,10 @@ class SwitchPortController extends IXP_Controller_FrontEnd
     // we have overridden the standard addAction() and so we need a dedicated editAction():
     public function editAction()
     {
+
+
+        // return null;
+
         $this->view->isEdit = $isEdit = true;
 
         $eid = $this->editResolveId();
@@ -366,7 +370,7 @@ class SwitchPortController extends IXP_Controller_FrontEnd
         $this->view->form = $form = $this->getForm( $isEdit, $object );
         $form->assignEntityToForm( $object, $this );
         if( $form->getElement( 'submit' ) )
-            $form->getElement( 'submit' )->setLabel( 'Save Changes' );
+            $form->getElement( 'submit' )->setLabel( 'SaveChanges' );
 
         $this->addPrepare( $form, $object, $isEdit );
 

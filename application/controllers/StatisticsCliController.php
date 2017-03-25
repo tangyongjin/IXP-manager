@@ -491,6 +491,10 @@ class StatisticsCliController extends IXP_Controller_CliAction
 
                 foreach( $switch->getPorts() as $port )
                 {
+
+                    //182 and 185  means XGigabitEthernet0/0/26 and XGigabitEthernet0/0/29
+
+
                     if( $port->getIfName() )
                     {
                         $snmpId = $port->ifnameToSNMPIdentifier();

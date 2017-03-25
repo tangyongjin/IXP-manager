@@ -57,6 +57,17 @@ class IXP_Form_Switch_Port extends IXP_Form
             ->addFilter( 'Int' );
         $this->addElement( $active );
 
+        $mrtgenalbe = $this->createElement( 'text', 'mrtgenalbe', array( 'size' => '10' ) );
+        $mrtgenalbe->addValidator( 'stringLength', false, array( 1, 1, 'UTF-8' ) )
+            ->setRequired( true )
+            ->setLabel( 'mrtgenalbe' )
+            ->setAttrib( 'class', 'span1' )
+            ->addFilter( 'StringTrim' )
+            ->addFilter( new OSS_Filter_StripSlashes() );
+        $this->addElement( $mrtgenalbe );
+
+
+
         $this->addElement( self::createSubmitElement( 'submit', _( 'Add' ) ) );
         $this->addElement( $this->createCancelElement() );
     }
