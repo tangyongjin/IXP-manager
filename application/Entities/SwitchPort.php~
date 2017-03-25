@@ -856,4 +856,32 @@ class SwitchPort
     {
         return $this->mauAutoNegAdminState;
     }
+    /**
+     * @var boolean
+     */
+    private $mrtgenalbe;
+
+
+    /**
+     * Set mrtgenalbe
+     *
+     * @param boolean $mrtgenalbe
+     * @return SwitchPort
+     */
+    public function setMrtgenalbe($mrtgenalbe)
+    {
+        $this->mrtgenalbe = $mrtgenalbe;
+    
+        return $this;
+    }
+
+    /**
+     * Get mrtgenalbe
+     *
+     * @return boolean 
+     */
+    public function getMrtgenalbe()
+    {
+        return $this->mrtgenalbe;
+    }
 }

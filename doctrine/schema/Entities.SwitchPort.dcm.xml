@@ -28,6 +28,8 @@
     <field name="mauJacktype" type="string" nullable="true"/>
     <field name="mauAutoNegSupported" type="boolean" nullable="true"/>
     <field name="mauAutoNegAdminState" type="boolean" nullable="true"/>
+    <field name="mrtgenable" type="string" nullable="true"/>
+    
     <many-to-one field="Switcher" target-entity="Entities\Switcher" inversed-by="Ports">
       <join-columns>
         <join-column name="switchid" referenced-column-name="id"/>

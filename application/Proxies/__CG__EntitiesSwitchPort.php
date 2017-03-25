@@ -345,10 +345,34 @@ class SwitchPort extends \Entities\SwitchPort implements \Doctrine\ORM\Proxy\Pro
         return parent::getMauAutoNegAdminState();
     }
 
+    public function setMrtgenalbe($mrtgenalbe)
+    {
+        $this->__load();
+        return parent::setMrtgenalbe($mrtgenalbe);
+    }
+
+    public function getMrtgenalbe()
+    {
+        $this->__load();
+        return parent::getMrtgenalbe();
+    }
+
+    public function setMrtgenable($mrtgenable)
+    {
+        $this->__load();
+        return parent::setMrtgenable($mrtgenable);
+    }
+
+    public function getMrtgenable()
+    {
+        $this->__load();
+        return parent::getMrtgenable();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'type', 'name', 'active', 'ifIndex', 'ifName', 'ifAlias', 'ifHighSpeed', 'ifMtu', 'ifPhysAddress', 'ifAdminStatus', 'ifOperStatus', 'ifLastChange', 'lastSnmpPoll', 'lagIfIndex', 'mauType', 'mauState', 'mauAvailability', 'mauJacktype', 'mauAutoNegSupported', 'mauAutoNegAdminState', 'id', 'PhysicalInterface', 'SecEvents', 'Switcher');
+        return array('__isInitialized__', 'type', 'name', 'active', 'ifIndex', 'ifName', 'ifAlias', 'ifHighSpeed', 'ifMtu', 'ifPhysAddress', 'ifAdminStatus', 'ifOperStatus', 'ifLastChange', 'lastSnmpPoll', 'lagIfIndex', 'mauType', 'mauState', 'mauAvailability', 'mauJacktype', 'mauAutoNegSupported', 'mauAutoNegAdminState', 'mrtgenable', 'id', 'PhysicalInterface', 'SecEvents', 'Switcher');
     }
 
     public function __clone()
