@@ -30,17 +30,24 @@ switch ($action) {
         $query = "select sub_ip,reason,memo from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
         $result = $mysqliConn->query($query);
 
-
+        
+        
+        $found=0;
 		while ($row = $result->fetch_object())
 		{
 		     $reason= $row->reason;
 		     $sub_ip=$row->sub_ip;
 		     $memo=$row->memo;
+		     $found++;
 		}
+        
+        
+        if($found ==0){
+              die('donothing');
+        }
 
-        // echo $reason;
-        // echo $sub_ip;
-              
+	    
+  
 
         /*
         https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6
