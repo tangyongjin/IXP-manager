@@ -122,14 +122,15 @@
 
 
     {foreach $dstVlis as $dvli}
-        <div class="span3">
+        <div class="span3" style="width:540px;">
     
-            <div class="well">
-                <h4 style="vertical-align: middle">
+            <div class="well" style="height: 340px; margin:0px">
+                
+                <h5 style="vertical-align: middle;height:20px;border:0px;">
                     {$dvli->getVirtualInterface()->getCustomer()->getName()}
-                </h4>
+                </h5>
     
-                <p>
+                <p style="height:400px;width:520px;">
                     <br />
                     <a href="{genUrl controller="statistics" action="p2p"
                             ixp=$ixp->getId()
@@ -148,7 +149,7 @@
                                 category=$category
                                 period=$period
                                 proto=$proto}"
-                            width="300"
+                            width="520px;"
                         />
                     </a>
                 </p>
@@ -157,18 +158,18 @@
     
         {assign var='count' value=$count+1}
     
-        {if $count%4 eq 0}
+        {if $count%2 eq 0}
             </div><br /><div class="row-fluid">
         {/if}
     {/foreach}
     
-    {if $count%4 neq 0}
+    {if $count%2 neq 0}
         <div class="span3"></div>
         {assign var='count' value=$count+1}
-        {if $count%4 neq 0}
+        {if $count%2 neq 0}
             <div class="span3"></div>
             {assign var='count' value=$count+1}
-            {if $count%4 neq 0}
+            {if $count%2 neq 0}
                 <div class="span3"></div>
                 {assign var='count' value=$count+1}
             {/if}
