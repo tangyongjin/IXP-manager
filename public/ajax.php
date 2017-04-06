@@ -27,7 +27,7 @@ switch ($action) {
  
 
 
-        $query = "select sub_ip,reason from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
+        $query = "select sub_ip,reason,memo from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
         $result = $mysqliConn->query($query);
 
 
@@ -35,16 +35,26 @@ switch ($action) {
 		{
 		     $reason= $row->reason;
 		     $sub_ip=$row->sub_ip;
+		     $memo=$row->memo;
 		}
 
         // echo $reason;
         // echo $sub_ip;
               
+
+        /*
+        https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6
+        */      
  
-        $robot_url='https://oapi.dingtalk.com/robot/send?access_token=ea2f8323f1486165ae26e9f0ba13d38395aec86220aa718066abce44982dad5d';
+        //$robot_url='https://oapi.dingtalk.com/robot/send?access_token=ea2f8323f1486165ae26e9f0ba13d38395aec86220aa718066abce44982dad5d';
+
+        $robot_url='https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6';
+
+
+
         $x=array("msgtype"=>"text",
-                "text"=>array("content"=>$sub_ip.'|'.$reason),
-                "at"=>array("atMobiles"=>array(18600089281),"isAtAll"=>false),
+                "text"=>array("content"=>'['.date('Y-m-d H:i:s').']'.$sub_ip.'|'.$reason.'|'.$memo),
+                "at"=>array("atMobiles"=>array(18600089281,13601303606,17310559595,18510627106),"isAtAll"=>true),
         	);
         
 
