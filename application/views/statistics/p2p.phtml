@@ -115,23 +115,21 @@
 </p>
 
 
-<div class="row-fluid">
+<div class="row-fluid" style="width:1145px;">
 
 {assign var='count' value=0}
 {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
 
 
     {foreach $dstVlis as $dvli}
-        <div class="span3" style="width:540px;">
+        <div class="span3" style="width:560px;margin-left:2px;">
     
-            <div class="well" style="height: 340px; margin:0px">
+            <div class="well" style="width:100%;height:100%;padding:3px; margin-right:10px">
                 
                 <h5 style="vertical-align: middle;height:20px;border:0px;">
                     {$dvli->getVirtualInterface()->getCustomer()->getName()}
                 </h5>
-    
-                <p style="height:400px;width:520px;">
-                    <br />
+
                     <a href="{genUrl controller="statistics" action="p2p"
                             ixp=$ixp->getId()
                             shortname=$cust->getShortname()
@@ -149,10 +147,10 @@
                                 category=$category
                                 period=$period
                                 proto=$proto}"
-                            width="520px;"
+                                width="560px;"
                         />
                     </a>
-                </p>
+                
             </div>
         </div>
     
@@ -170,7 +168,7 @@
             <div class="span3"></div>
             {assign var='count' value=$count+1}
             {if $count%2 neq 0}
-                <div class="span3" style="margin-left: 10px;"></div>
+                <div class="span3" style="margin-left:2px;"></div>
                 {assign var='count' value=$count+1}
             {/if}
         {/if}

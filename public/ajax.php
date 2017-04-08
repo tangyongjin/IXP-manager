@@ -7,16 +7,11 @@ switch ($action) {
 
    case 'warn':
 
-
-         
-       
-	
 	    $servername = "mysql";
         $username = "root";
 		$password = "cnix@1234";
 		$mysqliConn = new mysqli();
  
-
 	    $mysqliConn->connect($servername, $username, $password, 'ixp2');
 	    if ($mysqliConn->connect_error)
 	    {
@@ -24,10 +19,8 @@ switch ($action) {
 	        exit();
 	    }
     
- 
 
-
-        $query = "select sub_ip,reason,memo from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
+        $query = "select sub_ip,reason,rt_diff as memo from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
         $result = $mysqliConn->query($query);
 
         
@@ -46,19 +39,8 @@ switch ($action) {
               die('donothing');
         }
 
-	    
-  
-
-        /*
-        https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6
-        */      
- 
-        //$robot_url='https://oapi.dingtalk.com/robot/send?access_token=ea2f8323f1486165ae26e9f0ba13d38395aec86220aa718066abce44982dad5d';
 
         $robot_url='https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6';
-
-
-
         $x=array("msgtype"=>"text",
                 "text"=>array("content"=>'['.date('Y-m-d H:i:s').']'.$sub_ip.'|'.$reason.'|'.$memo),
                 "at"=>array("atMobiles"=>array(18600089281,13601303606,17310559595,18510627106),"isAtAll"=>true),

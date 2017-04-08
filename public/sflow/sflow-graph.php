@@ -166,12 +166,13 @@ if ( ($file_type=='bytes')&&( $rrdtype=='bits') ){
 
 
 
+//697 * 266
 
 $options = array (
 //	'--daemon', isset( $config->sflow->rrd->rrdcached->sock ) ? $config->sflow->rrd->rrdcached->sock : null,
 	// '--font title:10:Courier',
-	'--width=520',
-	'--height=220',
+	'--width=600',
+	'--height=150',
 	'--slope-mode',
 	'--lower-limit=0',
 	'--start=' . (time() - $timeperiod),
