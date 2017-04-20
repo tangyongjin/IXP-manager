@@ -3,11 +3,30 @@
 
 $action=$_GET['action'];
 
+
+
+function request_by_curl($remote_server, $post_string) {  
+    $ch = curl_init();  
+    curl_setopt($ch, CURLOPT_URL, $remote_server);
+    curl_setopt($ch, CURLOPT_POST, 1); 
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5); 
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array ('Content-Type: application/json;charset=utf-8'));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_string);  
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+    $data = curl_exec($ch);
+    curl_close($ch);  
+    return $data;  
+}  
+
 switch ($action) {
 
    case 'warn':
+        
+        //https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.c0UBCT&treeId=257&articleId=105735&docType=1
 
+  	    
 	    $servername = "mysql";
+
         $username = "root";
 		$password = "cnix@1234";
 		$mysqliConn = new mysqli();
@@ -18,6 +37,9 @@ switch ($action) {
 	        printf("Unable to connect to the database:%s", $mysqliConn->connect_error);
 	        exit();
 	    }
+
+
+
     
 
         $query = "select sub_ip,reason,rt_diff as memo from ticket where   id in (select max(id) as lastid from ticket ) and sub_ip<>'119.38.219.7' ";
@@ -33,28 +55,51 @@ switch ($action) {
 		     $memo=$row->memo;
 		     $found++;
 		}
+
+ 	    
         
         
         if($found ==0){
-              die('donothing');
+              die;
         }
+ 
+
+       // die;
+
+       if (strpos($reason, ' 0') !== false){
+          $picUrl='http://114.113.88.2/ixp/css/images/w16.png';
+       }else
+       {
+       	  $picUrl='http://114.113.88.2/ixp/css/images/sort_desc.png';
+       }
 
 
-        $robot_url='https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6';
-        $x=array("msgtype"=>"text",
-                "text"=>array("content"=>'['.date('Y-m-d H:i:s').']'.$sub_ip.'|'.$reason.'|'.$memo),
-                "at"=>array("atMobiles"=>array(18600089281,13601303606,17310559595,18510627106),"isAtAll"=>true),
-        	);
+        $webhook ='https://oapi.dingtalk.com/robot/send?access_token=5e401200959ff772720eceac0afeccb8eb29cf215c0465ecb13e8a14260e14f6';
         
+        // $message="###### AA  \n  ![screenshot](http://114.113.88.2/ixp/css/images/w16.png)\n  BB";
+        $message=$memo;
+        
+        // .'  ### '.date('Y-m-d H:i:s'). "   - ".$memo; 
+        // $message='<img src="http://114.113.88.2/ixp/css/images/w16.png" width = "16" height = "16"  />';
 
-        $ch = curl_init($robot_url);
-        $data_string = json_encode($x);                                                                          
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
-		curl_setopt($ch, CURLOPT_HTTPHEADER,array('Content-Type:application/json','Content-Length:'.strlen($data_string)));
-                                                                                                                     
-		$result = curl_exec($ch);
+ 
+
+        $md=$sub_ip.$reason;
+		$data = array (
+			   'msgtype' => 'markdown',
+			   'markdown' => array("title"=>"Alert",
+			   	                   "text"=>
+			   	                   '- '.$sub_ip."\n - ".$reason."\n - ".$memo
+			   	                   //."\n - aaa ![screenshot](http://114.113.88.2/ixp/css/images/w16.png) bbb\n"
+			   	                   )
+		        )
+		;
+		$data_string = json_encode($data);
+		$result = request_by_curl($webhook, $data_string);  
+		echo $result;
+
+
+ 
 
 	 	break;
 

@@ -1,7 +1,6 @@
-
 <div class="row-fluid">
-<div class="span2" style="width: 185px;">
-<div class="well sidebar-nav" style="width:180px;">
+<div class="span2">
+<div class="well sidebar-nav">
 
 <ul class="nav nav-list">
 
@@ -45,13 +44,13 @@
             {/if}
         </li>
 
-	{if not isset( $options['frontend']['disabled']['cust-kit'] ) or not $options['frontend']['disabled']['cust-kit'] }
+    {if not isset( $options['frontend']['disabled']['cust-kit'] ) or not $options['frontend']['disabled']['cust-kit'] }
             <li {if $controller eq 'cust-kit'}class="active"{/if}>
                 <a href="{genUrl controller='cust-kit' action='list'}">Colocated Equipment</a>
             </li>
         {/if}
 
-	{if not isset( $options['frontend']['disabled']['meeting'] ) or not $options['frontend']['disabled']['meeting'] }
+    {if not isset( $options['frontend']['disabled']['meeting'] ) or not $options['frontend']['disabled']['meeting'] }
             <li {if $controller eq 'meeting' and $controller neq 'meeting-item' and $action neq 'read'}class="active"{/if}>
                 <a href="{genUrl controller='meeting' action='list'}">Meetings</a>
 
@@ -256,4 +255,4 @@
 
 
 </div><!--/span-->
-<div class="span10" style="margin-left:10px;">
+<div class="span10">

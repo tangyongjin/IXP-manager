@@ -64,7 +64,7 @@ class TicketController extends IXP_Controller_FrontEnd
     {
  
         $conn = $this->getD2EM()->getConnection();
-        $sql = " select * from ticket   where  sub_ip <>'119.38.219.7' ";
+        $sql = " select * from ticket    ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         return  $stmt->fetchAll();
