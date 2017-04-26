@@ -100,11 +100,11 @@
                             </li>
                         {/if}
                         
-                        <!--
+                        {if $user->getPrivs() eq 3}
                         <li class="{if $controller eq 'static' and $action eq 'support'}active{/if}">
                             <a href="{genUrl controller="static" action="support"}">Support</a>
                         </li>
-                        -->
+                        {/if}
                         
                         {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
                             {tmplinclude file="staff-links.phtml"}
