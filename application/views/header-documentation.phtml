@@ -1,3 +1,6 @@
+ {if $user->getPrivs() eq 3}
+ 
+
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action<b class="caret"></b></a>
     <ul class="dropdown-menu">
@@ -28,12 +31,6 @@
         <li>
             <a href="{genUrl controller="static" action="list"}">Feature2(under build..)</a>
         </li>
-
-        
-
-
-
-
         {* PLEASE LEAVE THIS SOMEWHERE!  IT'S ONLY FAIR INEX GETS SOME CREDIT :D *}
         <li class="divider"></li>
 
@@ -43,3 +40,6 @@
         
     </ul>
 </li>
+
+{/if}
+
