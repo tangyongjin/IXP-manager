@@ -7,7 +7,9 @@
     <li>
         <a href="{genUrl controller="customer" action="list"}">Customers</a> <span class="divider">/</span>
     </li>
-     
+     <li>
+        <span>P2P表格</span>
+    </li>
 </ul>
 
 <div>
@@ -53,9 +55,12 @@
 
                 <tr> 
                    <td>{$one_p2p['dstname']}</td>
-                   <td>{$one_p2p['traffic_in']}</td>
-                   <td>{$one_p2p['traffic_out']}</td>
-                   <td>{$one_p2p['traffic_avg']}</td>
+                  
+                   <td>{math format="%.2f" equation="(x/rate)" x=$one_p2p['traffic_in']   rate=80*1024   }</td>
+                   <td>{math format="%.2f" equation="(x/rate)" x=$one_p2p['traffic_out']  rate=80*1024   }</td>
+                   <td>{math format="%.2f" equation="(x/rate)" x=$one_p2p['traffic_avg']  rate=80*1024   }</td>
+                  
+                  
 
                 </tr>
                {/foreach}         

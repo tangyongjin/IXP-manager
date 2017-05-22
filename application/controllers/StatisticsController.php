@@ -382,7 +382,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
     public function p3pAction()
     {
         $conn = $this->getD2EM()->getConnection();
-        $sql  = " select name, shortname from cust where id <>1 limit 10";
+        $sql  = " select name, shortname from cust where id <>1 limit 1000";
         $stmt = $conn->prepare($sql);
  
       
@@ -527,6 +527,8 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
     public function ip2ipAction()
     {
 
+        header('Content-Type:text/html; charset= utf-8');
+
         $poolmacs = $this->getPoolMacs();
 
         $shortname = $this->getParam('shortname', false);
@@ -549,10 +551,16 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
             }
 
             $destdir = "/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/";
+
+            // debug($destdir);
+
             $dir     = new DirectoryIterator($destdir);
             foreach ($dir as $fileinfo) {
                 if (!$fileinfo->isDot()) {
                     $ctag          = $this->rrdfile_to_ctag($fileinfo->getFilename());
+
+                   // echo "ctag is $ctag";
+
                     $tag_related[] = array('filename' => "/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/" . $fileinfo->getFilename(),
                         'poolname'                        => $one_pool_name,
                         'poolmac'                         => $one_pool_mac,
@@ -561,6 +569,9 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
                 }
             }
         }
+
+        // debug($tag_related);die;
+
 
         $this->view->src_mac     = $mac;
         $this->view->tag_related = $tag_related;
@@ -587,8 +598,20 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         $xquery = $conn->prepare($sql);
         $xquery->execute();
         $rows = $xquery->fetchAll();
-        $ctag = $rows[0]['content_type'];
-        return $ctag;
+        
+
+        //检查 rrd文件名是否是遗留的 tag. 
+
+        if( count($rows) ==1){
+             $ctag = $rows[0]['content_type'];
+             return $ctag;
+
+        }else
+        {
+             return '未知';
+        }
+
+        
 
     }
 

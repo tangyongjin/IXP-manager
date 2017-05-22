@@ -104,13 +104,19 @@
 {assign var='count' value=0}
  
      {foreach $tag_related as $one_ip}
+
+
+                                
+
        <div class="span3" style="width: 550px;">
             <div class="well">
-             <h4>{$one_ip['poolname']}<-->{$one_ip['ctag']}</h4>
+             <h5>{$one_ip['poolname']}<-->{$one_ip['ctag']}|/ixpdata/rrd/ip2ip/{$one_ip['poolmac']}/{$src_mac}/{$one_ip['etag']}</h5>
                 <p>
                     <br />
-
+                                
+                      
                      <a href="#">
+                                 
 
                      {* ./inex-smarty/functions/function.genMrtgIp2ipImgUrl.php *}
 

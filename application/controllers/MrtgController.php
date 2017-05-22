@@ -43,6 +43,8 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         // there's no HTML output from this controller - just images
         Zend_Controller_Action_HelperBroker::removeHelper( 'viewRenderer' );
         
+        // header("Content-type: text/html; charset=utf-8");    
+
         header( 'Content-Type: image/png' );
 
         header( 'Expires: Thu, 01 Jan 1970 00:00:00 GMT' );
@@ -63,12 +65,10 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         die();
     }
     
+
+    //图片由mrtg进程生成.
     function retrieveImageAction()
     {
-
-         
-
-        
         $this->setIXP();
         $monitorindex = $this->getParam( 'monitorindex', 'aggregate' );
         $period       = $this->getParam( 'period', IXP_Mrtg::$PERIODS['Day'] );
@@ -100,17 +100,13 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
         {
             if( $this->getUser()->getPrivs() != \Entities\User::AUTH_SUPERUSER || !$this->checkShortname( $shortname ) )
                 $shortname = $this->getCustomer()->getShortname();
-
+         
             $filename = IXP_Mrtg::getMrtgFilePath( $this->ixp->getMrtgPath() . '/members'    , 'PNG',
                 $monitorindex, $category, $shortname, $period
             );
         }
- 
 
         $this->getLogger()->debug( "Serving {$filename} to {$this->getUser()->getUsername()}" );
-        
-
- 
 
         if( readfile( $filename ) === false )
         {
@@ -122,6 +118,8 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
             );
         }
     }
+
+
 
 
     function retrieveP2pImageAction()
@@ -226,7 +224,44 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
 
 
 
+      function retrieveIp3ipImageAction()
+    {
 
+        $period   = $this->setPeriod();
+        $src_mac=$this->getParam( 'src_mac') ;
+
+        $poolmac=$this->getParam( 'poolmac') ;
+        $etag=$this->getParam( 'etag') ;
+
+        $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
+        
+        $this->setIXP( $cust );
+
+        $category=$this->getParam( 'category') ;
+
+
+        $period   = $this->setPeriod();
+        $proto    = $this->setProtocol();
+
+        
+        $ip2ip_graph_url="http://127.0.0.1/ixp/sflow/ip3ip-graph.php";
+        $filename ='/ixpdata/rrd/ip2ip/sample.rrd';
+        
+
+        
+        if( readfile( $filename ) === false )
+        {
+            header( 'Content-Type: txt/html' );
+            echo "show png failed";
+            die;
+            $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
+            readfile(
+                APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+                    . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
+                    . '300x1.png'
+            );
+        }
+    }
 
 
 

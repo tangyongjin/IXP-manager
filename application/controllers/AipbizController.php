@@ -27,8 +27,8 @@ class AipbizController  extends IXP_Controller_FrontEnd
                 'id'        => [ 'title' => '序列号', 'display' => true ],
               
                 'ip' =>'ip',
-                'content_type'=>'content_type',
-                'tag' => 'tag',
+                'content_type'=>'tag中文',
+                'tag' => 'tag英文',
                 'name'=>'客户名称'
             ]
         ];
