@@ -30,7 +30,7 @@
 function smarty_function_genMrtgGraphBox( $params, &$smarty )
 {
     $url = IXP_Mrtg::generateZendFrontendUrl( $params );
-
+    
     $box = <<<END_BOX
 <table width="506" cellspacing="1" cellpadding="1">
 <tr>

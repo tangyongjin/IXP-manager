@@ -192,7 +192,11 @@ http://114.113.88.2/ixp/schema.php?action=dbtool&table=Tablename
 /opt/ixpmanager/doctrine/schema
 
 重新生成步骤:
+
 https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
+
+在web容器目录:  /ixpdata/webapp/opt/ixpmanager/bin  执行:
+
 
 ./doctrine2-cli.php orm:validate-schema
 ./doctrine2-cli.php orm:schema-tool:update --dump-sql
@@ -246,9 +250,7 @@ https://github.com/inex/IXP-Manager/wiki/Installation-09-Upgrading-IXP-Manager
 </div>
 
 
-<div class="well">
-<h3>新增控制器与URL,Form</h3>
-<pre>
+ 
 
 
 <div class="well">

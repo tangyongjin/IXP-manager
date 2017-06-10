@@ -180,6 +180,9 @@ $options = array (
 	
 	// '--vertical-label='.(($rrdtype == 'bytes') ? 'bits' : 'pkts' ).' / second',
     '--vertical-label='.$rrdtype.'/second',
+    // '--upper-limit=20000',
+    
+        
 
 	'--watermark=Copyright '. date('Y') .' '.$config->identity->orgname.$rrdfilename.'-'.date('Y-m-d G:i:s'),
 	'DEF:a='.$filename.':traffic_in:AVERAGE',

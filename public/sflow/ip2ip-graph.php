@@ -145,17 +145,6 @@ if ($output) {
 	print $output;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 exit;
 
 # PECL rrd_graph is completely brain damaged as it doesn't support taking
@@ -174,7 +163,7 @@ function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
     $cmdline ="$rrdtool graph  -  $font_cfg  $args  2>&1";
  	$fp = popen($cmdline, "r");
   
-
+    // echo $cmdline;die;
         	
 	if (isset($fp) && is_resource($fp)) {
 		$line = "";

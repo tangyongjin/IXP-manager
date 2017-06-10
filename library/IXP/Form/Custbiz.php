@@ -31,12 +31,15 @@
  * @copyright  Copyright (C) 2009-2016 Internet Neutral Exchange Association Company Limited By Guarantee
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL V2.0
  */
-class IXP_Form_Aipbiz extends IXP_Form
+class IXP_Form_Custbiz extends IXP_Form
 {
     public function init()
     {
 
-         $custid = $this::getPopulatedSelect( 'custid' )
+        //customer_id
+        //biz_id
+
+         $custid = $this::getPopulatedSelect( 'customer_id' )
             ->setRequired( true );
          $custid->setLabel( _( '客户' ) );
 
@@ -47,39 +50,15 @@ class IXP_Form_Aipbiz extends IXP_Form
 
 
 
+         $biz_id = $this::getPopulatedSelect_biz( 'biz_id' )
+            ->setRequired( true );
+         $biz_id->setLabel( _( '业务类型' ) );
 
-        $ip = $this->createElement( 'text', 'ip' );
-        $ip->addValidator( 'stringLength', false, array( 1, 20, 'UTF-8' ) )
-            ->setRequired( true )
-            ->setLabel( 'IP地址范围' )
-            ->setAttrib( 'class', 'span3' )
-            ->addFilter( 'StringTrim' )
-            ->addFilter( new OSS_Filter_StripSlashes() );
-        $this->addElement( $ip );
-        
-        $content_type = $this->createElement( 'text', 'content_type' );
-        $content_type->addValidator( 'stringLength', false, array( 0, 255, 'UTF-8' ) )
-            ->setRequired( false )
-            ->setLabel( 'Tag中文' )
-            ->setAttrib( 'class', 'span3' )
-            ->addFilter( 'StringTrim' )
-            ->addFilter( new OSS_Filter_StripSlashes() );
-        $this->addElement( $content_type );
+         
+         $biz_id->addValidator( 'between', false, array( 1, $custid->getAttrib( 'data-maxId' ) ) )
+            ->setAttrib( 'class', 'chzn-select' );
+         $this->addElement( $biz_id );
 
-
-        $tag = $this->createElement( 'text', 'tag' );
-        $tag->addValidator( 'stringLength', false, array( 0, 255, 'UTF-8' ) )
-            ->setRequired( false )
-            ->setLabel( 'Tag英文' )
-            ->setAttrib( 'class', 'span3' )
-            ->addFilter( 'StringTrim' )
-            ->addFilter( new OSS_Filter_StripSlashes() );
-        $this->addElement( $tag );
-        
-
-       
-
-    
 
 
         $this->addElement( self::createSubmitElement( 'submit', _( 'Add' ) ) );
@@ -87,7 +66,7 @@ class IXP_Form_Aipbiz extends IXP_Form
     }
 
 
-       public static function getPopulatedSelect( $name = 'custid' )
+       public static function getPopulatedSelect( $name )
     {
         $sw = new Zend_Form_Element_Select( $name );
 
@@ -95,18 +74,41 @@ class IXP_Form_Aipbiz extends IXP_Form
             ->select( 'e.id AS id, e.name AS name' )
             ->from( '\\Entities\\Customer', 'e' );
          $maxId = self::populateSelectFromDatabaseQuery( $qb->getQuery(), $sw,'\\Entities\\Customer','id',[ 'id', 'name' ],null,null );
-   
-
-
-        $sw->setRegisterInArrayValidator( true )
+         $sw->setRegisterInArrayValidator( true )
             ->setRequired( false )
             ->setAttrib( 'data-maxId', $maxId )
             ->setLabel( _( 'infrastructure' ) )
             ->setAttrib( 'class', 'chzn-select-deselect' )
             ->setErrorMessages( [ 'Please select an infrastructure' ] );
-        // debug(  $sw);
+        return $sw;
+
+    } 
+    
+ 
+      public static function getPopulatedSelect_biz( $name )
+    {
+        $sw = new Zend_Form_Element_Select( $name );
+
+         $qb = Zend_Registry::get( 'd2em' )['default']->createQueryBuilder()
+            ->select( 'e.id AS id, e.biz_name AS biz_name' )
+            ->from( '\\Entities\\A_biz_type', 'e' );
+         $maxId = self::populateSelectFromDatabaseQuery( $qb->getQuery(), $sw,'\\Entities\\A_biz_type','id',[ 'id', 'biz_name' ],null,null );
+         $sw->setRegisterInArrayValidator( true )
+            ->setRequired( false )
+            ->setAttrib( 'data-maxId', $maxId )
+            ->setLabel( _( 'infrastructure' ) )
+            ->setAttrib( 'class', 'chzn-select-deselect' )
+            ->setErrorMessages( [ 'Please select an infrastructure' ] );
         return $sw;
 
     }
     
+
+
+
+
+
+
+
+
 }
