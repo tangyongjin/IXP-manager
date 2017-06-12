@@ -321,6 +321,8 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
     /**
      * sFlow Peer to Peer statistics
      */
+
+
     public function p2pAction()
     {
 
@@ -379,53 +381,63 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         }
     }
 
-    public function p3pAction()
-    {
-        $conn = $this->getD2EM()->getConnection();
-        $sql  = " select name, shortname from cust where id <>1 limit 1000";
-        $stmt = $conn->prepare($sql);
- 
-      
-        $stmt->execute();  ;
-        $rows=$stmt->fetchAll();
-       
-        
-        foreach ($rows as $key => $shortname) {
-           
-            $cust = $this->getD2EM()->getRepository( '\\Entities\\Customer' )->findOneBy( [ 'shortname' => $shortname ] );
-           
-            $this->setIXP($cust);
-             
 
-            $srcVlis=$this->getD2R('\\Entities\\VlanInterface')->getForCustomer($cust, $this->ixp);
+    
+     public function dongxiAction()
+     {
+        $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
+        $this->setIXP($cust);
+        $category = $this->setCategory('category', true);
 
-            $srcVli=null;
+        $period = $this->setPeriod();
+        $proto  = $this->setProtocol();
 
-            if (($svlid = $this->getParam('svli', false)) && isset($srcVlis[$svlid])) {
-                $srcVli = $srcVlis[$svlid];
-            } else 
+        if (!count($srcVlis = $this->view->srcVlis = $this->getD2R('\\Entities\\VlanInterface')->getForCustomer($cust, $this->ixp))) {
 
-            {
-                // $srcVli = $srcVlis[$svlid];
-                 $x_keys=array_keys($srcVlis);
-                 if(array_key_exists(0, $x_keys)){
-                     $srcVli = $srcVlis[array_keys($srcVlis)[0]];
-                 }
-            }
-
-            if( !is_null($srcVli) ){
-
-                  $dstVlis = $this->getD2R('\\Entities\\VlanInterface')->getObjectsForVlan($srcVli->getVlan());
-                  unset($dstVlis[$srcVli->getId()]);
-                  $raw_data = $this->sortRRD(4, $srcVli, $dstVlis,'raw');
-                  $rows[$key]['p2p']=$raw_data;
-            }
+            $this->addMessage('There were no interfaces available for the given criteria. Returning to default view.');
+            $this->redirect('statistics/p2p');
         }
-         
-         // debug($rows);
-         $this->view->rows = $rows;
-         $this->view->display('statistics/p3p.phtml');        
+
+        if (($svlid = $this->getParam('svli', false)) && isset($srcVlis[$svlid])) {
+            $this->view->srcVli = $srcVli = $srcVlis[$svlid];
+        } else {
+            $this->view->srcVli = $srcVli = $srcVlis[array_keys($srcVlis)[0]];
+        }
+
+        $dstVlis = $this->getD2R('\\Entities\\VlanInterface')->getObjectsForVlan($srcVli->getVlan());
+        unset($dstVlis[$srcVli->getId()]);
+
+        $url_dvli = intval($this->getParam('dvli', false));
+
+        if ($url_dvli == 0) // 只是在 1:N时候需要排序,否则不需要.
+        {
+            $dstVlis = $this->sortRRD($proto, $srcVli, $dstVlis,'complex');
+
+        }
+
+        $this->view->dstVlis = $dstVlis;
+
+        if (!count($dstVlis)) {
+            $this->addMessage('There were no other interfaces available for traffic exchange for the given criteria. Returning to default view.');
+        }
+
+        if (($dvlid = $this->getParam('dvli', false)) && isset($dstVlis[$dvlid])) {
+            $this->view->dstVli = $dstVli = $dstVlis[$dvlid];
+        } else {
+            $this->view->dstVli = $dstVli = false;
+        }
+
+        $BizTypes=$this->getAllBizTypes(); 
+        
+        $this->view->BizTypes = $BizTypes;
+        
+        if ($dstVli) {
+
+            Zend_Controller_Action_HelperBroker::removeHelper('viewRenderer');
+            $this->view->display('statistics/dongxi-single.phtml');
+        }
     }
+
 
     public function sortRRD($proto, $srcVli, $dstVlis,$ret_type)
     {
@@ -614,5 +626,17 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         
 
     }
+
+    public function getAllBizTypes(){
+
+      $conn = $this->getD2EM()->getConnection();
+      $sql = " select id, biz_name from a_biz_type ";
+      $stmt = $conn->prepare($sql);
+      $stmt->execute();
+      return  $stmt->fetchAll();
+
+   }
+
+   
 
 }

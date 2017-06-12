@@ -178,6 +178,14 @@
 
             {if isset( $options.sflow.enabled ) and $options.sflow.enabled}
                 <li>
+                    <a href="{genUrl controller="statistics" action="dongxi" shortname=$cust->getShortname()}">东西向 &raquo;</a>
+                </li>
+            {/if}
+
+
+
+            {if isset( $options.sflow.enabled ) and $options.sflow.enabled}
+                <li>
                     <a href="{genUrl controller="statistics" action="ip2ip" shortname=$cust->getShortname()}">IP2IP &raquo;</a>
                 </li>
             {/if}

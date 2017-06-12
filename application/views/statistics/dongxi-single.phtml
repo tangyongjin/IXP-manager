@@ -57,13 +57,7 @@
     <td width="20"></td>
     <td valign="middle"><strong>Graph Type:</strong></td>
     <td>
-
-
         <select name="category" style="width: 100px;">
-           
-           
-            
-            
             {foreach from=$categories key=cname item=cvalue}
                 {if $cname neq 'Errors' and $cname neq 'Discards'}
                     <option value="{$cvalue}" {if $category eq $cvalue}selected{/if}>{$cname}</option>

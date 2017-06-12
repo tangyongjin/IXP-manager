@@ -375,9 +375,54 @@ class IXP_Mrtg
         return $url;
     }
 
- 
 
 
+    public static function generateZendFrontendUrl_biz( $params )
+    { 
+        $url = Zend_Controller_Front::getInstance()->getBaseUrl();
+        if( isset( $params['dongxi'] ) && $params['dongxi'] )
+            $url .= '/mrtg/retrieve-biz-image';
+        else
+            $url .= '/mrtg/retrieve-image';
+        if( isset( $params['ixp'] ) && $params['ixp'] )
+            $url .= "/ixp/{$params['ixp']}";
+        else
+            $url .= '/ixp/1';
+        if( isset( $params['shortname'] ) )
+            $url .= "/shortname/{$params['shortname']}";
+        if( isset( $params['monitorindex'] ) )
+            $url .= "/monitorindex/{$params['monitorindex']}";
+        else if( !isset( $params['dongxi'] ) || !$params['dongxi'] )
+            $url .= "/monitorindex/aggregate";
+        if( isset( $params['period'] ) )
+            $url .= "/period/{$params['period']}";
+        else
+            $url .= "/period/day";
+        if( isset( $params['category'] ) )
+            $url .= "/category/{$params['category']}";
+        else
+            $url .= "/category/bits";
+        if( isset( $params['dongxi'] ) && $params['dongxi'] )
+        {
+            if( isset( $params['svli'] ) )
+                $url .= "/svli/{$params['svli']}";
+            else
+                die();
+            if( isset( $params['biz'] ) )
+                $url .= "/dvli/{$params['biz']}";
+            else
+                die();
+            if( isset( $params['proto'] ) )
+                $url .= "/proto/{$params['proto']}";
+            else
+                $url .= "/proto/4";
+        }
+        if( isset( $params['graph'] ) )
+            $url .= "/graph/{$params['graph']}";
+        return $url;
+    }
+
+  
   public static function generateZendFrontendUrl_ip2ip( $params )
     {
         $url = Zend_Controller_Front::getInstance()->getBaseUrl();

@@ -25,12 +25,12 @@
 
 /**
  * Generate a URL for an Mrtg image.
- *
  */
-function smarty_function_genMrtgP2pImgUrl( $params, &$smarty )
+
+function smarty_function_genMrtgBizImgUrl( $params, &$smarty )
 {
-    $params['p2p'] = true;
-    return IXP_Mrtg::generateZendFrontendUrl( $params );
+    $params['dongxi'] = true;
+    return IXP_Mrtg::generateZendFrontendUrl_biz( $params );
 }
 
 
