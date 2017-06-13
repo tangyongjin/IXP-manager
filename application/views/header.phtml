@@ -40,11 +40,13 @@
                                     {/if}
                                 </ul>
                             </li>
+                            
                             <li class="dropdown {if $controller eq 'peering-manager' or $controller eq 'rs-prefixes'
                                     or $controller eq 'peering-matrix'}active{/if}">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peering<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    {if $user->getPrivs() eq 1 and $user->getCustomer()->getType() neq CUSTOMER::TYPE_ASSOCIATE}
+                                    
+                                   <!--  {if $user->getPrivs() eq 1 and $user->getCustomer()->getType() neq CUSTOMER::TYPE_ASSOCIATE}
                                         {if !isset( $options['frontend']['disabled']['peering-manager'] ) or !$options['frontend']['disabled']['peering-manager'] }
                                             <li><a href="{genUrl controller="peering-manager"}">Peering Manager</a></li>
                                         {/if}
@@ -54,11 +56,13 @@
                                             {/if}
                                         {/if}
                                     {/if}
+ -->
                                     {if !isset( $options['frontend']['disabled']['peering-matrix'] ) or !$options['frontend']['disabled']['peering-matrix'] }
                                         <li><a href="{genUrl controller="peering-matrix"}">Public Peering Matrix</a></li>
                                     {/if}
                                 </ul>
                             </li>
+
 
                             {* STATIC DOCUMENTATION LINKS - SPECIFIC TO INDIVIDUAL IXPS *}
                             {* Add a skinned file in views/_skins/xxx/header-documentation.phtml for your IXP to override the sample *}
