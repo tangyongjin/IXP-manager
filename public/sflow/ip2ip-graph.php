@@ -48,7 +48,7 @@ if( !is_readable( $filename ) )
 }
 
 $period = isset ($_REQUEST['period']) ? $_REQUEST['period'] : 'day';
-$period='day';
+//$period='day';
 
 switch ($period) {
 	case 'year':

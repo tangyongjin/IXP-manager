@@ -649,14 +649,10 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
             $destdir = "/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/";
 
-            // debug($destdir);
-
             $dir     = new DirectoryIterator($destdir);
             foreach ($dir as $fileinfo) {
                 if (!$fileinfo->isDot()) {
                     $ctag          = $this->rrdfile_to_ctag($fileinfo->getFilename());
-
-                   // echo "ctag is $ctag";
 
                     $tag_related[] = array('filename' => "/ixpdata/rrd/ip2ip/$one_pool_mac/$mac/" . $fileinfo->getFilename(),
                         'poolname'                        => $one_pool_name,
@@ -667,9 +663,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
             }
         }
 
-        // debug($tag_related);die;
-
-
+     
         $this->view->src_mac     = $mac;
         $this->view->tag_related = $tag_related;
         $cust                    = $this->view->cust                    = $this->resolveCustomerByShortnameParam(); // includes security checks
@@ -678,8 +672,6 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
         $period = $this->setPeriod();
         $proto  = $this->setProtocol();
-
-        //load view  ip2ip.phtml
 
     }
 

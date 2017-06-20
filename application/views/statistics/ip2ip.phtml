@@ -100,27 +100,15 @@
 
 
 <div class="row-fluid">
- 
 {assign var='count' value=0}
- 
      {foreach $tag_related as $one_ip}
-
-
-                                
-
        <div class="span3" style="width: 550px;">
             <div class="well">
              <h5>{$one_ip['poolname']}<-->{$one_ip['ctag']}|/ixpdata/rrd/ip2ip/{$one_ip['poolmac']}/{$src_mac}/{$one_ip['etag']}</h5>
                 <p>
                     <br />
-                                
-                      
                      <a href="#">
-                                 
-
                      {* ./inex-smarty/functions/function.genMrtgIp2ipImgUrl.php *}
-
-                
                         <img
                             src="{genMrtgIp2ipImgUrl
                                 ixp=$ixp->getId()
@@ -134,14 +122,11 @@
                             width="600"
                         />
                     </a>
-                      
                 </p>
             </div>
 
         </div>
-    
         {assign var='count' value=$count+1}
-    
         {if $count%2 eq 0}
             </div><br /><div class="row-fluid">
         {/if}
@@ -160,11 +145,6 @@
             {/if}
         {/if}
     {/if}
-    
-    
- 
 </div>
-
 </div>
-
 {tmplinclude file="footer.phtml"}
