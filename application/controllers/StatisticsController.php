@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 /*
  * Copyright (C) 2009-2016 Internet Neutral Exchange Association Company Limited By Guarantee.
@@ -326,18 +326,15 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
     public function p2pAction()
     {
 
-        // $aaa_cust = $this->getD2EM()->getRepository( '\\Entities\\Customer' )->findOneBy( [ 'shortname' => 'shanghaiyouchi' ] );
 
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
-        // $cust = $this->view->cust =  $this->getD2EM()->getRepository( '\\Entities\\Customer' )->findOneBy( [ 'shortname' => 'shanghaiyouchi' ] );
-
+     
         $this->setIXP($cust);
         $category = $this->setCategory('category', true);
 
         $period = $this->setPeriod();
         $proto  = $this->setProtocol();
 
-        // Find the possible VLAN interfaces that this customer has for the given IXP
         if (!count($srcVlis = $this->view->srcVlis = $this->getD2R('\\Entities\\VlanInterface')->getForCustomer($cust, $this->ixp))) {
 
             $this->addMessage('There were no interfaces available for the given criteria. Returning to default view.');
@@ -365,7 +362,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
         if (!count($dstVlis)) {
             $this->addMessage('There were no other interfaces available for traffic exchange for the given criteria. Returning to default view.');
-            //  $this->redirect( 'statistics/p2p' );
+           
         }
 
         if (($dvlid = $this->getParam('dvli', false)) && isset($dstVlis[$dvlid])) {
@@ -375,12 +372,62 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
         }
 
         if ($dstVli) {
-
+            
             Zend_Controller_Action_HelperBroker::removeHelper('viewRenderer');
             $this->view->display('statistics/p2p-single.phtml');
         }
     }
 
+    // p2p 流量表格
+
+        public function p2ptableAction()
+    {
+        $conn = $this->getD2EM()->getConnection();
+        $sql  = " select name, shortname from cust where id <>1 limit 10";
+        $stmt = $conn->prepare($sql);
+ 
+      
+        $stmt->execute();  ;
+        $rows=$stmt->fetchAll();
+       
+        
+        foreach ($rows as $key => $shortname) {
+           
+            $cust = $this->getD2EM()->getRepository( '\\Entities\\Customer' )->findOneBy( [ 'shortname' => $shortname ] );
+           
+            $this->setIXP($cust);
+             
+
+            $srcVlis=$this->getD2R('\\Entities\\VlanInterface')->getForCustomer($cust, $this->ixp);
+
+            $srcVli=null;
+
+            if (($svlid = $this->getParam('svli', false)) && isset($srcVlis[$svlid])) {
+                $srcVli = $srcVlis[$svlid];
+            } else 
+
+            {
+                // $srcVli = $srcVlis[$svlid];
+                 $x_keys=array_keys($srcVlis);
+                 if(array_key_exists(0, $x_keys)){
+                     $srcVli = $srcVlis[array_keys($srcVlis)[0]];
+                 }
+            }
+
+            if( !is_null($srcVli) ){
+
+                  $dstVlis = $this->getD2R('\\Entities\\VlanInterface')->getObjectsForVlan($srcVli->getVlan());
+                  unset($dstVlis[$srcVli->getId()]);
+                  $raw_data = $this->sortRRD(4, $srcVli, $dstVlis,'raw');
+                  $rows[$key]['p2p']=$raw_data;
+            }
+        }
+         
+         // debug($rows);
+         $this->view->rows = $rows;
+         $this->view->display('statistics/p2ptable.phtml');        
+    }
+ 
 
     
      public function dongxiAction()
@@ -437,6 +484,44 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
             $this->view->display('statistics/dongxi-single.phtml');
         }
     }
+
+
+
+      public function dxtotalAction()
+     {
+
+        
+
+       $alltypes=$this->getAllBizTypes();
+       
+       $alltypes2=$this->getAllBizTypes();
+
+       foreach ($alltypes as $key => $one_value) {
+       
+           $proto=4;
+           $category='pkts';
+           $period='day';
+
+           $t1= $one_value['id'];
+           $bizname1=$one_value['biz_name'];
+
+           foreach ($alltypes2 as $key2 => $one_value2 ) {
+             
+             $t2=$one_value2['id'];
+             $bizname2=$one_value2['biz_name'];
+             $img ="http://114.113.88.2/ixp/sflow/dxtotal-graph.php?biza=$t1&bizb=$t2&protocol=$proto&type=$category&period=$period";
+
+             $alltypes[$key]['tree'][]=array(
+                 'file'=>$t1.'---'.$t2,
+                 'img'=>$img,
+                 'biz_name'=>$bizname2
+                );
+           }
+       }
+       // debug($alltypes);die;
+       $this->view->BizTypes = $alltypes;
+     }
+
 
 
     public function sortRRD($proto, $srcVli, $dstVlis,$ret_type)

@@ -1,0 +1,45 @@
+{tmplinclude file="header.phtml"}
+{if isset( $user ) and $user->getPrivs() eq 3}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{genUrl}">Home</a> <span class="divider">/</span>
+        </li>
+        <li>
+            Action <span class="divider">/</span>
+        </li>
+        <li class="active">
+            东西汇总
+        </li>
+    </ul>
+{else}
+    <div class="page-content">
+{/if}
+    
+ {foreach $BizTypes as $onetype}
+
+            <h3>{$onetype['biz_name']} </h3>  </br>
+			 {foreach $onetype['tree'] as $biztype}
+              
+               <div class="well" style="width:500px;height:250px;margin:40px;padding:2px;">
+                
+                <h5 style="vertical-align: middle;height:20px;border:0px;padding: 0px;">
+					 {$biztype['biz_name']}
+                 </h5>
+    
+                <p style="height:250px;width:500px;">
+                    <br>
+                    <img
+                        src="{$biztype['img']}"
+                        width="600"
+                    />
+                       {$biztype['img']}
+                    </a>
+                </p>
+            </div>
+             {/foreach}
+ {/foreach}
+
+{if not isset( $user ) or $user->getPrivs() neq 3}
+    </div>
+{/if}
+{tmplinclude file="footer.phtml"}

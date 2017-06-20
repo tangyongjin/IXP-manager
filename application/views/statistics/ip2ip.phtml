@@ -44,7 +44,7 @@
 {/if}
 
 <p>
-<form action="{genUrl controller="statistics" action="p2p"}{if $user->getPrivs() eq USER::AUTH_SUPERUSER}/shortname/{$cust->getShortname()}{/if}" method="post">
+<form action="{genUrl controller="statistics" action="ip2ip"}{if $user->getPrivs() eq USER::AUTH_SUPERUSER}/shortname/{$cust->getShortname()}{/if}" method="post">
 <table>
 <tr>
     {if $multiIXP}

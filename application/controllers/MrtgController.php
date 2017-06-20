@@ -184,38 +184,61 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
     function retrieveBizImageAction()
     {
 
-       
-
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
-        
         $this->setIXP( $cust );
-
         $category=$this->getParam( 'category') ;
-
-
         $period   = $this->setPeriod();
         $proto    = $this->setProtocol();
 
-        
-        
         if( !( $svli = $this->getParam( 'svli', false ) ) )
         {
             $this->getLogger()->alert("svli 未设置或错误");
             die();
         }
         
-      
-        
-        if( !( $dvli = $this->getParam( 'dvli', false ) )   )
+        if( !( $biz = $this->getParam( 'dvli', false ) )   )
         {
             $this->getLogger()->alert( " 业务类型未设置 " );
             die();
         }
+        $filename= "http://127.0.0.1/ixp/sflow/dongxi-graph.php?srcvli=$svli&biz=$biz&protocol=$proto&type=$category&period=$period";
+        if( readfile( $filename ) === false )
+        {
+            header( 'Content-Type: txt/html' );
+            echo "show png failed";
+            die;
+            $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
+            readfile(
+                APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+                    . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
+                    . '300x1.png'
+            );
+        }
+    }
+
+   
+   function retrieveDxtotalImageAction()
+    {
+
+        $category=$this->getParam( 'category') ;
+        $period   = $this->setPeriod();
+        $proto    = $this->setProtocol();
+
+        if( !( $typea = $this->getParam( 'typea', false ) ) )
+        {
+            $this->getLogger()->alert("typea 未设置或错误");
+            die();
+        }
         
+        if( !( $typeb = $this->getParam( 'typeb', false ) ) )
+        {
+            $this->getLogger()->alert("typeb 未设置或错误");
+            die();
+        }
         
-        $filename= "http://127.0.0.1/ixp/sflow/dongxi-graph.php?srcvli=$svli&biz=$dvli&protocol=$proto&type=$category&period=$period";
 
 
+        $filename= "http://127.0.0.1/ixp/sflow/dongxi-graph.php?typea=$typea&typeb=$typeb&protocol=$proto&type=$category&period=$period";
         if( readfile( $filename ) === false )
         {
             header( 'Content-Type: txt/html' );
