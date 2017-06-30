@@ -4,12 +4,18 @@
     <p>
         IXP Manager V{$smarty.const.APPLICATION_VERSION}
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        Copyright &copy; 2010 - {$smarty.now|date_format:'%Y'} Internet Neutral Exchange Association Company Limited By Guarantee. - <a href="http://www.inex.ie/">http://www.inex.ie/</a>
+        Copyright &copy; 2010 - {$smarty.now|date_format:'%Y'} China Internet Exchange . - <a href="http://www.cnix.com.cn/">http://www.cnix.com.cn/</a>
         &nbsp;|&nbsp;
-        <a href="{genUrl controller="static" action="support"}">Contact Us</a>
+  
+        <a href="{genUrl controller="static" action="support"}">{mailto address='sales@cnix.com.cn' encode='javascript' text='Contact Us'}</a>
+<!-- <p>
+    Contact Us{mailto address=$options.identity.email encode='javascript' text=$options.identity.name}.
+</p>
+ -->
+
     </p>
 
-    <p>
+<!--     <p>
         Licensed under GPL v2.0.
         &nbsp;|&nbsp;
         This Program is provided AS IS, without warranty.
@@ -18,7 +24,7 @@
         {assign var="RUNNINGTIME" value="`$ENDTIME-$smarty.const.APPLICATION_STARTTIME`"}
         Generated in {$RUNNINGTIME|string_format:"%0.3f"} seconds
     </p>
-    
+ -->    
 
     {if $smarty.const.APPLICATION_ENV != 'production' and ( not isset( $hasIdentity ) or !$hasIdentity)}
         <p>

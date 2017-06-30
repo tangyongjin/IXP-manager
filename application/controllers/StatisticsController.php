@@ -499,7 +499,7 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
        foreach ($alltypes as $key => $one_value) {
        
            $proto=4;
-           $category='pkts';
+           $category='bits';
            $period='day';
 
            $t1= $one_value['id'];

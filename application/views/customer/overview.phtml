@@ -51,6 +51,18 @@
                             {/if}
                         </a>
                     </li>
+                    <li>
+                        <a href="{genUrl controller=$controller action="deletecust" id=$cust->getId()}">
+                            {if (!isset( $options.reseller.no_billing_for_resold_customers ) || !$options.reseller.no_billing_for_resold_customers ) || !$resellerMode || !$cust->isResoldCustomer()}
+                                删除客户
+                            {else}
+                                Edit Registration Details
+                            {/if}
+                        </a>
+                    </li>
+
+
+
                 </ul>
             </div>
     

@@ -589,6 +589,65 @@ class CustomerController extends IXP_Controller_FrontEnd
         }
     }
 
+    
+    public function deletecustAction()
+    {
+    
+       /*
+        delete from macaddress where virtualinterfaceid  in (select id from  virtualinterface where custid=12 )
+        delete from physicalinterface where virtualinterfaceid in (select id from  virtualinterface where custid=12 )
+        delete from vlaninterface where  virtualinterfaceid in (    select id from  virtualinterface where custid=12 );
+        delete from virtualinterface where custid=12
+        delete from  customer_to_ixp where customer_id=12
+        delete from traffic_daily where cust_id=12
+        delete from cust where id=12
+       */
+
+
+        $this->view->cust = $c = $this->_loadCustomer();
+        $this->view->form = $form = new IXP_Form_Customer_BillingRegistration();
+
+        $form->updateCancelLocation( OSS_Utils::genUrl( 'customer', 'overview', null, [ 'id' => $c->getId() ] ) );
+        
+        $custid=$c->getId();
+
+        // echo  $custid;
+        // die;
+        
+        $conn = $this->getD2EM()->getConnection();
+        $sql = "delete from macaddress where virtualinterfaceid  in (select id from  virtualinterface where custid=$custid )";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        $sql = "delete from physicalinterface where virtualinterfaceid in (select id from  virtualinterface where custid=$custid )";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        $sql = "delete from vlaninterface where  virtualinterfaceid in (select id from  virtualinterface where custid=$custid)";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+
+        $sql = "delete from virtualinterface where custid=$custid";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        
+        $sql = "delete from  customer_to_ixp where customer_id= $custid";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        $sql = "delete from traffic_daily where cust_id=$custid";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        $sql = "delete from cust where id=$custid ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+     
+        $this->redirect( 'customer/list/');
+    }
+    
     /**
      * Send the member an operations welcome mail
      *
