@@ -105,6 +105,7 @@ class CustomerController extends IXP_Controller_FrontEnd
                         'title'     => 'Joined',
                         'type'      => self::$FE_COL_TYPES[ 'DATE' ]
                     ]
+
                 ];
 
                 if( !$this->resellerMode() )
@@ -133,11 +134,16 @@ class CustomerController extends IXP_Controller_FrontEnd
                 'nocemail'        => 'NOC Email',
                 'nocwww'          => 'NOC WWW',
                 'noc24hphone'     => 'NOC 24h Phone',
+                // 'nocpeeringDb'=>'NOC peeringDb',
+
+
                 'status'          => [
                     'title'         => 'Status',
                     'type'          => self::$FE_COL_TYPES[ 'XLATE' ],
                     'xlator'        => \Entities\Customer::$CUST_STATUS_TEXT
                 ],
+
+                
                 'activepeeringmatrix' => 'Active Peering Matrix',
                 'peeringemail'   => 'Peering Email',
                 'peeringmacro'    => 'IPv4 Peering Macro',
