@@ -1,0 +1,72 @@
+{tmplinclude file="header.phtml"}
+
+{if isset( $user ) and $user->getPrivs() eq 3}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{genUrl}">Home</a> <span class="divider">/</span>
+        </li>
+        <li>
+            Documentation <span class="divider">/</span>
+        </li>
+        <li class="active">
+            Technical Support and Contact Information
+        </li>
+    </ul>
+{else}
+    <div class="page-content">
+        <div class="page-header">
+            <h1>技术须知</h1>
+        </div>
+{/if}
+
+
+
+
+
+<br /><br />
+
+
+
+
+
+
+<div class="well">
+<h3>重要目录</h3>
+<pre>
+  /ixpdata/webapp/opt/ixpmanager/library/inex-smarty/functions
+  -rw-r--r-- 1 root root 4395 Mar  2 02:22 function.genDoctrinePagerLinks.php
+  -rw-r--r-- 1 root root 2250 Mar  2 02:22 function.genMrtgGraphBox.php
+  -rw-r--r-- 1 root root  972 Mar  2 02:22 function.genMrtgImgUrl.php
+  -rw-r--r-- 1 root root 1062 Mar  2 02:22 function.genMrtgImgUrlTag.php
+  -rw-r--r-- 1 root root  997 Mar  2 02:22 function.genMrtgP2pImgUrl.php
+  -rw-r--r-- 1 root root 1658 Mar  2 02:22 function.getMrtgStatistics.php
+  -rw-r--r-- 1 root root 1180 Mar  2 02:22 function.mrtgScale.php
+  -rw-r--r-- 1 root root 1341 Mar  2 02:22 modifier.asnumber.php
+  -rw-r--r-- 1 root root  953 Mar  2 02:22 modifier.pmasn.php
+  -rw-r--r-- 1 root root 1307 Mar  2 02:22 modifier.underline.php
+</pre>
+</div>
+
+ 
+ 
+<div class="well">
+<h3>标题</h3>
+<pre>
+        内容/内容
+
+</pre>
+</div>
+
+ 
+ 
+ 
+ 
+
+ 
+
+{if not isset( $user ) or $user->getPrivs() neq 3}
+    </div>
+{/if}
+
+{tmplinclude file="footer.phtml"}
+

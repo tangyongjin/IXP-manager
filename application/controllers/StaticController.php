@@ -80,6 +80,15 @@ class StaticController extends IXP_Controller_Action
 
     }
 
+
+    public function techguideAction()
+    {
+                $this->_requireAuth();
+
+    }
+
+
+
     public function exampleAction()
     {
                 $this->_requireAuth();

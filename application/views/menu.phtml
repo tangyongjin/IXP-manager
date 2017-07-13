@@ -133,9 +133,12 @@
         </li>
 
         {if not isset( $options['frontend']['disabled']['console-server-connection'] ) or not $options['frontend']['disabled']['console-server-connection'] }
-            <li {if $controller eq 'console-server-connection'}class="active"{/if}>
+
+        <!--     <li {if $controller eq 'console-server-connection'}class="active"{/if}>
                 <a href="{genUrl controller='console-server-connection' action='list'}">Console Server Connections</a>
             </li>
+         -->
+
         {/if}
 
         <li {if $controller eq 'vlan' and $action neq 'private'}class="active"{/if}>
