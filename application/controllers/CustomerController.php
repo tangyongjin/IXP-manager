@@ -660,6 +660,8 @@ class CustomerController extends IXP_Controller_FrontEnd
      */
     public function welcomeEmailAction()
     {
+
+
         $this->view->customer = $c = $this->_loadCustomer();
         $this->view->admins = $c->getAdminUsers();
 
@@ -680,16 +682,29 @@ class CustomerController extends IXP_Controller_FrontEnd
         $form->getElement( 'subject' )->setValue( $this->_options['identity']['name'] . ' :: Welcome Mail' );
         $form->getElement( 'message' )->setValue( $this->view->render( "customer/email/welcome-email.phtml" ) );
 
+
+
         // Process a submitted form if it passes initial validation
         if( $this->getRequest()->isPost() && $form->isValid( $_POST ) )
         {
+
+        
+            //echo 111;die;
+
             $mail = $this->_processSendEmailForm( $form );
+
+            //debug($mail);die;
+
+           
+
             if( $mail )
             {
                 $mail->setBodyText( $form->getValue( 'message' ) );
                 $mail->setFrom( $this->_options['identity']['email'], $this->_options['identity']['name'] );
                 $mail->setSubject( $form->getValue( 'subject' ) );
                 $mail->send();
+
+                // debug($mail);die;
 
                 $this->getLogger()->info( "Welcome email sent for {$c->getName()}" );
                 $this->addMessage( "Welcome email successfully sent to {$c->getName()}", OSS_Message::SUCCESS );
@@ -783,8 +798,16 @@ class CustomerController extends IXP_Controller_FrontEnd
      */
     protected function _processSendEmailForm( $form )
     {
+
+        
+
         $emailsOkay = null;
         $mail = $this->getMailer();
+
+         
+
+        
+
         // Validate all e-mail addresses
         foreach( [ 'to' => 'To', 'cc' => 'Cc', 'bcc' => 'Bcc' ] as $element => $function )
         {

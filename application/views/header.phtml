@@ -132,11 +132,10 @@
 
 
 
-                        {if $user->getPrivs() eq 1}
-                        <li class="{if $controller eq 'static' and $action eq 'support'}active{/if}">
-                            <a href="{genUrl controller="static" action="techguide"}">技术须知</a>
+                       ] <li class="{if $controller eq 'static' and $action eq 'support'}active{/if}">
+                            <a href="{genUrl controller="static" action="techguide"}">Technial</a>
                         </li>
-                        {/if}
+                         
                       
                         
                         {if $user->getPrivs() neq 3}

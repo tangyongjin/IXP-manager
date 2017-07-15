@@ -82,6 +82,9 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
             $parameters = implode(' ', $parameters);
         }
 
+        
+
+
         $this->parameters = $parameters;
     }
 
@@ -97,7 +100,15 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
      */
     public function _sendMail()
     {
+
+
+        
+        
         if ($this->parameters === null) {
+
+            
+            
+
             set_error_handler(array($this, '_handleMailErrors'));
             $result = mail(
                 $this->recipients,
@@ -106,6 +117,8 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
                 $this->header);
             restore_error_handler();
         } else {
+
+
             if(!is_string($this->parameters)) {
                 /**
                  * @see Zend_Mail_Transport_Exception
@@ -117,9 +130,15 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
                 throw new Zend_Mail_Transport_Exception(
                     'Parameters were set but are not a string'
                 );
+            }else
+            {
+            
             }
 
+
             set_error_handler(array($this, '_handleMailErrors'));
+            
+
             $result = mail(
                 $this->recipients,
                 $this->_mail->getSubject(),
@@ -129,12 +148,18 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
             restore_error_handler();
         }
 
+
+          
+
         if ($this->_errstr !== null || !$result) {
+
             /**
              * @see Zend_Mail_Transport_Exception
              */
             require_once 'Zend/Mail/Transport/Exception.php';
-            throw new Zend_Mail_Transport_Exception('Unable to send mail. ' . $this->_errstr);
+            // throw new Zend_Mail_Transport_Exception('Unable to send mail. ' . $this->_errstr);
+           throw new Zend_Mail_Transport_Exception('Unable to send mail. ' . $this->_errstr);
+               
         }
     }
 

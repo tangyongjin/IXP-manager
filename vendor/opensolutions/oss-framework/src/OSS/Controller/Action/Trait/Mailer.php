@@ -81,12 +81,37 @@ trait OSS_Controller_Action_Trait_Mailer
      */
     protected function getMailer()
     {
-        if( $this->_mailer === null )
-            $this->_mailer = $this->getBootstrap()->getResource('mailer');
+
+
+        
+        if(  $this->_mailer === null ){
+            logtext('_mailer is null ,so call  getResource  ');
+
+            $options = $this->getOptions();
+
+            $mail_cfg=$options['ondemand_resources']['mailer'];
     
+             $config = array(
+                    'auth' => $mail_cfg['auth'],
+                    'username' => $mail_cfg['username'],
+                    'password' => $mail_cfg['password']
+             );
+
+                 logtext($config);
+                 $transport = new Zend_Mail_Transport_Smtp( $mail_cfg['smtphost'], $config );
+                
+                 logtext($transport);
+                
+                 Zend_Mail::setDefaultTransport( $transport );
+
+                $this->_mailer = $transport;
+           //  $this->_mailer = $this->getBootstrap()->getResource('mailer');
+        }else
+        {
+            logtext(' do nothing ');
+
+        }
         return new Zend_Mail( 'UTF-8' );
     }
-    
-    
 }
 

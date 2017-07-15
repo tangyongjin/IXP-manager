@@ -69,12 +69,18 @@ class OSS_Resource_Mailer extends Zend_Application_Resource_ResourceAbstract
      * 
      * @return Zend_Mail_Transport_Smtp
      */
+    
     public function getMailer()
     {
+
+        // logtext('getMailer');
+
         if( null === $this->_mailer ) 
         {
             $options = $this->getOptions();
-
+               
+            // logtext($options);
+        
             if( count( $options ) )
             {
                 if( isset( $options['auth'] ) )
@@ -94,9 +100,11 @@ class OSS_Resource_Mailer extends Zend_Application_Resource_ResourceAbstract
                 $this->_mailer = $transport;
             }
         }
-
+      
         return $this->_mailer;
     }    
 
+
+ 
 
 } 

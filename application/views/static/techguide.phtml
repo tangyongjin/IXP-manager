@@ -15,7 +15,7 @@
 {else}
     <div class="page-content">
         <div class="page-header">
-            <h1>技术须知</h1>
+            <h1>Technical</h1>
         </div>
 {/if}
 
@@ -29,39 +29,88 @@
 
 
 
+ <!-- 开始 -->
+<div class="well">
+  <h3>Port Policy</h3>
+  <pre>
+
+CNIX每个客户的端口只支持一个IPv4 and/or IPv6地址
+CNIX交换机不支持trunk或VLAN mapping，只支持access端口模式
+客户与CNIX对接的端口关闭代理ARP
+CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
+
+<h5>Port-security</h5>接入客户端口默认开启端口安全限制客户的 MAC 地址数量，每个端口绑定一个MAC地址
+客户一旦接入到 CNIX，我们会记录客户当前接入的MAC地址。如果客户需要变更请提前
+一个工作日联系 NOC，如果情况紧急建议客户直接发邮件到 noc@cnix.com.cn
+
+<h5>Allowed traffic</h5>CNIX网络端口只支持 Ethernet II帧格式，只允许以下三种流量进入CNIX
+1.  0x0800 – IPv4
+2.  0x0806 – ARP
+3.  0x86dd – IPv6
+
+
+  </pre>
+</div>
+ <!-- 结束 -->
 
 <div class="well">
-<h3>重要目录</h3>
-<pre>
-  /ixpdata/webapp/opt/ixpmanager/library/inex-smarty/functions
-  -rw-r--r-- 1 root root 4395 Mar  2 02:22 function.genDoctrinePagerLinks.php
-  -rw-r--r-- 1 root root 2250 Mar  2 02:22 function.genMrtgGraphBox.php
-  -rw-r--r-- 1 root root  972 Mar  2 02:22 function.genMrtgImgUrl.php
-  -rw-r--r-- 1 root root 1062 Mar  2 02:22 function.genMrtgImgUrlTag.php
-  -rw-r--r-- 1 root root  997 Mar  2 02:22 function.genMrtgP2pImgUrl.php
-  -rw-r--r-- 1 root root 1658 Mar  2 02:22 function.getMrtgStatistics.php
-  -rw-r--r-- 1 root root 1180 Mar  2 02:22 function.mrtgScale.php
-  -rw-r--r-- 1 root root 1341 Mar  2 02:22 modifier.asnumber.php
-  -rw-r--r-- 1 root root  953 Mar  2 02:22 modifier.pmasn.php
-  -rw-r--r-- 1 root root 1307 Mar  2 02:22 modifier.underline.php
-</pre>
+  <h3>Set up</h3>
+  <pre>CNIX为新客户分配互连IP及BGP MD5 KEY，客户使用CNIX分配的互连IP与CNIX route-server建立ebgp邻居关系。CNIX默认为客户同时分配IPV4/IPV6互连IP。
+以下CNIX BJ节点分配客户互连IP地址段：
+  IPV4    103.216.40.0/23
+  IPV6    2404:E780:F872:A::/64
+
+<h6>route-server-1(Platform:Junos)</h6>  AS:63602    IPv4：103.216.40.1       
+  AS:63602    IPv6：2404:E780:F872:A:1::1/64 
+<h6>route-server-2(platform:BIRD)[test phase]</h6>  AS:63602    IPv4：103.216.41.1       
+  AS:63602    IPv6：2404:E780:F872:A:1::2/64 
+  </pre>
 </div>
+ <!-- 结束 -->
+
+
 
  
- 
+ <!-- 开始 -->
 <div class="well">
-<h3>标题</h3>
-<pre>
-        内容/内容
-
-</pre>
+  <h3>CNIX BGP COMMUNITY</h3>
+  <pre><h5>For 16-bit ASN   community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
+    0:63602           do not advertise to any peer
+    1:PEER-AS         advertise to PEER-AS
+    0:PEER-AS         do not advertise to PEER-AS
+    11:YOUR-AS        prepend YOUR-AS 1x
+    12:YOUR-AS        prepend YOUR-AS 2x
+    13:YOUR-AS        prepend YOUR-AS 3x
+  <h5>For 32-bit ASN   ext-community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
+    0:63602           do not advertise to any peer
+    RT:1:PEER-AS      advertise to PEER-AS
+    RT:0:PEER-AS      do not advertise to PEER-AS
+    RT:11:YOUR-AS     prepend YOUR-AS 1x
+    RT:12:YOUR-AS     prepend YOUR-AS 2x
+    RT:13:YOUR-AS     prepend YOUR-AS 3x
+  <h5>63602:666   CNIX Blackhole community</h5>
+  </pre>
 </div>
-
+ <!-- 结束 -->
  
  
+ <!-- 开始 -->
+<div class="well">
+  <h3>CNIX DDOS</h3>
+  <pre><h5>CNIX Blackhole Next-hop : 103.216.40.66  
+                   MAC  : 24:4c:07:6d:ac:4e</h5>
+1.什么是Blackhole?
+  Blackhole是一个/32为路由前缀，去往这个目的地的流量将会被丢弃。
+2.客户IP地址被攻击时，怎么宣告黑洞路由?
+  黑洞路由必须是/32主机路由，必须是属于客户自治域的路由，必须包含CNIX Blackhole community(63602:666),三个条件同时满足
+3.CNIX收到黑洞路由后的动作?
+  CNIX收到客户宣告黑洞路由后，将修改下一跳至103.216.40.66，CNIX在所有客户端口执行L2ACL拒绝destination为24:4c:07:6d:ac:4e的数据帧，从而将攻击流量丢弃
+4.CNIX需要怎么配合？
+  CINX客户需要收取包含Blackhole community 和下一跳为103.216.40.66的主机路由
+  </pre>
+</div>
+ <!-- 结束 -->
  
- 
-
  
 
 {if not isset( $user ) or $user->getPrivs() neq 3}
