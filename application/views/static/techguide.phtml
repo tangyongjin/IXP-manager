@@ -34,16 +34,17 @@
   <h3>Port Policy</h3>
   <pre>
 
-CNIX每个客户的端口只支持一个IPv4 and/or IPv6地址
+CNIX每个客户接入端口只支持一个IPv4 and/or IPv6地址
 CNIX交换机不支持trunk或VLAN mapping，只支持access端口模式
-客户与CNIX对接的端口关闭代理ARP
+客户与CNIX对接的端口关闭ProxyARP、STP、LLDP/CDP、VTP、UDLD等协议
 CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
+客户接入端口默认配置抑制广播风暴策略，一旦收到异常广播和组播报文时，协议会触发关闭端口操作
+我们所有客户均在一个大二层环境，客户学到其他客户的路由看到的下一跳均是其他客户的BGP peer地址，一跳到达其他客户网内
 
-<h5>Port-security</h5>接入客户端口默认开启端口安全限制客户的 MAC 地址数量，每个端口绑定一个MAC地址
-客户一旦接入到 CNIX，我们会记录客户当前接入的MAC地址。如果客户需要变更请提前
-一个工作日联系 NOC，如果情况紧急建议客户直接发邮件到 noc@cnix.com.cn
+<h5>Port-security</h5>客户接入端口默认开启端口安全策略，且每个端口限制唯一MAC地址。客户接入CNIX时，我们会绑定客户当前MAC地址。
+如果客户需要变更请提前一个工作日联系 NOC，如果情况紧急建议客户直接发邮件到 noc@cnix.com.cn
 
-<h5>Allowed traffic</h5>CNIX网络端口只支持 Ethernet II帧格式，只允许以下三种流量进入CNIX
+<h5>Allowed traffic</h5>CNIX网络端口只支持 Ethernet II帧格式，且只有以下帧类型被允许
 1.  0x0800 – IPv4
 2.  0x0806 – ARP
 3.  0x86dd – IPv6
@@ -54,8 +55,8 @@ CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
  <!-- 结束 -->
 
 <div class="well">
-  <h3>Set up</h3>
-  <pre>CNIX为新客户分配互连IP及BGP MD5 KEY，客户使用CNIX分配的互连IP与CNIX route-server建立ebgp邻居关系。CNIX默认为客户同时分配IPV4/IPV6互连IP。
+  <h3>Start up</h3>
+  <pre>新客户对接时，CNIX为客户分配互连IP及BGP MD5 KEY，客户使用分配IP和CNIX route-server建立ebgp邻居关系。CNIX默认为客户同时分配IPV4/IPV6互连IP。
 以下CNIX BJ节点分配客户互连IP地址段：
   IPV4    103.216.40.0/23
   IPV6    2404:E780:F872:A::/64
@@ -74,14 +75,14 @@ CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
  <!-- 开始 -->
 <div class="well">
   <h3>CNIX BGP COMMUNITY</h3>
-  <pre><h5>For 16-bit ASN   community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
+  <pre><h5>For 16-bits ASN   community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
     0:63602           do not advertise to any peer
     1:PEER-AS         advertise to PEER-AS
     0:PEER-AS         do not advertise to PEER-AS
     11:YOUR-AS        prepend YOUR-AS 1x
     12:YOUR-AS        prepend YOUR-AS 2x
     13:YOUR-AS        prepend YOUR-AS 3x
-  <h5>For 32-bit ASN   ext-community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
+  <h5>For 32-bits ASN   ext-community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
     0:63602           do not advertise to any peer
     RT:1:PEER-AS      advertise to PEER-AS
     RT:0:PEER-AS      do not advertise to PEER-AS

@@ -117,9 +117,21 @@ switch ($action) {
 
 	case 'refreshmac':
 
-	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflow  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
-        print_r($output);
+
+
+
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowip2ip  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+            print_r($output);
 	    print_r($return_var);
+
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowdongxi  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+            print_r($output);
+	    print_r($return_var);
+
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowoverall  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+            print_r($output);
+	    print_r($return_var);
+
 	  	break;
 
  

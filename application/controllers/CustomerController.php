@@ -617,9 +617,6 @@ class CustomerController extends IXP_Controller_FrontEnd
         
         $custid=$c->getId();
 
-        // echo  $custid;
-        // die;
-        
         $conn = $this->getD2EM()->getConnection();
         $sql = "delete from macaddress where virtualinterfaceid  in (select id from  virtualinterface where custid=$custid )";
         $stmt = $conn->prepare($sql);
@@ -688,14 +685,7 @@ class CustomerController extends IXP_Controller_FrontEnd
         if( $this->getRequest()->isPost() && $form->isValid( $_POST ) )
         {
 
-        
-            //echo 111;die;
-
             $mail = $this->_processSendEmailForm( $form );
-
-            //debug($mail);die;
-
-           
 
             if( $mail )
             {
@@ -703,8 +693,6 @@ class CustomerController extends IXP_Controller_FrontEnd
                 $mail->setFrom( $this->_options['identity']['email'], $this->_options['identity']['name'] );
                 $mail->setSubject( $form->getValue( 'subject' ) );
                 $mail->send();
-
-                // debug($mail);die;
 
                 $this->getLogger()->info( "Welcome email sent for {$c->getName()}" );
                 $this->addMessage( "Welcome email successfully sent to {$c->getName()}", OSS_Message::SUCCESS );
@@ -804,11 +792,6 @@ class CustomerController extends IXP_Controller_FrontEnd
         $emailsOkay = null;
         $mail = $this->getMailer();
 
-         
-
-        
-
-        // Validate all e-mail addresses
         foreach( [ 'to' => 'To', 'cc' => 'Cc', 'bcc' => 'Bcc' ] as $element => $function )
         {
             if( ( $v = $form->getValue( $element ) ) != '' )
