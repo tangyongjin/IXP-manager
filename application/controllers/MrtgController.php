@@ -105,6 +105,8 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
                 $monitorindex, $category, $shortname, $period
             );
         }
+       
+        // echo $filename;die;
 
         $this->getLogger()->debug( "Serving {$filename} to {$this->getUser()->getUsername()}" );
 

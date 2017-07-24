@@ -144,7 +144,9 @@ switch ($period) {
 		$timeperiod = 60*60*24*8*1.2;
 		break;
 	default:
-		$timeperiod = 60*60*24*1.5;
+		// $timeperiod = 60*60*24*1.5;
+		$timeperiod = 60*60*24;
+	
 		break;
 }
 
