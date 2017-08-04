@@ -46,17 +46,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peering<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-                                   <!--  {if $user->getPrivs() eq 1 and $user->getCustomer()->getType() neq CUSTOMER::TYPE_ASSOCIATE}
-                                        {if !isset( $options['frontend']['disabled']['peering-manager'] ) or !$options['frontend']['disabled']['peering-manager'] }
-                                            <li><a href="{genUrl controller="peering-manager"}">Peering Manager</a></li>
-                                        {/if}
-                                        {if not isset( $options['frontend']['disabled']['rs-prefixes'] ) or not $options['frontend']['disabled']['rs-prefixes'] }
-                                            {if $user->getCustomer()->isRouteServerClient()}
-                                                <li><a href="{genUrl controller="rs-prefixes" action="list"}">Route Server Prefixes</a></li>
-                                            {/if}
-                                        {/if}
-                                    {/if}
- -->
+                              
                                     {if !isset( $options['frontend']['disabled']['peering-matrix'] ) or !$options['frontend']['disabled']['peering-matrix'] }
                                         <li><a href="{genUrl controller="peering-matrix"}">Public Peering Matrix</a></li>
                                     {/if}
@@ -112,10 +102,6 @@
                                                 {/foreach}
                                             {/if}
                                       {/if}
-
-                                    
-                                     
-
                                 </ul>
                             </li>
                         {/if}
@@ -125,18 +111,15 @@
                             <a href="{genUrl controller="static" action="support"}">Support</a>
                         </li>
                         {/if}
-                        
-                        {if $user->getPrivs() eq USER::AUTH_SUPERUSER}
-                            {tmplinclude file="staff-links.phtml"}
-                        {/if}
+                       ] 
 
 
+                       {tmplinclude file="header-bird.phtml"}
 
-                       ] <li class="{if $controller eq 'static' and $action eq 'support'}active{/if}">
+                        <li class="{if $controller eq 'static' and $action eq 'support'}active{/if}">
                             <a href="{genUrl controller="static" action="techguide"}">Technial</a>
                         </li>
                          
-                      
                         
                         {if $user->getPrivs() neq 3}
 	                        <li class="dropdown">
