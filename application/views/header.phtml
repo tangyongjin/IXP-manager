@@ -41,7 +41,7 @@
                                 </ul>
                             </li>
                             
-                            <li class="dropdown {if $controller eq 'peering-manager' or $controller eq 'rs-prefixes'
+                          <!--   <li class="dropdown {if $controller eq 'peering-manager' or $controller eq 'rs-prefixes'
                                     or $controller eq 'peering-matrix'}active{/if}">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peering<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
                                     {/if}
                                 </ul>
                             </li>
-
+ -->
 
                             {* STATIC DOCUMENTATION LINKS - SPECIFIC TO INDIVIDUAL IXPS *}
                             {* Add a skinned file in views/_skins/xxx/header-documentation.phtml for your IXP to override the sample *}
@@ -128,10 +128,12 @@
 							        <li>
 							            <a href="{genUrl controller="profile"}">Profile</a>
 							        </li>
-							        <li>
+
+							        <!-- <li>
 							            <a href="{genUrl controller="api-key"}">API Keys</a>
 							        </li>
-							        <li class="divider"></li>
+							         -->
+                                    <li class="divider"></li>
 							        <li>
 		                                <a href="{genUrl controller="auth" action="logout"}">Logout</a>
         							</li>
@@ -161,9 +163,11 @@
 							        <li>
 							            <a href="{genUrl controller="profile"}">Profile</a>
 							        </li>
-							        <li>
+							        
+                                    <!-- <li>
 							            <a href="{genUrl controller="api-key"}">API Keys</a>
 							        </li>
+ -->
 							        <li class="divider"></li>
 							        <li>
 							            <a href="{genUrl controller="customer" action="unread-notes"}">Unread Notes</a>
