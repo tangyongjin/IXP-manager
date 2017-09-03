@@ -40,6 +40,24 @@ foreach ($sth as $row) {
 $srcvli = isset( $_REQUEST['srcvli'] ) ? $_REQUEST['srcvli'] : false;
 $biz = isset( $_REQUEST['biz'] ) ? $_REQUEST['biz'] : false;
 
+
+
+$sth = $db->query("SELECT biz_name from a_biz_type where  id=$biz ");
+foreach ($sth as $row) {
+    $biz_name= $row['biz_name'];
+}
+
+
+
+$sql="select name from cust where id in(select custid from   view_vlaninterface_details_by_custid where vlaninterfaceid= $srcvli ) ";
+
+$sth = $db->query($sql);
+
+foreach ($sth as $row) {
+    $cust_name= $row['name'];
+}
+
+
  
 $protocol = ($_REQUEST['protocol'] == 6) ? 6 : 4;
 $rrdtype = $_REQUEST['type']; 
@@ -127,7 +145,10 @@ $options = array (
 
 
 
+// 2A97FF 蓝色
+// 00CF00 绿色
 
+// FF0000  红色 
 
 if ($separated_maxima) {
 	$options[] = 'LINE2:cdefb#ff00ff:Peak ';
@@ -139,14 +160,19 @@ if ($separated_maxima) {
 
 $avg_label = $separated_maxima ? 'Avg. ' : '';
 
-$options[] = 'AREA:cdefc#00CF00:'.$avg_label.'-';
+// $options[] = 'AREA:cdefc#00CF00:'.$avg_label.'-';
+$options[] = 'AREA:cdefc#000066:'.$biz_name.$avg_label.' to '.$cust_name;
+
+
 if (!$separated_maxima)
 	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
- $options[] = 'LINE1:cdefa#002A97FF:'.$avg_label.'-';
+ $options[] = 'LINE1:cdefa#00CF00:'.$avg_label.$cust_name.' to '.$biz_name;
 
+ // $options[] = 'LINE1:cdefa#0000CF00:'.$avg_label.'-';
+ 
 
 if (!$separated_maxima)
 	$options[] = 'GPRINT:max_in:\tMax\\:%8.2lf%s';

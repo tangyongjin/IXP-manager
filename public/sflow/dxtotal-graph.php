@@ -132,13 +132,17 @@ if ($separated_maxima) {
 
 $avg_label = $separated_maxima ? 'Avg. ' : '';
 
-$options[] = 'AREA:cdefc#00CF00:'.$avg_label.'-';
+$options[] = 'AREA:cdefc#000066:'.$name_b.$avg_label.'-'.$name_a;
+
+// $options[] = 'AREA:cdefc#000066:'.$biz_name.$avg_label.' to '.$cust_name;
+
+
 if (!$separated_maxima)
 	$options[] = 'GPRINT:max_out:\tMax\\:%8.2lf%s';
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
- $options[] = 'LINE1:cdefa#002A97FF:'.$avg_label.'-';
+ $options[] = 'LINE1:cdefa#00CF00:'.$name_a.$avg_label.'-'.$name_b;
 
 
 if (!$separated_maxima)
