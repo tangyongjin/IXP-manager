@@ -22,6 +22,9 @@
  */
 
 
+
+
+
 /**
  * Controller: Authentication controller
  *
@@ -156,6 +159,13 @@ class AuthController extends IXP_Controller_Action
         $params['url'] = 'customer/overview/tab/users/id/' . $subUser->getCustomer()->getId();
 
         return $params;
+    }
+
+
+    public function test(){
+
+  
+
     }
 
 }
