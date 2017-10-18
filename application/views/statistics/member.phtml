@@ -128,7 +128,7 @@
         <div class="span6">
 
             <div class="well">
-
+        
                 <h4>
                     LAG on {$pi->getSwitchPort()->getSwitcher()->getCabinet()->getLocation()->getName()}
                         / {$pi->getSwitchPort()->getSwitcher()->getName()}
@@ -166,9 +166,11 @@
 
             <div class="well">
 
-                <h4>
+                <h4> 
                     {$pi->getSwitchPort()->getSwitcher()->getCabinet()->getLocation()->getName()}
-                        / {$pi->getSwitchPort()->getSwitcher()->getName()}
+                        
+                        <!-- / {$pi->getSwitchPort()->getSwitcher()->getName()} -->
+                        /主交换机
                         / {$pi->getSwitchPort()->getName()} ({$pi->getSpeed()}Mbps)
 
                     {if $resellerMode and $cust->isReseller()}

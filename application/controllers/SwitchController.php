@@ -128,7 +128,20 @@ class SwitchController extends IXP_Controller_FrontEnd
     protected function listGetData( $id = null )
     {
         $qb = $this->getD2EM()->createQueryBuilder()
-            ->select( 's.id AS id, s.name AS name,
+            
+            // ->select( 's.id AS id, s.name AS name,
+            //     s.ipv4addr AS ipv4addr, s.ipv6addr AS ipv6addr, s.snmppasswd AS snmppasswd,
+            //     i.name AS infrastructure, s.switchtype AS switchtype, s.model AS model,
+            //     s.active AS active, s.notes AS notes, s.lastPolled AS lastPolled,
+            //     s.hostname AS hostname, s.os AS os, s.osDate AS osDate, s.osVersion AS osVersion,
+            //     s.serialNumber AS serialNumber, s.mauSupported AS mauSupported,
+            //     v.id AS vendorid, v.name AS vendor, c.id AS cabinetid, c.name AS cabinet'
+            // )
+
+
+
+
+           ->select( 's.id AS id, s.notes AS name,
                 s.ipv4addr AS ipv4addr, s.ipv6addr AS ipv6addr, s.snmppasswd AS snmppasswd,
                 i.name AS infrastructure, s.switchtype AS switchtype, s.model AS model,
                 s.active AS active, s.notes AS notes, s.lastPolled AS lastPolled,
@@ -136,6 +149,10 @@ class SwitchController extends IXP_Controller_FrontEnd
                 s.serialNumber AS serialNumber, s.mauSupported AS mauSupported,
                 v.id AS vendorid, v.name AS vendor, c.id AS cabinetid, c.name AS cabinet'
             )
+
+
+
+
             ->from( '\\Entities\\Switcher', 's' )
             ->leftJoin( 's.Infrastructure', 'i' )
             ->leftJoin( 's.Cabinet', 'c' )

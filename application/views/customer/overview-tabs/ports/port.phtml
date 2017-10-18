@@ -82,7 +82,12 @@
             {/if}
             <tr>
                 <td width="200"><strong>Switch:</strong></td>
-                <td width="200" id="value">{$pi->getSwitchPort()->getSwitcher()->getName()}</td>
+                
+                <td width="200" id="value">
+                    主交换机
+                    <!-- {$pi->getSwitchPort()->getSwitcher()->getName()} -->
+                </td>
+
                 <td width="40"></td>
                 <td width="200"><strong>Switch Port:</strong></td>
                 <td width="200" id="value">{$pi->getSwitchPort()->getName()}</td>
@@ -266,7 +271,12 @@
         {foreach $vi->getPhysicalInterfaces() as $pi}
             <br /><br />
             <div class="well">
-                <h4>Day Graph for {$pi->getSwitchPort()->getSwitcher()->getName()} / {$pi->getSwitchPort()->getName()}</h4>
+                
+                <!-- <h4>Day Graph for {$pi->getSwitchPort()->getSwitcher()->getName()} / {$pi->getSwitchPort()->getName()}</h4> -->
+                <h4>Day Graph for 主交换机 / {$pi->getSwitchPort()->getName()}</h4>
+
+
+
                 <br />
                 <a href="{genUrl controller="statistics" action="member-drilldown" shortname=$cust->getShortname() category='bits' monitorindex=$pi->getMonitorindex()}">
                     {genMrtgImgUrlTag ixp=$pi->getSwitchPort()->getSwitcher()->getInfrastructure()->getIXP()->getId() shortname=$cust->getShortname() monitorindex=$pi->getMonitorindex()}
