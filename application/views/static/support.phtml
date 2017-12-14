@@ -319,6 +319,37 @@ url:  helloworldagain 则控制器为HelloworldagainController.php
 </pre>
 </div>
 
+
+
+<div class="well">
+<h3>移除CI index.php</h3>
+<pre>
+Remove index.php for Codeigniter:
+
+1: check  docker /etc/apache2/apache2.conf:
+
+    {"<Directory /var/www/>
+            Options Indexes FollowSymLinks
+            AllowOverride all
+            Require all granted
+    </Directory>"|escape}
+
+2: add .htaccess to  document root,where index.php located:
+
+     {"<IfModule mod_rewrite.c>"|escape}{literal}
+         RewriteEngine On
+         #RewriteBase /
+         RewriteCond %{REQUEST_FILENAME} !-f
+         RewriteRule ^ index.php [QSA,L]{/literal}
+    {" </IfModule>"|escape}
+
+
+3: make sure  mod_rewite is installed and enabled
+
+</pre>
+</div>
+
+ 
  
 
 {if not isset( $user ) or $user->getPrivs() neq 3}

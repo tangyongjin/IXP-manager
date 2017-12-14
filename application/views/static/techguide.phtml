@@ -79,17 +79,11 @@ CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
     0:63602           do not advertise to any peer
     1:PEER-AS         advertise to PEER-AS
     0:PEER-AS         do not advertise to PEER-AS
-    11:YOUR-AS        prepend YOUR-AS 1x
-    12:YOUR-AS        prepend YOUR-AS 2x
-    13:YOUR-AS        prepend YOUR-AS 3x
   <h5>For 32-bits ASN   ext-community</h5>    1:63602           advertise to any peer(If customer not defined then Default)
     0:63602           do not advertise to any peer
     RT:1:PEER-AS      advertise to PEER-AS
     RT:0:PEER-AS      do not advertise to PEER-AS
-    RT:11:YOUR-AS     prepend YOUR-AS 1x
-    RT:12:YOUR-AS     prepend YOUR-AS 2x
-    RT:13:YOUR-AS     prepend YOUR-AS 3x
-  <h5>63602:666   CNIX Blackhole community</h5>
+  <h5>63602:66   CNIX Blackhole community</h5>
   </pre>
 </div>
  <!-- 结束 -->
@@ -103,7 +97,7 @@ CNIX支持1G和10G端口速率的链路聚合，聚合模式为静态聚合
 1.什么是Blackhole?
   Blackhole是一个/32为路由前缀，去往这个目的地的流量将会被丢弃。
 2.客户IP地址被攻击时，怎么宣告黑洞路由?
-  黑洞路由必须是/32主机路由，必须是属于客户自治域的路由，必须包含CNIX Blackhole community(63602:666),三个条件同时满足
+  黑洞路由必须是/32主机路由，必须是属于客户自治域的路由，必须包含CNIX Blackhole community(63602:66),三个条件同时满足
 3.CNIX收到黑洞路由后的动作?
   CNIX收到客户宣告黑洞路由后，将修改下一跳至103.216.40.66，CNIX在所有客户端口执行L2ACL拒绝destination为24:4c:07:6d:ac:4e的数据帧，从而将攻击流量丢弃
 4.CNIX需要怎么配合？

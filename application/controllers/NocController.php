@@ -39,9 +39,21 @@ class NocController extends IXP_Controller_Action
 
     public function birdAction()
     {
-        $this->view->apachever = str_replace("Apache/", "", $_SERVER['SERVER_SOFTWARE']);
-        $this->view->phpver    = phpversion();
-        $this->view->dbver     = $this->getD2EM()->getConnection()->query( "SELECT VERSION() AS V" )->fetch()['V'];
+    
+        // will show  views/noc/bird.phtml
+        // $this->view->apachever = str_replace("Apache/", "", $_SERVER['SERVER_SOFTWARE']);
+        // $this->view->phpver    = phpversion();
+        // $this->view->dbver     = $this->getD2EM()->getConnection()->query( "SELECT VERSION() AS V" )->fetch()['V'];
+    
+    }
+
+    public function sflowtrendAction()
+    {
+        // will show  views/noc/sflowtrend.phtml
+        // $this->view->apachever = str_replace("Apache/", "", $_SERVER['SERVER_SOFTWARE']);
+        // $this->view->phpver    = phpversion();
+        // $this->view->dbver     = $this->getD2EM()->getConnection()->query( "SELECT VERSION() AS V" )->fetch()['V'];
+    
     }
 
 

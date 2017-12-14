@@ -1,0 +1,26 @@
+{tmplinclude file="header.phtml"}
+
+{if isset( $user ) and $user->getPrivs() eq 3}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{genUrl}">Home</a> <span class="divider">/</span>
+        </li>
+        <li class="active">
+            Looking Glass
+        </li>
+    </ul>
+{else}
+    <div class="page-content">
+        
+{/if}
+
+ 
+<div class="row-fluid">
+<iframe src="http://114.113.88.2:8087/" style="width:1200px;height: 900px;"></iframe>
+</div>
+
+{if not isset( $user ) or $user->getPrivs() neq 3}
+    </div>
+{/if}
+
+{tmplinclude file="footer.phtml"}
