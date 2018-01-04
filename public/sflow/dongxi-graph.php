@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 set_include_path(get_include_path() . PATH_SEPARATOR . dirname( __FILE__ ) . "/../../library".PATH_SEPARATOR.'/opt/ixpmanager/vendor/zendframework/zendframework1/library/');
 require '/opt/ixpmanager/vendor/zendframework/zendframework1/library/Zend/Config/Ini.php';
 require '../../bin/utils.inc';
@@ -81,12 +83,7 @@ $filename=sprintf ($config->sflow->rootdir."/ipv$protocol/$file_type/dongxi/src-
 
 $rrdfilename=$filename;
 
-// don't send error messages back to the end user (barryo)
-if( !is_readable( $filename ) )
-{
-    header("HTTP/1.0 404 Not Found $filename");
-    die();
-}
+ 
 
 
 
@@ -117,7 +114,7 @@ if ( ($file_type=='bytes')&&( $rrdtype=='bits') ){
 
 }
 
-$options = array (
+@$options = array (
 	'--width=600',
 	'--height=150',
 	'--slope-mode',
@@ -161,7 +158,7 @@ if ($separated_maxima) {
 $avg_label = $separated_maxima ? 'Avg. ' : '';
 
 // $options[] = 'AREA:cdefc#00CF00:'.$avg_label.'-';
-$options[] = 'AREA:cdefc#000066:'.$biz_name.$avg_label.' to '.$cust_name;
+@$options[] = 'AREA:cdefc#000066:'.$biz_name.$avg_label.' to '.$cust_name;
 
 
 if (!$separated_maxima)
@@ -169,7 +166,7 @@ if (!$separated_maxima)
 $options[] = 'GPRINT:avg_out:\tAvg\\:%8.2lf%s';
 $options[] = 'GPRINT:last_out:\tCur\\:%8.2lf%s\l';
 
- $options[] = 'LINE1:cdefa#00CF00:'.$avg_label.$cust_name.' to '.$biz_name;
+ @$options[] = 'LINE1:cdefa#00CF00:'.$avg_label.$cust_name.' to '.$biz_name;
 
  // $options[] = 'LINE1:cdefa#0000CF00:'.$avg_label.'-';
  
@@ -183,21 +180,74 @@ $options[] = 'COMMENT:\s';
 $options[] = 'COMMENT:\s';
 $options[] = 'COMMENT:\s';
 
-$output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options,$rrdfilename);
 
-if ($output) {
-	ob_start();
-	header("Content-type: image/png");
-	ob_end_clean();
-	session_write_close();
-	print $output;
+
+// don't send error messages back to the end user (barryo)
+if( @is_readable( $rrdfilename ) )
+{
+  
+  $output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options,$rrdfilename);
+
+  if ($output) {
+		ob_start();
+		header("Content-type: image/png");
+		ob_end_clean();
+		session_write_close();
+		print $output;
+    }
+
+    
+}else{
+
+// echo 111;
+        $output=Errimg($rrdfilename);
+        ob_start();
+
+        header( "Content-type: image/png" );
+        imagepng( $output );
+
+		// header("Content-type: image/png");
+		// ob_end_clean();
+		// session_write_close();
+		// print $output;
+
 }
+
+
+
+
+// $output = ixpmanager_rrdgraph ($config->sflow->rrd->rrdtool, "-", $options,$rrdfilename);
+
+// if ($output) {
+// 	ob_start();
+// 	header("Content-type: image/png");
+// 	ob_end_clean();
+// 	session_write_close();
+// 	print $output;
+// }
 
 exit;
 
 # PECL rrd_graph is completely brain damaged as it doesn't support taking
 # "-" as a filename.  Because of this, it cannot be used for inline image
 # generation.  So we need to write our own wrapper function, sigh.
+
+
+
+
+function  Errimg($text){
+	
+
+	$my_img = imagecreate( 750, 80 );                             //width & height
+	$background  = imagecolorallocate( $my_img, 0,   0,   255 );
+	$text_colour = imagecolorallocate( $my_img, 255, 255, 0 );
+	imagestring( $my_img, 4, 30, 25, 'check:'.$text, $text_colour );
+	imagesetthickness ( $my_img, 5 );
+    return $my_img;
+}
+
+
+
 
 function ixpmanager_rrdgraph ($rrdtool, $filename, $options,$rrdfilename)
 {

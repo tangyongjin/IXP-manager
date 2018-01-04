@@ -412,8 +412,37 @@ class StatisticsCliController extends IXP_Controller_CliAction
         }
     }
 
+
+    public  function testAction(){
+
+      
+      //测试用,调用方式:  /opt/ixpmanager/bin/ixptool.php -a statistics-cli.test
+
+          if( $this->multiIXP() )
+        {
+            $ixpid = $this->getParam( 'ixp', false );
+
+            if( !$ixpid || !( $ixp = $this->getD2R( '\\Entities\\IXP' )->find( $ixpid ) ) )
+                die( "ERROR: Invalid or no IXP specified.\n" );
+        }
+        else
+            $ixp = $this->getD2R( '\\Entities\\IXP' )->getDefault();
+
+
+         
+
+        $this->view->ixp                   = $ixp;
+        $this->view->TRAFFIC_TYPES         = IXP_Mrtg::$TRAFFIC_TYPES;
+        $this->view->portsByInfrastructure = $this->genMrtgConf_getPeeringPortsByInfrastructure( $ixp );
+        print_r($this->view->portsByInfrastructure   );
+        die;
+
+    }
+
     public function genMrtgConfAction()
     {
+
+        
         // what IXP are we running on here?
         if( $this->multiIXP() )
         {
@@ -425,12 +454,23 @@ class StatisticsCliController extends IXP_Controller_CliAction
         else
             $ixp = $this->getD2R( '\\Entities\\IXP' )->getDefault();
 
+
+         
+
         $this->view->ixp                   = $ixp;
         $this->view->TRAFFIC_TYPES         = IXP_Mrtg::$TRAFFIC_TYPES;
+
+
+       
+        
         $this->view->portsByInfrastructure = $this->genMrtgConf_getPeeringPortsByInfrastructure( $ixp );
+ 
 
         // get all active trafficing customers
         $this->view->custs = $this->getD2R( '\\Entities\\Customer' )->getCurrentActive( false, true, false, $ixp );
+
+
+ 
 
         // Smarty has variable scope which OSS' skinning does not yet support so we need to use the native {include}
         // As such, we need to resolve here for skinning for these templates:
@@ -439,23 +479,39 @@ class StatisticsCliController extends IXP_Controller_CliAction
         $this->view->tyj_time=date("Y-m-d H:i:s",time()+8*60*60);                           // 20010310
 
         //echo date("Y-m-d H:i:s",time()+8*60*60); 
-
-
+ 
         
         $this->view->tmplMemberPort          = $this->view->resolveTemplate( 'statistics-cli/mrtg/member-port.cfg' );
+       
+
+        
+
         $this->view->tmplMemberAggregatePort = $this->view->resolveTemplate( 'statistics-cli/mrtg/member-aggregate-port.cfg' );
+        
         $this->view->tmplMemberLagPort       = $this->view->resolveTemplate( 'statistics-cli/mrtg/member-lag-port.cfg' );
 
 
+        // print_r( array_keys( $this->view->portsByInfrastructure[1]['mrtgIds'] )    );
 
+        // print_r(  $this->view->portsByInfrastructure[1]['switches']     );
+
+        // echo 111;die;
+         
 
         if( isset( $this->_options['mrtg']['conf']['dstfile'] ) )
         {
+
             if( !$this->writeConfig( $this->_options['mrtg']['conf']['dstfile'], $this->view->render( 'statistics-cli/mrtg/index.cfg' ) ) )
-                fwrite( STDERR, "Error: could not save configuration data\n" );
+                  {
+                      fwrite( STDERR, "Error: could not save configuration data\n" );
+                  }
+
+                 
         }
-        else
-            echo $this->view->render( 'statistics-cli/mrtg/index.cfg' );
+        else{
+             
+                echo $this->view->render( 'statistics-cli/mrtg/index.cfg' );
+        }
     }
 
     /**

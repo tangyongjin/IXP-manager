@@ -121,11 +121,56 @@ $rrdfilename=$filename;
 
 
 
+
+function showError(){
+
+    header("HTTP/1.0 404 Errorinfo:Not Found: $filename");
+    die();
+
+
+}
+
+
 // don't send error messages back to the end user (barryo)
 if( !is_readable( $filename ) )
 {
-    header("HTTP/1.0 404 Not Found $filename");
+
+	// showError();
+
+    header("HTTP/1.0 404 Not_Found-> $filename");
     die();
+
+
+ //    $text = "YOUR  texttttttttttttttt";
+
+	// $my_img = imagecreate( 200, 80 );                             //width & height
+	// $background  = imagecolorallocate( $my_img, 0,   0,   255 );
+	// $text_colour = imagecolorallocate( $my_img, 255, 255, 0 );
+	// $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
+	// imagestring( $my_img, 4, 30, 25, $text, $text_colour );
+	// imagesetthickness ( $my_img, 5 );
+	// imageline( $my_img, 30, 45, 165, 45, $line_colour );
+
+	// header( "Content-type: image/png" );
+	// imagepng( $my_img );
+	// imagecolordeallocate( $line_color );
+	// imagecolordeallocate( $text_color );
+	// imagecolordeallocate( $background );
+	// imagedestroy( $my_img );
+
+
+ //    exit;
+ 
+
+
+
+
+
+
+
+
+
+
 }
 
 

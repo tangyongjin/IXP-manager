@@ -431,7 +431,9 @@ class StatisticsController extends IXP_Controller_AuthRequiredAction
 
     
      public function dongxiAction()
-     {
+     {  
+
+       
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
         $this->setIXP($cust);
         $category = $this->setCategory('category', true);

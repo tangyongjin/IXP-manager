@@ -186,6 +186,9 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
     function retrieveBizImageAction()
     {
 
+
+        
+
         $cust = $this->view->cust = $this->resolveCustomerByShortnameParam(); // includes security checks
         $this->setIXP( $cust );
         $category=$this->getParam( 'category') ;
@@ -203,18 +206,27 @@ class MrtgController extends IXP_Controller_AuthRequiredAction
             $this->getLogger()->alert( " 业务类型未设置 " );
             die();
         }
+        
+
         $filename= "http://127.0.0.1/ixp/sflow/dongxi-graph.php?srcvli=$svli&biz=$biz&protocol=$proto&type=$category&period=$period";
         if( readfile( $filename ) === false )
         {
+
             header( 'Content-Type: txt/html' );
             echo "show png failed";
             die;
-            $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
-            readfile(
-                APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
-                    . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
-                    . '300x1.png'
-            );
+
+
+            // $this->getLogger()->notice( 'Could not load ' . $filename . ' for mrtg/retrieveImageAction' );
+            // readfile(
+            //     APPLICATION_PATH . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+            //         . 'public' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR
+            //         . '300x1.png'
+            // );
+        
+        }else{
+                 $this->getLogger()->notice( 'Good' . $filename . ' for mrtg/retrieveImageAction' );
+
         }
     }
 

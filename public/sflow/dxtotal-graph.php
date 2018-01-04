@@ -59,7 +59,7 @@ $rrdfilename=$filename;
 // don't send error messages back to the end user (barryo)
 if( !is_readable( $filename ) )
 {
-    header("HTTP/1.0 404 Not Found $filename");
+    header("HTTP/1.0 404 dxtotal-graph.php :Not Found $filename");
     die();
 }
 
