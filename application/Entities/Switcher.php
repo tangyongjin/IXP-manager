@@ -716,8 +716,15 @@ class Switcher
         foreach( $host->useIface()->indexes() as $index )
         {
             // we're only interested in Ethernet ports here (right?)
-            if( $host->useIface()->types()[ $index ] != \OSS_SNMP\MIBS\Iface::IF_TYPE_ETHERNETCSMACD )
-                continue;
+
+            /*
+
+            Cisco 设备,如果下面两句放开,会跳过 port channel.
+            */
+            // if( $host->useIface()->types()[ $index ] != \OSS_SNMP\MIBS\Iface::IF_TYPE_ETHERNETCSMACD )
+            //     continue;
+
+
 
             // find the matching switchport that may already be in the database (or create a new one)
             $switchport = false;
