@@ -33,12 +33,12 @@
  */
 class TesterController extends IXP_Controller_FrontEnd
 {
-    /**
+    /**  
      * This function sets up the frontend controller
      */
     protected function _feInit()
-    {
-      
+    {  
+        //不需要验证.
 
         $this->view->feParams = $this->_feParams = (object)[
             'entity'        => '\\Entities\\SwitchPort',
