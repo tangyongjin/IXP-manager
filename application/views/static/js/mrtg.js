@@ -33,11 +33,13 @@ function refreshmac(){
 
  var timestamp = new Date();
     alert('刷新MAC地址')
+    document.getElementById('refreshmac').style.cursor="wait";
 
     url='http://'+document.domain+'/ixp/ajax.php?action=refreshmac&t='+timestamp
     $.post(url).done(function(data){
       $('#mrtg_file').html('');
       $('#mrtg_file').html(data);
+      document.getElementById('refreshmac').style.cursor="auto";
     });
 
 

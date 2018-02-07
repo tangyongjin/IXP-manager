@@ -120,15 +120,15 @@ switch ($action) {
 
 
 
-	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowip2ip  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflow.ip2ip  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
             print_r($output);
 	    print_r($return_var);
 
-	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowdongxi  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflow.dongxi  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
             print_r($output);
 	    print_r($return_var);
 
-	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflowoverall  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
+	    exec("sshpass -p 'cnix@1234' ssh -o StrictHostKeyChecking=no root@sflow.p2p  /usr/local/bin/update-l2database.pl 2>&1", $output, $return_var);
             print_r($output);
 	    print_r($return_var);
 
