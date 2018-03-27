@@ -644,6 +644,25 @@ class CustomerController extends IXP_Controller_FrontEnd
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
+        //删除 contact_to_group 表格内容
+
+        $sql="delete  from  contact_to_group where contact_id in(select   id from contact where custid= $custid ) " ;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+       
+        //删除联系人
+        $sql = "delete from contact where custid=$custid";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        // 删除客户的 user
+          
+        $sql = "delete from user where custid=$custid";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+
         $sql = "delete from cust where id=$custid ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
