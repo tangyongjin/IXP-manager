@@ -6,26 +6,6 @@ and especially new and small IXPs looking to expand.
 
 [![Build Status](https://travis-ci.org/inex/IXP-Manager.png?branch=master)](https://travis-ci.org/inex/IXP-Manager) - courtesy of [Travis CI](https://travis-ci.org/inex/IXP-Manager).
 
-## Documentation
-
-Please see the [wiki](https://github.com/inex/IXP-Manager/wiki) for general
-documentation including [installation
-instructions](https://github.com/inex/IXP-Manager/wiki/Installation).
-
-## IXP Manager V3 Released
-
-IXP Manager V3 was officially released on 2012-12-12 and primarily featured
-a significant amount of backend changes:
-
-* code refactoring
-* migration to Doctrine2
-* removal of all non JQuery JS libraries
-* better library consistancy and API interfaces
-* security audit
-
-IXP Manager V3 is primarily about INEX trying to fashion IXP Manager as a
-true open source project rather than something INEX specific. 
-
 
 ## About IXP Manager
 
@@ -61,21 +41,12 @@ Copyright (C) 2009-2016 Internet Neutral Exchange Association Company Limited By
 All Rights Reserved.
 
  
-## License
+## Important Note!!!
 
-This file is part of IXP Manager.
- 
-IXP Manager is free software: you can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by the Free
-Software Foundation, version v2.0 of the License.
+- You must have some understanding of the ancient language Perl; otherwise, it will be challenging to debug.
 
-IXP Manager is distributed in the hope that it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-more details.
- 
-You should have received a copy of the GNU General Public License v2.0
-along with IXP Manager.  If not, see:
- 
-http://www.gnu.org/licenses/gpl-2.0.html
+-  Do not set the sFlow sampling rate too high, or the results will deviate significantly from the actual situation. It is recommended to debug step by step from low to high.
 
+-  Turn on debug mode; otherwise, debugging will become extremely difficult.
+
+-  It is recommended to start the installation on a clean Linux machine. If you need to install multiple instances, it is recommended to deploy using Docker. The Docker File is located in the Docker/sflow directory.
